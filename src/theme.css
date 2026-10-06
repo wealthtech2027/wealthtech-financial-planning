@@ -1,0 +1,75 @@
+/**
+ * ⚠️ THEME CONFIGURATION — Tailwind v4
+ * WealthTech Financial Services Theme
+ */
+@theme {
+	/* Font Family */
+	--font-sans: 'Heebo', system-ui, sans-serif;
+	
+	/* Brand Colors - Navy & Gold */
+	--color-navy: #1a365d;
+	--color-navy-light: #2d4a6f;
+	--color-navy-dark: #0f2442;
+	--color-gold: #d4a853;
+	--color-gold-light: #e4be73;
+	--color-gold-dark: #b8903f;
+	
+	/* Neutral Colors */
+	--color-slate: #64748b;
+	--color-slate-light: #94a3b8;
+	
+	/* Background & Surface */
+	--color-background: #ffffff;
+	--color-foreground: #1a365d;
+	--color-muted: #f8fafc;
+	--color-muted-foreground: #64748b;
+	
+	/* Border */
+	--color-border: #e2e8f0;
+	
+	/* Semantic */
+	--color-primary: #1a365d;
+	--color-primary-foreground: #ffffff;
+	--color-secondary: #d4a853;
+	--color-secondary-foreground: #1a365d;
+	
+	/* Animation */
+	--animate-marquee: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Accessibility Styles */
+.high-contrast {
+  filter: contrast(1.4);
+}
+
+.high-contrast * {
+  border-color: #000 !important;
+}
+
+.grayscale-mode {
+  filter: grayscale(100%);
+}
+
+.highlight-links a {
+  background-color: #ffff00 !important;
+  color: #000 !important;
+  text-decoration: underline !important;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.stop-animations *,
+.stop-animations *::before,
+.stop-animations *::after {
+  animation: none !important;
+  transition: none !important;
+}

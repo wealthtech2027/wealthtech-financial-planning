@@ -1,0 +1,32 @@
+{
+  "summary": "בניית כלי \"מפת הנכסים שלי\" - Wealth Snapshot",
+  "todos": [
+    {
+      "id": 1,
+      "description": "בניית דף מפת הנכסים עם סטפר 4 שלבים + טפסים דינמיים",
+      "files": [
+        "src/pages/WealthSnapshot.tsx"
+      ],
+      "status": "complete"
+    },
+    {
+      "id": 2,
+      "description": "דשבורד תוצאות עם גרפים ותובנות אוטומטיות",
+      "files": [
+        "src/pages/WealthSnapshot.tsx"
+      ],
+      "status": "complete"
+    },
+    {
+      "id": 3,
+      "description": "הוספה לניווט ולראוטינג",
+      "files": [
+        "src/App.tsx",
+        "src/pages/Index.tsx"
+      ],
+      "status": "complete"
+    }
+  ],
+  "createdAt": "2026-04-20T03:29:40.243Z",
+  "updatedAt": "2026-04-20T03:35:15.468Z"
+}
