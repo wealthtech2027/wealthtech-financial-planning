@@ -367,38 +367,38 @@ export default function PensionReturns() {
   };
 
   return (
-    <div data-ev-id="ev_3617417a63" className="min-h-screen bg-white font-sans">
+    <div data-ev-id="ev_3617417a63" className="min-h-screen bg-surface font-sans">
       {/* Navigation */}
-      <nav data-ev-id="ev_b75f94aaf5" className="fixed top-0 right-0 left-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+      <nav data-ev-id="ev_b75f94aaf5" className="fixed top-0 right-0 left-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-border">
         <div data-ev-id="ev_167b2521d1" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div data-ev-id="ev_82c650a323" className="flex justify-between items-center h-20">
             <Logo />
             
-            <div data-ev-id="ev_834fe8265a" className="hidden md:flex items-center gap-8">
-              <Link to="/" className="text-slate hover:text-navy transition-colors font-medium">ראשי</Link>
-              <Link to="/#about" className="text-slate hover:text-navy transition-colors font-medium">אודות</Link>
-              <Link to="/products" className="text-slate hover:text-navy transition-colors font-medium">מוצרים</Link>
-              <Link to="/#services" className="text-slate hover:text-navy transition-colors font-medium">שירותים</Link>
+            <div data-ev-id="ev_834fe8265a" className="hidden xl:flex items-center gap-4 2xl:gap-7 text-[15px] 2xl:text-base">
+              <Link to="/" className="text-ink-muted hover:text-ink transition-colors font-medium">ראשי</Link>
+              <Link to="/#about" className="text-ink-muted hover:text-ink transition-colors font-medium">אודות</Link>
+              <Link to="/products" className="text-ink-muted hover:text-ink transition-colors font-medium">מוצרים</Link>
+              <Link to="/#services" className="text-ink-muted hover:text-ink transition-colors font-medium">שירותים</Link>
               <Link to="/pension-returns" className="text-gold font-medium">תשואות פנסיה</Link>
-              <Link to="/links" className="text-slate hover:text-navy transition-colors font-medium">קישורים שימושיים</Link>
+              <Link to="/links" className="text-ink-muted hover:text-ink transition-colors font-medium">קישורים שימושיים</Link>
               <a data-ev-id="ev_ecec70bbb4"
               href="https://surense.com/app/p/9z3sqal"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-navy hover:bg-navy-light text-white font-semibold px-5 py-2.5 rounded-lg transition-colors flex items-center gap-2">
+              className="bg-gold hover:bg-gold-light text-navy-dark font-semibold px-5 py-2.5 rounded-lg transition-colors flex items-center gap-2">
 
                 <FileText className="w-4 h-4" />
                 להוצאת מידע עדכני
               </a>
               <Link
                 to="/onboarding"
-                className="bg-gold hover:bg-gold-light text-navy font-semibold px-6 py-2.5 rounded-lg transition-colors">
+                className="bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-2.5 rounded-lg transition-colors">
                 התחל תהליך
               </Link>
             </div>
 
             <button data-ev-id="ev_9b80e90ba0"
-            className="md:hidden p-2"
+            className="xl:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -406,26 +406,26 @@ export default function PensionReturns() {
         </div>
 
         {mobileMenuOpen &&
-        <div data-ev-id="ev_569a514bf5" className="md:hidden bg-white border-t border-border">
+        <div data-ev-id="ev_569a514bf5" className="xl:hidden bg-surface border-t border-border">
             <div data-ev-id="ev_9b1599f60d" className="px-4 py-4 flex flex-col gap-4">
-              <Link to="/" className="text-slate hover:text-navy font-medium py-2">ראשי</Link>
-              <Link to="/#about" className="text-slate hover:text-navy font-medium py-2">אודות</Link>
-              <Link to="/products" className="text-slate hover:text-navy font-medium py-2">מוצרים</Link>
-              <Link to="/#services" className="text-slate hover:text-navy font-medium py-2">שירותים</Link>
+              <Link to="/" className="text-ink-muted hover:text-ink font-medium py-2">ראשי</Link>
+              <Link to="/#about" className="text-ink-muted hover:text-ink font-medium py-2">אודות</Link>
+              <Link to="/products" className="text-ink-muted hover:text-ink font-medium py-2">מוצרים</Link>
+              <Link to="/#services" className="text-ink-muted hover:text-ink font-medium py-2">שירותים</Link>
               <Link to="/pension-returns" className="text-gold font-medium py-2">תשואות פנסיה</Link>
-              <Link to="/links" className="text-slate hover:text-navy font-medium py-2">קישורים שימושיים</Link>
+              <Link to="/links" className="text-ink-muted hover:text-ink font-medium py-2">קישורים שימושיים</Link>
               <a data-ev-id="ev_63251dee5f"
             href="https://surense.com/app/p/9z3sqal"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-navy hover:bg-navy-light text-white font-semibold px-6 py-3 rounded-lg">
+            className="flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-3 rounded-lg">
 
                 <FileText className="w-4 h-4" />
                 להוצאת מידע עדכני
               </a>
               <Link
               to="/onboarding"
-              className="bg-gold hover:bg-gold-light text-navy font-semibold px-6 py-3 rounded-lg text-center">
+              className="bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-3 rounded-lg text-center">
                 התחל תהליך
               </Link>
             </div>
@@ -434,7 +434,7 @@ export default function PensionReturns() {
       </nav>
 
       {/* Hero Section */}
-      <section data-ev-id="ev_f8588f16ad" className="pt-28 pb-12 bg-gradient-to-br from-navy via-navy-light to-navy">
+      <section data-ev-id="ev_f8588f16ad" className="pt-28 pb-12 hero-tech">
         <div data-ev-id="ev_b69b843645" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div data-ev-id="ev_758d1f5bf9" className="text-center">
             <div data-ev-id="ev_3625dc4f5f" className="inline-flex items-center justify-center w-16 h-16 bg-gold/20 rounded-2xl mb-6">
@@ -478,19 +478,19 @@ export default function PensionReturns() {
       </section>
 
       {/* Filters Section */}
-      <section data-ev-id="ev_6be8fc24a6" className="py-8 bg-muted border-b border-border">
+      <section data-ev-id="ev_6be8fc24a6" className="py-8 bg-surface-2 border-b border-border">
         <div data-ev-id="ev_a71db49e5d" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div data-ev-id="ev_2d71cbfac3" className="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
             <div data-ev-id="ev_8cdb360e77" className="flex flex-wrap gap-4 items-center">
               <div data-ev-id="ev_9a3bea47ad" className="flex items-center gap-2">
-                <Filter className="w-5 h-5 text-slate" />
-                <span data-ev-id="ev_899206bcaf" className="font-medium text-navy">סינון:</span>
+                <Filter className="w-5 h-5 text-ink-muted" />
+                <span data-ev-id="ev_899206bcaf" className="font-medium text-ink">סינון:</span>
               </div>
               
               <select data-ev-id="ev_892b76aa54"
               value={filters.type}
               onChange={(e) => setFilters((prev) => ({ ...prev, type: e.target.value }))}
-              className="px-4 py-2 rounded-lg border border-border bg-white text-navy focus:outline-none focus:ring-2 focus:ring-gold/50">
+              className="px-4 py-2 rounded-lg border border-border bg-surface text-ink focus:outline-none focus:ring-2 focus:ring-gold/50">
 
                 <option data-ev-id="ev_324449dab8" value="">כל סוגי הקופות</option>
                 <option data-ev-id="ev_c6a6b36586" value="gemel">קופות גמל</option>
@@ -502,7 +502,7 @@ export default function PensionReturns() {
               <select data-ev-id="ev_808f7a3f90"
               value={filters.company}
               onChange={(e) => setFilters((prev) => ({ ...prev, company: e.target.value }))}
-              className="px-4 py-2 rounded-lg border border-border bg-white text-navy focus:outline-none focus:ring-2 focus:ring-gold/50">
+              className="px-4 py-2 rounded-lg border border-border bg-surface text-ink focus:outline-none focus:ring-2 focus:ring-gold/50">
 
                 <option data-ev-id="ev_d587cb61e6" value="">כל החברות</option>
                 {companies.map((company) =>
@@ -513,7 +513,7 @@ export default function PensionReturns() {
               <select data-ev-id="ev_7819607001"
               value={filters.track}
               onChange={(e) => setFilters((prev) => ({ ...prev, track: e.target.value }))}
-              className="px-4 py-2 rounded-lg border border-border bg-white text-navy focus:outline-none focus:ring-2 focus:ring-gold/50">
+              className="px-4 py-2 rounded-lg border border-border bg-surface text-ink focus:outline-none focus:ring-2 focus:ring-gold/50">
 
                 <option data-ev-id="ev_4a4331f9f4" value="">כל המסלולים</option>
                 {tracks.map((track) =>
@@ -522,23 +522,23 @@ export default function PensionReturns() {
               </select>
 
               <div data-ev-id="ev_bcd0a41275" className="relative">
-                <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate" />
+                <Search className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-ink-muted" />
                 <input data-ev-id="ev_5c45da7e07"
                 type="text"
                 placeholder="חיפוש קופה..."
                 value={filters.search}
                 onChange={(e) => setFilters((prev) => ({ ...prev, search: e.target.value }))}
-                className="pr-10 pl-4 py-2 rounded-lg border border-border bg-white text-navy focus:outline-none focus:ring-2 focus:ring-gold/50 w-48" />
+                className="pr-10 pl-4 py-2 rounded-lg border border-border bg-surface text-ink focus:outline-none focus:ring-2 focus:ring-gold/50 w-48" />
 
               </div>
             </div>
 
             <div data-ev-id="ev_2ba1b96323" className="flex items-center gap-4">
-              <div data-ev-id="ev_c64c875ceb" className="flex items-center bg-white rounded-lg border border-border overflow-hidden">
+              <div data-ev-id="ev_c64c875ceb" className="flex items-center bg-surface rounded-lg border border-border overflow-hidden">
                 <button data-ev-id="ev_192ac02742"
                 onClick={() => setViewMode('table')}
                 className={`px-4 py-2 flex items-center gap-2 transition-colors ${
-                viewMode === 'table' ? 'bg-navy text-white' : 'text-navy hover:bg-muted'}`
+                viewMode === 'table' ? 'bg-navy text-white' : 'text-ink hover:bg-surface-2'}`
                 }>
 
                   <Table className="w-4 h-4" />
@@ -547,7 +547,7 @@ export default function PensionReturns() {
                 <button data-ev-id="ev_50423818bd"
                 onClick={() => setViewMode('chart')}
                 className={`px-4 py-2 flex items-center gap-2 transition-colors ${
-                viewMode === 'chart' ? 'bg-navy text-white' : 'text-navy hover:bg-muted'}`
+                viewMode === 'chart' ? 'bg-navy text-white' : 'text-ink hover:bg-surface-2'}`
                 }>
 
                   <BarChart3 className="w-4 h-4" />
@@ -558,7 +558,7 @@ export default function PensionReturns() {
               <button data-ev-id="ev_61e5e5e487"
               onClick={() => loadData()}
               disabled={loading}
-              className="flex items-center gap-2 px-4 py-2 bg-gold hover:bg-gold-light text-navy font-medium rounded-lg transition-colors disabled:opacity-50">
+              className="flex items-center gap-2 px-4 py-2 bg-gold hover:bg-gold-light text-navy-dark font-medium rounded-lg transition-colors disabled:opacity-50">
 
                 <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
                 <span data-ev-id="ev_018618a769" className="hidden sm:inline">עדכן נתונים</span>
@@ -568,7 +568,7 @@ export default function PensionReturns() {
           
           {/* Data source indicator */}
           {(error || dataSource === 'sample') &&
-          <div data-ev-id="ev_74a3c3e0e2" className="mt-4 flex items-center gap-2 text-amber-600 bg-amber-50 px-4 py-2 rounded-lg">
+          <div data-ev-id="ev_74a3c3e0e2" className="mt-4 flex items-center gap-2 text-amber-400 bg-amber-500/10 px-4 py-2 rounded-lg">
               <AlertCircle className="w-5 h-5" />
               <span data-ev-id="ev_0eb6ac8073" className="text-sm">
                 {error || 'מציג נתונים לדוגמה. לחץ על "עדכן נתונים" לטעינת נתונים עדכניים.'}
@@ -577,7 +577,7 @@ export default function PensionReturns() {
           }
           
           {dataSource === 'api' && !error &&
-          <div data-ev-id="ev_b73ca9f4f6" className="mt-4 flex items-center gap-2 text-green-600 bg-green-50 px-4 py-2 rounded-lg">
+          <div data-ev-id="ev_b73ca9f4f6" className="mt-4 flex items-center gap-2 text-green-400 bg-green-500/10 px-4 py-2 rounded-lg">
               <Info className="w-5 h-5" />
               <span data-ev-id="ev_32d0cb86e2" className="text-sm">
                 נתונים עדכניים מ-data.gov.il • {funds.length} קופות נטענו
@@ -594,8 +594,8 @@ export default function PensionReturns() {
           {loading &&
           <div data-ev-id="ev_d9fb37eccc" className="flex flex-col items-center justify-center py-20">
               <Loader2 className="w-12 h-12 text-gold animate-spin mb-4" />
-              <p data-ev-id="ev_2d3b4cda27" className="text-navy font-medium">טוען נתונים מ-data.gov.il...</p>
-              <p data-ev-id="ev_5b7de0d148" className="text-slate text-sm mt-2">זה עשוי לקחת מספר שניות</p>
+              <p data-ev-id="ev_2d3b4cda27" className="text-ink font-medium">טוען נתונים מ-data.gov.il...</p>
+              <p data-ev-id="ev_5b7de0d148" className="text-ink-muted text-sm mt-2">זה עשוי לקחת מספר שניות</p>
             </div>
           }
 
@@ -604,15 +604,15 @@ export default function PensionReturns() {
           <>
 
               <div data-ev-id="ev_77f2279ffb" className="mb-6 flex items-center justify-between">
-                <p data-ev-id="ev_9033ed1eaa" className="text-slate">
-                  מציג <span data-ev-id="ev_b6bc216462" className="font-semibold text-navy">{sortedFunds.length}</span> קופות
+                <p data-ev-id="ev_9033ed1eaa" className="text-ink-muted">
+                  מציג <span data-ev-id="ev_b6bc216462" className="font-semibold text-ink">{sortedFunds.length}</span> קופות
                 </p>
                 {selectedFunds.length > 0 &&
               <div data-ev-id="ev_d7839b3f63" className="flex items-center gap-2">
-                    <span data-ev-id="ev_553cbcce21" className="text-sm text-slate">נבחרו {selectedFunds.length} להשוואה</span>
+                    <span data-ev-id="ev_553cbcce21" className="text-sm text-ink-muted">נבחרו {selectedFunds.length} להשוואה</span>
                     <button data-ev-id="ev_798cce614f"
                 onClick={() => setSelectedFunds([])}
-                className="text-sm text-red-500 hover:text-red-600">
+                className="text-sm text-red-500 hover:text-red-400">
 
                       נקה בחירה
                     </button>
@@ -622,8 +622,8 @@ export default function PensionReturns() {
 
               {/* Comparison Chart */}
               {selectedFunds.length >= 2 &&
-            <div data-ev-id="ev_6e8bec704d" className="mb-8 bg-white rounded-2xl border border-border p-6 shadow-sm">
-                  <h3 data-ev-id="ev_51454f87fd" className="text-lg font-bold text-navy mb-4">השוואת קופות נבחרות</h3>
+            <div data-ev-id="ev_6e8bec704d" className="mb-8 bg-surface rounded-2xl border border-border p-6 shadow-sm">
+                  <h3 data-ev-id="ev_51454f87fd" className="text-lg font-bold text-ink mb-4">השוואת קופות נבחרות</h3>
                   <div data-ev-id="ev_4dca5b2b04" className="h-80">
                     <ResponsiveContainer width="100%" height="100%">
                       <BarChart data={comparisonData} layout="vertical">
@@ -633,9 +633,9 @@ export default function PensionReturns() {
                         <Tooltip formatter={(value: number) => `${value.toFixed(2)}%`} />
                         <Legend />
                         <Bar dataKey="מתחילת השנה" fill="#d4a853" />
-                        <Bar dataKey="שנה" fill="#1a365d" />
-                        <Bar dataKey="3 שנים" fill="#2d4a6f" />
-                        <Bar dataKey="5 שנים" fill="#64748b" />
+                        <Bar dataKey="שנה" fill="#e8e2d4" />
+                        <Bar dataKey="3 שנים" fill="#7c8db0" />
+                        <Bar dataKey="5 שנים" fill="#4a5a7c" />
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
@@ -644,12 +644,12 @@ export default function PensionReturns() {
 
               {viewMode === 'table' ? (
             /* Table View */
-            <div data-ev-id="ev_8907c1e6a7" className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm">
+            <div data-ev-id="ev_8907c1e6a7" className="bg-surface rounded-2xl border border-border overflow-hidden shadow-sm">
                   <div data-ev-id="ev_1cdb288228" className="overflow-x-auto">
                     <table data-ev-id="ev_9ed40a5c75" className="w-full">
-                      <thead data-ev-id="ev_8b364dea05" className="bg-muted">
+                      <thead data-ev-id="ev_8b364dea05" className="bg-surface-2">
                         <tr data-ev-id="ev_a759ca6f8d">
-                          <th data-ev-id="ev_bc00488d2e" className="px-4 py-3 text-right text-sm font-semibold text-navy">
+                          <th data-ev-id="ev_bc00488d2e" className="px-4 py-3 text-right text-sm font-semibold text-ink">
                             <input data-ev-id="ev_d2b810927f"
                         type="checkbox"
                         onChange={(e) => {
@@ -662,12 +662,12 @@ export default function PensionReturns() {
                         className="rounded" />
 
                           </th>
-                          <th data-ev-id="ev_0fc87c08b0" className="px-4 py-3 text-right text-sm font-semibold text-navy">מס׳ קופה</th>
-                          <th data-ev-id="ev_578d7d9fcc" className="px-4 py-3 text-right text-sm font-semibold text-navy">שם הקופה</th>
-                          <th data-ev-id="ev_0be3d5c254" className="px-4 py-3 text-right text-sm font-semibold text-navy">סוג</th>
-                          <th data-ev-id="ev_8aaad67994" className="px-4 py-3 text-right text-sm font-semibold text-navy">מסלול</th>
+                          <th data-ev-id="ev_0fc87c08b0" className="px-4 py-3 text-right text-sm font-semibold text-ink">מס׳ קופה</th>
+                          <th data-ev-id="ev_578d7d9fcc" className="px-4 py-3 text-right text-sm font-semibold text-ink">שם הקופה</th>
+                          <th data-ev-id="ev_0be3d5c254" className="px-4 py-3 text-right text-sm font-semibold text-ink">סוג</th>
+                          <th data-ev-id="ev_8aaad67994" className="px-4 py-3 text-right text-sm font-semibold text-ink">מסלול</th>
                           <th data-ev-id="ev_85c93bcc69"
-                      className="px-4 py-3 text-right text-sm font-semibold text-navy cursor-pointer hover:text-gold"
+                      className="px-4 py-3 text-right text-sm font-semibold text-ink cursor-pointer hover:text-gold"
                       onClick={() => handleSort('returns.ytd')}>
 
                             <div data-ev-id="ev_c509a336b7" className="flex items-center gap-1">
@@ -676,7 +676,7 @@ export default function PensionReturns() {
                             </div>
                           </th>
                           <th data-ev-id="ev_406c13a31b"
-                      className="px-4 py-3 text-right text-sm font-semibold text-navy cursor-pointer hover:text-gold"
+                      className="px-4 py-3 text-right text-sm font-semibold text-ink cursor-pointer hover:text-gold"
                       onClick={() => handleSort('returns.oneYear')}>
 
                             <div data-ev-id="ev_1e1660546c" className="flex items-center gap-1">
@@ -685,7 +685,7 @@ export default function PensionReturns() {
                             </div>
                           </th>
                           <th data-ev-id="ev_9eb46e69a3"
-                      className="px-4 py-3 text-right text-sm font-semibold text-navy cursor-pointer hover:text-gold"
+                      className="px-4 py-3 text-right text-sm font-semibold text-ink cursor-pointer hover:text-gold"
                       onClick={() => handleSort('returns.threeYears')}>
 
                             <div data-ev-id="ev_c5ab9fed93" className="flex items-center gap-1">
@@ -694,7 +694,7 @@ export default function PensionReturns() {
                             </div>
                           </th>
                           <th data-ev-id="ev_b26adde8af"
-                      className="px-4 py-3 text-right text-sm font-semibold text-navy cursor-pointer hover:text-gold"
+                      className="px-4 py-3 text-right text-sm font-semibold text-ink cursor-pointer hover:text-gold"
                       onClick={() => handleSort('returns.fiveYears')}>
 
                             <div data-ev-id="ev_2637b0bf18" className="flex items-center gap-1">
@@ -703,7 +703,7 @@ export default function PensionReturns() {
                             </div>
                           </th>
                           <th data-ev-id="ev_bd9729bb94"
-                      className="px-4 py-3 text-right text-sm font-semibold text-navy cursor-pointer hover:text-gold"
+                      className="px-4 py-3 text-right text-sm font-semibold text-ink cursor-pointer hover:text-gold"
                       onClick={() => handleSort('managementFee')}>
 
                             <div data-ev-id="ev_90bbf51ff1" className="flex items-center gap-1">
@@ -717,7 +717,7 @@ export default function PensionReturns() {
                         {sortedFunds.map((fund, index) =>
                     <tr data-ev-id="ev_4f58bff4b4"
                     key={fund.id}
-                    className={`hover:bg-muted/50 transition-colors ${
+                    className={`hover:bg-surface-2/50 transition-colors ${
                     selectedFunds.includes(fund.id) ? 'bg-gold/10' : ''}`
                     }>
 
@@ -730,54 +730,54 @@ export default function PensionReturns() {
 
                             </td>
                             <td data-ev-id="ev_45871a6722" className="px-4 py-4 text-center">
-                              <span data-ev-id="ev_1577b01eef" className="font-mono text-sm text-navy">
+                              <span data-ev-id="ev_1577b01eef" className="font-mono text-sm text-ink">
                                 {fund.fundNumber || '—'}
                               </span>
                             </td>
                             <td data-ev-id="ev_e3832becdd" className="px-4 py-4">
-                              <div data-ev-id="ev_2ed9c41354" className="font-medium text-navy">{fund.name}</div>
-                              <div data-ev-id="ev_1b0e60a896" className="text-sm text-slate">{fund.company}</div>
+                              <div data-ev-id="ev_2ed9c41354" className="font-medium text-ink">{fund.name}</div>
+                              <div data-ev-id="ev_1b0e60a896" className="text-sm text-ink-muted">{fund.company}</div>
                             </td>
                             <td data-ev-id="ev_e1c52dc480" className="px-4 py-4">
                               <span data-ev-id="ev_43dd3bf355" className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${
-                        fund.type === 'gemel' ? 'bg-blue-100 text-blue-700' :
-                        fund.type === 'hishtalmut' ? 'bg-green-100 text-green-700' :
-                        fund.type === 'pitzuim' ? 'bg-orange-100 text-orange-700' :
-                        'bg-purple-100 text-purple-700'}`
+                        fund.type === 'gemel' ? 'bg-blue-500/15 text-blue-400' :
+                        fund.type === 'hishtalmut' ? 'bg-green-500/15 text-green-400' :
+                        fund.type === 'pitzuim' ? 'bg-orange-500/15 text-orange-400' :
+                        'bg-purple-500/15 text-purple-400'}`
                         }>
                                 {fundTypeLabels[fund.type]}
                               </span>
                             </td>
-                            <td data-ev-id="ev_5c08308e06" className="px-4 py-4 text-slate">{fund.track}</td>
+                            <td data-ev-id="ev_5c08308e06" className="px-4 py-4 text-ink-muted">{fund.track}</td>
                             <td data-ev-id="ev_defa98656a" className="px-4 py-4">
                               <span data-ev-id="ev_bcdda9359b" className={`font-semibold ${
-                        fund.returns.ytd >= 0 ? 'text-green-600' : 'text-red-600'}`
+                        fund.returns.ytd >= 0 ? 'text-green-400' : 'text-red-400'}`
                         }>
                                 {fund.returns.ytd >= 0 ? '+' : ''}{fund.returns.ytd.toFixed(2)}%
                               </span>
                             </td>
                             <td data-ev-id="ev_65cd5b8f43" className="px-4 py-4">
                               <span data-ev-id="ev_e11d8b7634" className={`font-semibold ${
-                        fund.returns.oneYear >= 0 ? 'text-green-600' : 'text-red-600'}`
+                        fund.returns.oneYear >= 0 ? 'text-green-400' : 'text-red-400'}`
                         }>
                                 {fund.returns.oneYear >= 0 ? '+' : ''}{fund.returns.oneYear.toFixed(2)}%
                               </span>
                             </td>
                             <td data-ev-id="ev_0cbe9f6954" className="px-4 py-4">
                               <span data-ev-id="ev_fe4ef2dbd0" className={`font-semibold ${
-                        fund.returns.threeYears >= 0 ? 'text-green-600' : 'text-red-600'}`
+                        fund.returns.threeYears >= 0 ? 'text-green-400' : 'text-red-400'}`
                         }>
                                 {fund.returns.threeYears >= 0 ? '+' : ''}{fund.returns.threeYears.toFixed(2)}%
                               </span>
                             </td>
                             <td data-ev-id="ev_8249616aaa" className="px-4 py-4">
                               <span data-ev-id="ev_1e57d89101" className={`font-semibold ${
-                        fund.returns.fiveYears >= 0 ? 'text-green-600' : 'text-red-600'}`
+                        fund.returns.fiveYears >= 0 ? 'text-green-400' : 'text-red-400'}`
                         }>
                                 {fund.returns.fiveYears >= 0 ? '+' : ''}{fund.returns.fiveYears.toFixed(2)}%
                               </span>
                             </td>
-                            <td data-ev-id="ev_56b4731f1c" className="px-4 py-4 text-slate">{fund.managementFee.toFixed(2)}%</td>
+                            <td data-ev-id="ev_56b4731f1c" className="px-4 py-4 text-ink-muted">{fund.managementFee.toFixed(2)}%</td>
                           </tr>
                     )}
                       </tbody>
@@ -786,8 +786,8 @@ export default function PensionReturns() {
                 </div>) : (
 
             /* Chart View */
-            <div data-ev-id="ev_85b2fa470a" className="bg-white rounded-2xl border border-border p-6 shadow-sm">
-                  <h3 data-ev-id="ev_df0f7ba175" className="text-lg font-bold text-navy mb-6">השוואת תשואות - 10 הקופות המובילות</h3>
+            <div data-ev-id="ev_85b2fa470a" className="bg-surface rounded-2xl border border-border p-6 shadow-sm">
+                  <h3 data-ev-id="ev_df0f7ba175" className="text-lg font-bold text-ink mb-6">השוואת תשואות - 10 הקופות המובילות</h3>
                   <div data-ev-id="ev_7ecdc79c1a" className="h-96">
                     <ResponsiveContainer width="100%" height="100%">
                       <BarChart data={chartData}>
@@ -796,9 +796,9 @@ export default function PensionReturns() {
                         <YAxis unit="%" />
                         <Tooltip formatter={(value: number) => `${value.toFixed(2)}%`} />
                         <Legend />
-                        <Bar dataKey="שנה" fill="#1a365d" />
+                        <Bar dataKey="שנה" fill="#e8e2d4" />
                         <Bar dataKey="3 שנים" fill="#d4a853" />
-                        <Bar dataKey="5 שנים" fill="#64748b" />
+                        <Bar dataKey="5 שנים" fill="#4a5a7c" />
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
@@ -806,12 +806,12 @@ export default function PensionReturns() {
             }
 
               {/* Info Box */}
-              <div data-ev-id="ev_52fd09eadb" className="mt-8 bg-blue-50 rounded-2xl p-6 border border-blue-200">
+              <div data-ev-id="ev_52fd09eadb" className="mt-8 bg-blue-500/10 rounded-2xl p-6 border border-blue-500/30">
                 <div data-ev-id="ev_4f19a2e3fc" className="flex items-start gap-4">
-                  <Info className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <Info className="w-6 h-6 text-blue-400 flex-shrink-0 mt-1" />
                   <div data-ev-id="ev_801df18434">
-                    <h4 data-ev-id="ev_2cc095aca8" className="font-semibold text-blue-900 mb-2">על הנתונים</h4>
-                    <p data-ev-id="ev_cc2b8f51ac" className="text-blue-800 text-sm leading-relaxed">
+                    <h4 data-ev-id="ev_2cc095aca8" className="font-semibold text-blue-400 mb-2">על הנתונים</h4>
+                    <p data-ev-id="ev_cc2b8f51ac" className="text-blue-400 text-sm leading-relaxed">
                       הנתונים המוצגים מבוססים על מידע ציבורי מאתר גמל-נט של רשות שוק ההון. 
                       התשואות הן תשואות ברוטו (ללא ניכוי דמי ניהול) ומחושבות על בסיס שנתי ממוצע. 
                       נתונים אלו אינם מהווים המלצה להשקעה. ביצועי עבר אינם מעידים על ביצועים עתידיים.
@@ -820,7 +820,7 @@ export default function PensionReturns() {
                   href="https://gemelnet.cma.gov.il"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm mt-2">
+                  className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-400 text-sm mt-2">
 
                       <span data-ev-id="ev_96990a564f">לנתונים המלאים באתר גמל-נט</span>
                       <ExternalLink className="w-3 h-3" />
@@ -844,7 +844,7 @@ export default function PensionReturns() {
           </p>
           <Link
             to="/onboarding"
-            className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-semibold px-8 py-4 rounded-lg transition-colors">
+            className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-semibold px-8 py-4 rounded-lg transition-colors">
 
             <span data-ev-id="ev_dc94b92e41">קבע פגישת ייעוץ חינם</span>
           </Link>
@@ -854,7 +854,7 @@ export default function PensionReturns() {
       {/* Floating Offer Button */}
       <button data-ev-id="ev_b659b01171"
       onClick={() => setShowOfferPopup(true)}
-      className="fixed bottom-6 left-20 z-50 bg-gold hover:bg-gold-light text-navy font-bold px-6 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center gap-3 group">
+      className="fixed bottom-6 left-20 z-50 bg-gold hover:bg-gold-light text-navy-dark font-bold px-6 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center gap-3 group">
 
         <Gift className="w-6 h-6 group-hover:scale-110 transition-transform" />
         <span data-ev-id="ev_79c71eac44" className="hidden sm:inline">מגיע לך הטבה!</span>
@@ -875,7 +875,7 @@ export default function PensionReturns() {
             href="https://surense.com/app/p/9z3sqal"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-navy font-bold px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            className="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
 
               <FileText className="w-5 h-5" />
               להוצאת מידע פנסיוני עדכני

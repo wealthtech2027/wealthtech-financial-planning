@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" font-family="Heebo, Assistant, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1d3d"/>
+      <stop offset="1" stop-color="#070e20"/>
+    </linearGradient>
+    <radialGradient id="glowL" cx="0.3" cy="0.5" r="0.45">
+      <stop offset="0" stop-color="#d4a853" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#d4a853" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowR" cx="0.78" cy="0.5" r="0.35">
+      <stop offset="0" stop-color="#4a6fa5" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#4a6fa5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flow" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#d4a853" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#e8c47c" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a2c55" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#0f1d3d" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d4a853" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#d4a853" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="800" fill="url(#bg)"/>
+  <rect width="1600" height="800" fill="url(#grid)"/>
+  <rect width="1600" height="800" fill="url(#glowL)"/>
+  <rect width="1600" height="800" fill="url(#glowR)"/>
+
+  <!-- Tangled dashed lines between scattered items (the "confusion") -->
+  <g fill="none" stroke="#7f9cc9" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="6 8">
+    <path d="M1150 275 C1300 200, 1200 420, 1360 345"/>
+    <path d="M1170 475 C1250 330, 1420 600, 1375 520"/>
+    <path d="M1145 290 C1050 380, 1300 380, 1165 470"/>
+    <path d="M1355 360 C1460 420, 1220 560, 1380 515"/>
+  </g>
+
+  <!-- Gold flows converging into one clear picture -->
+  <g fill="none" stroke="url(#flow)" stroke-width="3" stroke-linecap="round">
+    <path d="M1070 270 C930 270, 880 330, 712 330"/>
+    <path d="M1265 350 C1000 345, 900 375, 712 375"/>
+    <path d="M1080 470 C930 470, 880 425, 712 425"/>
+    <path d="M1200 525 C980 525, 900 470, 712 470"/>
+  </g>
+  <g fill="#e8c47c">
+    <circle cx="712" cy="330" r="5"/>
+    <circle cx="712" cy="375" r="5"/>
+    <circle cx="712" cy="425" r="5"/>
+    <circle cx="712" cy="470" r="5"/>
+  </g>
+
+  <!-- Scattered product cards -->
+  <g filter="url(#soft)">
+    <g transform="translate(1065 225) rotate(-8)">
+      <rect width="180" height="92" rx="16" fill="#1a2c55" stroke="#7f9cc9" stroke-opacity="0.4"/>
+      <circle cx="148" cy="46" r="20" fill="#d4a853" fill-opacity="0.18"/>
+      <path d="M140 52 v-10 l8 -6 l8 6 v10 z" fill="none" stroke="#e8c47c" stroke-width="2.5" stroke-linejoin="round"/>
+      <text x="112" y="54" text-anchor="end" font-size="24" font-weight="700" fill="#ffffff" fill-opacity="0.9">פנסיה</text>
+    </g>
+    <g transform="translate(1265 300) rotate(6)">
+      <rect width="180" height="92" rx="16" fill="#1a2c55" stroke="#7f9cc9" stroke-opacity="0.4"/>
+      <circle cx="148" cy="46" r="20" fill="#d4a853" fill-opacity="0.18"/>
+      <path d="M148 34 l10 4 v8 c0 7 -5 11 -10 13 c-5 -2 -10 -6 -10 -13 v-8 z" fill="none" stroke="#e8c47c" stroke-width="2.5" stroke-linejoin="round"/>
+      <text x="112" y="54" text-anchor="end" font-size="24" font-weight="700" fill="#ffffff" fill-opacity="0.9">ביטוח</text>
+    </g>
+    <g transform="translate(1075 420) rotate(5)">
+      <rect width="180" height="92" rx="16" fill="#1a2c55" stroke="#7f9cc9" stroke-opacity="0.4"/>
+      <circle cx="148" cy="46" r="20" fill="#d4a853" fill-opacity="0.18"/>
+      <ellipse cx="148" cy="40" rx="9" ry="4" fill="none" stroke="#e8c47c" stroke-width="2.5"/>
+      <path d="M139 40 v12 c0 2 4 4 9 4 s9 -2 9 -4 v-12" fill="none" stroke="#e8c47c" stroke-width="2.5"/>
+      <text x="112" y="54" text-anchor="end" font-size="24" font-weight="700" fill="#ffffff" fill-opacity="0.9">חסכונות</text>
+    </g>
+    <g transform="translate(1290 470) rotate(-6)">
+      <rect width="180" height="92" rx="16" fill="#1a2c55" stroke="#7f9cc9" stroke-opacity="0.4"/>
+      <circle cx="148" cy="46" r="20" fill="#d4a853" fill-opacity="0.18"/>
+      <path d="M137 54 l7 -8 l6 5 l9 -12" fill="none" stroke="#e8c47c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="112" y="54" text-anchor="end" font-size="24" font-weight="700" fill="#ffffff" fill-opacity="0.9">השקעות</text>
+    </g>
+  </g>
+
+  <!-- Faint question marks around the scattered items -->
+  <g font-size="34" font-weight="700" fill="#7f9cc9" fill-opacity="0.35">
+    <text x="1300" y="255">?</text>
+    <text x="1480" y="410">?</text>
+    <text x="1235" y="605">?</text>
+  </g>
+
+  <!-- The organized family dashboard -->
+  <g filter="url(#soft)">
+    <rect x="230" y="225" width="480" height="350" rx="26" fill="url(#panel)" stroke="#d4a853" stroke-opacity="0.45" stroke-width="1.5"/>
+  </g>
+
+  <!-- Family icon -->
+  <g transform="translate(640 270)" fill="#e8c47c">
+    <circle cx="-22" cy="-8" r="8"/>
+    <path d="M-36 18 c0 -12 6 -18 14 -18 s14 6 14 18 z"/>
+    <circle cx="4" cy="-4" r="6" fill-opacity="0.8"/>
+    <path d="M-6 18 c0 -9 4 -14 10 -14 s10 5 10 14 z" fill-opacity="0.8"/>
+    <circle cx="26" cy="-8" r="8"/>
+    <path d="M12 18 c0 -12 6 -18 14 -18 s14 6 14 18 z"/>
+  </g>
+  <rect x="270" y="258" width="150" height="12" rx="6" fill="#ffffff" fill-opacity="0.85"/>
+  <rect x="270" y="280" width="100" height="8" rx="4" fill="#ffffff" fill-opacity="0.3"/>
+
+  <!-- Donut allocation -->
+  <g transform="translate(355 410) rotate(-90)" fill="none" stroke-width="26">
+    <circle r="70" stroke="#ffffff" stroke-opacity="0.06"/>
+    <circle r="70" stroke="#d4a853" stroke-dasharray="168 272"/>
+    <circle r="70" stroke="#e8c47c" stroke-dasharray="100 340" stroke-dashoffset="-172"/>
+    <circle r="70" stroke="#4a6fa5" stroke-dasharray="84 356" stroke-dashoffset="-276"/>
+    <circle r="70" stroke="#7f9cc9" stroke-dasharray="72 368" stroke-dashoffset="-364"/>
+  </g>
+  <circle cx="355" cy="410" r="44" fill="#0f1d3d"/>
+  <path d="M338 410 l12 12 l22 -24" fill="none" stroke="#e8c47c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Checklist rows -->
+  <g>
+    <g transform="translate(470 345)">
+      <circle cx="0" cy="0" r="11" fill="#d4a853"/>
+      <path d="M-5 0 l3.5 3.5 l6.5 -7" fill="none" stroke="#070e20" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="22" y="-6" width="150" height="12" rx="6" fill="#ffffff" fill-opacity="0.75"/>
+    </g>
+    <g transform="translate(470 390)">
+      <circle cx="0" cy="0" r="11" fill="#d4a853"/>
+      <path d="M-5 0 l3.5 3.5 l6.5 -7" fill="none" stroke="#070e20" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="22" y="-6" width="120" height="12" rx="6" fill="#ffffff" fill-opacity="0.75"/>
+    </g>
+    <g transform="translate(470 435)">
+      <circle cx="0" cy="0" r="11" fill="#d4a853"/>
+      <path d="M-5 0 l3.5 3.5 l6.5 -7" fill="none" stroke="#070e20" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="22" y="-6" width="140" height="12" rx="6" fill="#ffffff" fill-opacity="0.75"/>
+    </g>
+  </g>
+
+  <!-- Growth trend -->
+  <path d="M270 545 L350 528 L420 532 L500 510 L580 498 L670 470 L670 552 L270 552 Z" fill="url(#area)"/>
+  <path d="M270 545 L350 528 L420 532 L500 510 L580 498 L670 470" fill="none" stroke="#e8c47c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="670" cy="470" r="7" fill="#e8c47c"/>
+  <circle cx="670" cy="470" r="14" fill="#e8c47c" fill-opacity="0.25"/>
+
+  <!-- Sparkles -->
+  <g fill="#e8c47c">
+    <circle cx="180" cy="200" r="2.5" fill-opacity="0.6"/>
+    <circle cx="790" cy="230" r="2" fill-opacity="0.5"/>
+    <circle cx="160" cy="610" r="3" fill-opacity="0.4"/>
+    <circle cx="820" cy="600" r="2.5" fill-opacity="0.5"/>
+    <circle cx="960" cy="190" r="2" fill-opacity="0.4"/>
+  </g>
+</svg>

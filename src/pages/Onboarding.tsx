@@ -185,12 +185,12 @@ export default function Onboarding() {
       case 1:
         return (
           <div data-ev-id="ev_c7137817a5" className="flex flex-col gap-6">
-            <h2 data-ev-id="ev_c654e9273a" className="text-2xl font-bold text-navy">פרטים אישיים</h2>
-            <p data-ev-id="ev_d6009218f8" className="text-slate">ספרו לנו קצת על עצמכם כדי שנוכל להתאים את השירות בצורה הטובה ביותר.</p>
+            <h2 data-ev-id="ev_c654e9273a" className="text-2xl font-bold text-ink">פרטים אישיים</h2>
+            <p data-ev-id="ev_d6009218f8" className="text-ink-muted">ספרו לנו קצת על עצמכם כדי שנוכל להתאים את השירות בצורה הטובה ביותר.</p>
             
             <div data-ev-id="ev_7f74023773" className="grid md:grid-cols-2 gap-4">
               <div data-ev-id="ev_5e7d71ffc5">
-                <label data-ev-id="ev_f4ea808b6e" className="block text-sm font-medium text-navy mb-2">שם מלא *</label>
+                <label data-ev-id="ev_f4ea808b6e" className="block text-sm font-medium text-ink mb-2">שם מלא *</label>
                 <input data-ev-id="ev_5b194ed868"
                 type="text"
                 value={formData.fullName}
@@ -201,7 +201,7 @@ export default function Onboarding() {
               </div>
               
               <div data-ev-id="ev_219817eb74">
-                <label data-ev-id="ev_6630b29238" className="block text-sm font-medium text-navy mb-2">טלפון *</label>
+                <label data-ev-id="ev_6630b29238" className="block text-sm font-medium text-ink mb-2">טלפון *</label>
                 <input data-ev-id="ev_437d7c9784"
                 type="tel"
                 value={formData.phone}
@@ -212,7 +212,7 @@ export default function Onboarding() {
               </div>
               
               <div data-ev-id="ev_01f2046cf5">
-                <label data-ev-id="ev_14530a7bc1" className="block text-sm font-medium text-navy mb-2">אימייל *</label>
+                <label data-ev-id="ev_14530a7bc1" className="block text-sm font-medium text-ink mb-2">אימייל *</label>
                 <input data-ev-id="ev_7a198cb5d5"
                 type="email"
                 value={formData.email}
@@ -223,7 +223,7 @@ export default function Onboarding() {
               </div>
               
               <div data-ev-id="ev_b510b3a386">
-                <label data-ev-id="ev_3d6d330238" className="block text-sm font-medium text-navy mb-2">גיל</label>
+                <label data-ev-id="ev_3d6d330238" className="block text-sm font-medium text-ink mb-2">גיל</label>
                 <input data-ev-id="ev_5463c4a998"
                 type="number"
                 value={formData.age}
@@ -234,11 +234,11 @@ export default function Onboarding() {
               </div>
               
               <div data-ev-id="ev_34734ed03d">
-                <label data-ev-id="ev_49b33a77cc" className="block text-sm font-medium text-navy mb-2">מצב משפחתי</label>
+                <label data-ev-id="ev_49b33a77cc" className="block text-sm font-medium text-ink mb-2">מצב משפחתי</label>
                 <select data-ev-id="ev_6f79a6c14e"
                 value={formData.maritalStatus}
                 onChange={(e) => updateField('maritalStatus', e.target.value)}
-                className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-gold/50 bg-white">
+                className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-gold/50 bg-surface">
 
                   <option data-ev-id="ev_d425dd0dd2" value="">בחרו...</option>
                   <option data-ev-id="ev_e572e2c4b5" value="single">רווק/ה</option>
@@ -249,7 +249,7 @@ export default function Onboarding() {
               </div>
               
               <div data-ev-id="ev_8024dbdde4">
-                <label data-ev-id="ev_0cef4397de" className="block text-sm font-medium text-navy mb-2">מספר ילדים</label>
+                <label data-ev-id="ev_0cef4397de" className="block text-sm font-medium text-ink mb-2">מספר ילדים</label>
                 <input data-ev-id="ev_cf92c400db"
                 type="number"
                 value={formData.children}
@@ -260,7 +260,7 @@ export default function Onboarding() {
               </div>
               
               <div data-ev-id="ev_3544e29e92">
-                <label data-ev-id="ev_66dfa4f542" className="block text-sm font-medium text-navy mb-2">מקצוע / תפקיד</label>
+                <label data-ev-id="ev_66dfa4f542" className="block text-sm font-medium text-ink mb-2">מקצוע / תפקיד</label>
                 <input data-ev-id="ev_587eb993db"
                 type="text"
                 value={formData.occupation}
@@ -271,7 +271,7 @@ export default function Onboarding() {
               </div>
               
               <div data-ev-id="ev_033537f65b">
-                <label data-ev-id="ev_d2b0af64b1" className="block text-sm font-medium text-navy mb-2">תעשייה</label>
+                <label data-ev-id="ev_d2b0af64b1" className="block text-sm font-medium text-ink mb-2">תעשייה</label>
                 <input data-ev-id="ev_715456038e"
                 type="text"
                 value={formData.industry}
@@ -287,16 +287,16 @@ export default function Onboarding() {
       case 2:
         return (
           <div data-ev-id="ev_8c1d547b66" className="flex flex-col gap-6">
-            <h2 data-ev-id="ev_5b3add5860" className="text-2xl font-bold text-navy">מצב פיננסי נוכחי</h2>
-            <p data-ev-id="ev_e19e4498bb" className="text-slate">מידע זה יעזור לנו להבין את התמונה המלאה ולהתאים את ההמלצות.</p>
+            <h2 data-ev-id="ev_5b3add5860" className="text-2xl font-bold text-ink">מצב פיננסי נוכחי</h2>
+            <p data-ev-id="ev_e19e4498bb" className="text-ink-muted">מידע זה יעזור לנו להבין את התמונה המלאה ולהתאים את ההמלצות.</p>
             
             <div data-ev-id="ev_fd4952d296" className="grid md:grid-cols-2 gap-4">
               <div data-ev-id="ev_914c5c29ba">
-                <label data-ev-id="ev_6e4c0cfd4f" className="block text-sm font-medium text-navy mb-2">הכנסה חודשית נטו (⪨) *</label>
+                <label data-ev-id="ev_6e4c0cfd4f" className="block text-sm font-medium text-ink mb-2">הכנסה חודשית נטו (⪨) *</label>
                 <select data-ev-id="ev_7687504878"
                 value={formData.monthlyIncome}
                 onChange={(e) => updateField('monthlyIncome', e.target.value)}
-                className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-gold/50 bg-white">
+                className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-gold/50 bg-surface">
 
                   <option data-ev-id="ev_78b3d9c979" value="">בחרו טווח...</option>
                   <option data-ev-id="ev_631795905a" value="under-15k">עד 15,000 ⪨</option>
@@ -309,7 +309,7 @@ export default function Onboarding() {
               </div>
               
               <div data-ev-id="ev_296d98431a">
-                <label data-ev-id="ev_1b77aa3202" className="block text-sm font-medium text-navy mb-2">הכנסות נוספות (אופציות, דיבידנדים, שכ"ד)</label>
+                <label data-ev-id="ev_1b77aa3202" className="block text-sm font-medium text-ink mb-2">הכנסות נוספות (אופציות, דיבידנדים, שכ"ד)</label>
                 <input data-ev-id="ev_8203715451"
                 type="text"
                 value={formData.additionalIncome}
@@ -320,11 +320,11 @@ export default function Onboarding() {
               </div>
               
               <div data-ev-id="ev_5f44c2489b">
-                <label data-ev-id="ev_66c9b94044" className="block text-sm font-medium text-navy mb-2">הוצאות חודשיות ממוצעות</label>
+                <label data-ev-id="ev_66c9b94044" className="block text-sm font-medium text-ink mb-2">הוצאות חודשיות ממוצעות</label>
                 <select data-ev-id="ev_631cdb3c0d"
                 value={formData.monthlyExpenses}
                 onChange={(e) => updateField('monthlyExpenses', e.target.value)}
-                className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-gold/50 bg-white">
+                className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-gold/50 bg-surface">
 
                   <option data-ev-id="ev_7a3f3fb933" value="">בחרו טווח...</option>
                   <option data-ev-id="ev_549deab7ce" value="under-10k">עד 10,000 ⪨</option>
@@ -336,11 +336,11 @@ export default function Onboarding() {
               </div>
               
               <div data-ev-id="ev_92ef2a4a95">
-                <label data-ev-id="ev_1e313cf222" className="block text-sm font-medium text-navy mb-2">חסכונות נזילים (משוער)</label>
+                <label data-ev-id="ev_1e313cf222" className="block text-sm font-medium text-ink mb-2">חסכונות נזילים (משוער)</label>
                 <select data-ev-id="ev_5aa6561aa4"
                 value={formData.existingSavings}
                 onChange={(e) => updateField('existingSavings', e.target.value)}
-                className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-gold/50 bg-white">
+                className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-gold/50 bg-surface">
 
                   <option data-ev-id="ev_8bb098140b" value="">בחרו טווח...</option>
                   <option data-ev-id="ev_607c850b13" value="under-100k">עד 100,000 ⪨</option>
@@ -353,7 +353,7 @@ export default function Onboarding() {
               </div>
               
               <div data-ev-id="ev_e9b83b708d">
-                <label data-ev-id="ev_ddae5099af" className="block text-sm font-medium text-navy mb-2">נדל"ן (שווי משוער)</label>
+                <label data-ev-id="ev_ddae5099af" className="block text-sm font-medium text-ink mb-2">נדל"ן (שווי משוער)</label>
                 <input data-ev-id="ev_136e294f4c"
                 type="text"
                 value={formData.realEstate}
@@ -364,7 +364,7 @@ export default function Onboarding() {
               </div>
               
               <div data-ev-id="ev_04cf320177">
-                <label data-ev-id="ev_837f15e7e9" className="block text-sm font-medium text-navy mb-2">הלוואות / משכנתאות</label>
+                <label data-ev-id="ev_837f15e7e9" className="block text-sm font-medium text-ink mb-2">הלוואות / משכנתאות</label>
                 <input data-ev-id="ev_18232e8928"
                 type="text"
                 value={formData.loans}
@@ -380,11 +380,11 @@ export default function Onboarding() {
       case 3:
         return (
           <div data-ev-id="ev_d917b6fc8a" className="flex flex-col gap-6">
-            <h2 data-ev-id="ev_546626785a" className="text-2xl font-bold text-navy">מוצרים פיננסיים קיימים</h2>
-            <p data-ev-id="ev_941fb19e0f" className="text-slate">סמנו את המוצרים הפיננסיים שיש לכם כיום.</p>
+            <h2 data-ev-id="ev_546626785a" className="text-2xl font-bold text-ink">מוצרים פיננסיים קיימים</h2>
+            <p data-ev-id="ev_941fb19e0f" className="text-ink-muted">סמנו את המוצרים הפיננסיים שיש לכם כיום.</p>
             
             <div data-ev-id="ev_f9ada145cf">
-              <label data-ev-id="ev_007ad9d525" className="block text-sm font-medium text-navy mb-3">קרנות פנסיה / גמל</label>
+              <label data-ev-id="ev_007ad9d525" className="block text-sm font-medium text-ink mb-3">קרנות פנסיה / גמל</label>
               <div data-ev-id="ev_7433ca36bd" className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {['קרן פנסיה', 'קופת גמל', 'ביטוח מנהלים', 'קרן השתלמות', 'לא יודע / לא בטוח'].map((item) =>
                 <button data-ev-id="ev_39af7a092f"
@@ -393,8 +393,8 @@ export default function Onboarding() {
                 onClick={() => toggleArrayField('pensionFunds', item)}
                 className={`px-4 py-3 rounded-lg border transition-colors text-sm ${
                 formData.pensionFunds.includes(item) ?
-                'bg-gold text-navy border-gold' :
-                'bg-white border-border hover:border-gold'}`
+                'bg-gold text-navy-dark border-gold' :
+                'bg-surface border-border hover:border-gold'}`
                 }>
 
                     {item}
@@ -404,7 +404,7 @@ export default function Onboarding() {
             </div>
             
             <div data-ev-id="ev_14907761d5">
-              <label data-ev-id="ev_3efa629788" className="block text-sm font-medium text-navy mb-3">פוליסות ביטוח</label>
+              <label data-ev-id="ev_3efa629788" className="block text-sm font-medium text-ink mb-3">פוליסות ביטוח</label>
               <div data-ev-id="ev_95a52fef25" className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {['ביטוח חיים', 'ביטוח בריאות', 'ביטוח סיעודי', 'ביטוח אובדן כושר עבודה', 'לא בטוח'].map((item) =>
                 <button data-ev-id="ev_dd8b6097cd"
@@ -413,8 +413,8 @@ export default function Onboarding() {
                 onClick={() => toggleArrayField('insurancePolicies', item)}
                 className={`px-4 py-3 rounded-lg border transition-colors text-sm ${
                 formData.insurancePolicies.includes(item) ?
-                'bg-gold text-navy border-gold' :
-                'bg-white border-border hover:border-gold'}`
+                'bg-gold text-navy-dark border-gold' :
+                'bg-surface border-border hover:border-gold'}`
                 }>
 
                     {item}
@@ -424,7 +424,7 @@ export default function Onboarding() {
             </div>
             
             <div data-ev-id="ev_8ebdd38fee">
-              <label data-ev-id="ev_291833d3e5" className="block text-sm font-medium text-navy mb-3">השקעות קיימות</label>
+              <label data-ev-id="ev_291833d3e5" className="block text-sm font-medium text-ink mb-3">השקעות קיימות</label>
               <div data-ev-id="ev_2106504cab" className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {['תיק השקעות מנוהל', 'קרנות נאמנות', 'מניות', 'קרן השתלמות', 'אופציות עובדים', 'אין השקעות'].map((item) =>
                 <button data-ev-id="ev_0754fcb837"
@@ -433,8 +433,8 @@ export default function Onboarding() {
                 onClick={() => toggleArrayField('investments', item)}
                 className={`px-4 py-3 rounded-lg border transition-colors text-sm ${
                 formData.investments.includes(item) ?
-                'bg-gold text-navy border-gold' :
-                'bg-white border-border hover:border-gold'}`
+                'bg-gold text-navy-dark border-gold' :
+                'bg-surface border-border hover:border-gold'}`
                 }>
 
                     {item}
@@ -444,7 +444,7 @@ export default function Onboarding() {
             </div>
             
             <div data-ev-id="ev_248f992408">
-              <label data-ev-id="ev_b67bbf6819" className="block text-sm font-medium text-navy mb-2">מוצרים נוספים</label>
+              <label data-ev-id="ev_b67bbf6819" className="block text-sm font-medium text-ink mb-2">מוצרים נוספים</label>
               <textarea data-ev-id="ev_0aebf0fba7"
               value={formData.otherProducts}
               onChange={(e) => updateField('otherProducts', e.target.value)}
@@ -459,11 +459,11 @@ export default function Onboarding() {
       case 4:
         return (
           <div data-ev-id="ev_361c1bef7b" className="flex flex-col gap-6">
-            <h2 data-ev-id="ev_54b2747eed" className="text-2xl font-bold text-navy">יעדים פיננסיים</h2>
-            <p data-ev-id="ev_c77139c073" className="text-slate">מה אתם רוצים להשיג? בטווח הקרוב ובטווח הארוך.</p>
+            <h2 data-ev-id="ev_54b2747eed" className="text-2xl font-bold text-ink">יעדים פיננסיים</h2>
+            <p data-ev-id="ev_c77139c073" className="text-ink-muted">מה אתם רוצים להשיג? בטווח הקרוב ובטווח הארוך.</p>
             
             <div data-ev-id="ev_2e44b7ab3f">
-              <label data-ev-id="ev_68429dbf39" className="block text-sm font-medium text-navy mb-3">יעדים לטווח קצר (1-5 שנים)</label>
+              <label data-ev-id="ev_68429dbf39" className="block text-sm font-medium text-ink mb-3">יעדים לטווח קצר (1-5 שנים)</label>
               <div data-ev-id="ev_db57cc09bb" className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {['רכישת דירה', 'רכישת רכב', 'חתונה', 'טיול משפחתי', 'קרן חירום לילדים', 'השקעות להכנסה נוספת'].map((item) =>
                 <button data-ev-id="ev_d5df736587"
@@ -472,8 +472,8 @@ export default function Onboarding() {
                 onClick={() => toggleArrayField('shortTermGoals', item)}
                 className={`px-4 py-3 rounded-lg border transition-colors text-sm ${
                 formData.shortTermGoals.includes(item) ?
-                'bg-gold text-navy border-gold' :
-                'bg-white border-border hover:border-gold'}`
+                'bg-gold text-navy-dark border-gold' :
+                'bg-surface border-border hover:border-gold'}`
                 }>
 
                     {item}
@@ -483,7 +483,7 @@ export default function Onboarding() {
             </div>
             
             <div data-ev-id="ev_fefdd091a7">
-              <label data-ev-id="ev_4967ede516" className="block text-sm font-medium text-navy mb-3">יעדים לטווח ארוך (5+ שנים)</label>
+              <label data-ev-id="ev_4967ede516" className="block text-sm font-medium text-ink mb-3">יעדים לטווח ארוך (5+ שנים)</label>
               <div data-ev-id="ev_68b9d6d460" className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {['פרישה מוקדמת', 'חופש כלכלי', 'העברת עושר לדור הבא', 'מימון לימודים אקדמיים', 'הגנה על הון'].map((item) =>
                 <button data-ev-id="ev_ee63d502b4"
@@ -492,8 +492,8 @@ export default function Onboarding() {
                 onClick={() => toggleArrayField('longTermGoals', item)}
                 className={`px-4 py-3 rounded-lg border transition-colors text-sm ${
                 formData.longTermGoals.includes(item) ?
-                'bg-gold text-navy border-gold' :
-                'bg-white border-border hover:border-gold'}`
+                'bg-gold text-navy-dark border-gold' :
+                'bg-surface border-border hover:border-gold'}`
                 }>
 
                     {item}
@@ -504,7 +504,7 @@ export default function Onboarding() {
             
             <div data-ev-id="ev_149610bf8e" className="grid md:grid-cols-2 gap-4">
               <div data-ev-id="ev_2fc1e56e28">
-                <label data-ev-id="ev_47123e09eb" className="block text-sm font-medium text-navy mb-2">גיל פרישה מתוכנן</label>
+                <label data-ev-id="ev_47123e09eb" className="block text-sm font-medium text-ink mb-2">גיל פרישה מתוכנן</label>
                 <input data-ev-id="ev_9fafc8e59c"
                 type="number"
                 value={formData.retirementAge}
@@ -515,7 +515,7 @@ export default function Onboarding() {
               </div>
               
               <div data-ev-id="ev_125b6c2e95">
-                <label data-ev-id="ev_a1fdbc286c" className="block text-sm font-medium text-navy mb-2">הכנסה חודשית רצויה בפרישה</label>
+                <label data-ev-id="ev_a1fdbc286c" className="block text-sm font-medium text-ink mb-2">הכנסה חודשית רצויה בפרישה</label>
                 <input data-ev-id="ev_1a030218bb"
                 type="text"
                 value={formData.financialFreedom}
@@ -531,11 +531,11 @@ export default function Onboarding() {
       case 5:
         return (
           <div data-ev-id="ev_a7187e0858" className="flex flex-col gap-6">
-            <h2 data-ev-id="ev_322c5ee7cc" className="text-2xl font-bold text-navy">פרופיל סיכון</h2>
-            <p data-ev-id="ev_6f462c19ca" className="text-slate">הבנת פרופיל הסיכון שלכם תעזור לנו להתאים אסטרטגיית השקעה מותאמת.</p>
+            <h2 data-ev-id="ev_322c5ee7cc" className="text-2xl font-bold text-ink">פרופיל סיכון</h2>
+            <p data-ev-id="ev_6f462c19ca" className="text-ink-muted">הבנת פרופיל הסיכון שלכם תעזור לנו להתאים אסטרטגיית השקעה מותאמת.</p>
             
             <div data-ev-id="ev_a7516bc25e">
-              <label data-ev-id="ev_9b3ef09964" className="block text-sm font-medium text-navy mb-3">מה רמת הסיכון שלכם? *</label>
+              <label data-ev-id="ev_9b3ef09964" className="block text-sm font-medium text-ink mb-3">מה רמת הסיכון שלכם? *</label>
               <div data-ev-id="ev_4c2aa47517" className="flex flex-col gap-3">
                 {[
                 { value: 'conservative', label: 'שמרני - מעדיף שמירה על תשואה גבוהה' },
@@ -548,8 +548,8 @@ export default function Onboarding() {
                 onClick={() => updateField('riskTolerance', option.value)}
                 className={`px-4 py-4 rounded-lg border transition-colors text-right ${
                 formData.riskTolerance === option.value ?
-                'bg-gold text-navy border-gold' :
-                'bg-white border-border hover:border-gold'}`
+                'bg-gold text-navy-dark border-gold' :
+                'bg-surface border-border hover:border-gold'}`
                 }>
 
                     {option.label}
@@ -559,7 +559,7 @@ export default function Onboarding() {
             </div>
             
             <div data-ev-id="ev_322c029f91">
-              <label data-ev-id="ev_98896af94e" className="block text-sm font-medium text-navy mb-3">ניסיון בהשקעות</label>
+              <label data-ev-id="ev_98896af94e" className="block text-sm font-medium text-ink mb-3">ניסיון בהשקעות</label>
               <div data-ev-id="ev_b05ecc2742" className="flex flex-col gap-3">
                 {[
                 { value: 'none', label: 'אין ניסיון - חדש בתחום' },
@@ -573,8 +573,8 @@ export default function Onboarding() {
                 onClick={() => updateField('investmentExperience', option.value)}
                 className={`px-4 py-4 rounded-lg border transition-colors text-right ${
                 formData.investmentExperience === option.value ?
-                'bg-gold text-navy border-gold' :
-                'bg-white border-border hover:border-gold'}`
+                'bg-gold text-navy-dark border-gold' :
+                'bg-surface border-border hover:border-gold'}`
                 }>
 
                     {option.label}
@@ -584,7 +584,7 @@ export default function Onboarding() {
             </div>
             
             <div data-ev-id="ev_626d02bda6">
-              <label data-ev-id="ev_b04d53c5b1" className="block text-sm font-medium text-navy mb-3">איך תגיבו לירידה של 20% בתיק ההשקעות?</label>
+              <label data-ev-id="ev_b04d53c5b1" className="block text-sm font-medium text-ink mb-3">איך תגיבו לירידה של 20% בתיק ההשקעות?</label>
               <div data-ev-id="ev_56347a45ba" className="flex flex-col gap-3">
                 {[
                 { value: 'sell', label: 'אמכור הכל - לא יכול לסבול הפסדים' },
@@ -597,8 +597,8 @@ export default function Onboarding() {
                 onClick={() => updateField('marketDropReaction', option.value)}
                 className={`px-4 py-4 rounded-lg border transition-colors text-right ${
                 formData.marketDropReaction === option.value ?
-                'bg-gold text-navy border-gold' :
-                'bg-white border-border hover:border-gold'}`
+                'bg-gold text-navy-dark border-gold' :
+                'bg-surface border-border hover:border-gold'}`
                 }>
 
                     {option.label}
@@ -612,11 +612,11 @@ export default function Onboarding() {
       case 6:
         return (
           <div data-ev-id="ev_39b15d3a6c" className="flex flex-col gap-6">
-            <h2 data-ev-id="ev_c7b8f5bc2d" className="text-2xl font-bold text-navy">צרכים מיוחדים והעדפות</h2>
-            <p data-ev-id="ev_d91ecf9a86" className="text-slate">כמעט סיימנו! ספרו לנו אם יש לכם צרכים מיוחדים או העדפות ליצירת קשר.</p>
+            <h2 data-ev-id="ev_c7b8f5bc2d" className="text-2xl font-bold text-ink">צרכים מיוחדים והעדפות</h2>
+            <p data-ev-id="ev_d91ecf9a86" className="text-ink-muted">כמעט סיימנו! ספרו לנו אם יש לכם צרכים מיוחדים או העדפות ליצירת קשר.</p>
             
             <div data-ev-id="ev_f0ea33b283">
-              <label data-ev-id="ev_eed6e209ed" className="block text-sm font-medium text-navy mb-3">שירותים שמעניינים אתכם</label>
+              <label data-ev-id="ev_eed6e209ed" className="block text-sm font-medium text-ink mb-3">שירותים שמעניינים אתכם</label>
               <div data-ev-id="ev_babd0340bf" className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {['תכנון פרישה', 'מיסוי אופציות', 'תיאום מס', 'ניהול תיק השקעות', 'ביטוח ופנסיה', 'השקעות אלטרנטיביות'].map((item) =>
                 <button data-ev-id="ev_cb5cbb3412"
@@ -625,8 +625,8 @@ export default function Onboarding() {
                 onClick={() => toggleArrayField('specificServices', item)}
                 className={`px-4 py-3 rounded-lg border transition-colors text-sm ${
                 formData.specificServices.includes(item) ?
-                'bg-gold text-navy border-gold' :
-                'bg-white border-border hover:border-gold'}`
+                'bg-gold text-navy-dark border-gold' :
+                'bg-surface border-border hover:border-gold'}`
                 }>
 
                     {item}
@@ -636,7 +636,7 @@ export default function Onboarding() {
             </div>
             
             <div data-ev-id="ev_6459b8e670">
-              <label data-ev-id="ev_df828813e9" className="block text-sm font-medium text-navy mb-2">נושאים דחופים לטיפול</label>
+              <label data-ev-id="ev_df828813e9" className="block text-sm font-medium text-ink mb-2">נושאים דחופים לטיפול</label>
               <textarea data-ev-id="ev_1e8b550bed"
               value={formData.urgentMatters}
               onChange={(e) => updateField('urgentMatters', e.target.value)}
@@ -647,7 +647,7 @@ export default function Onboarding() {
             </div>
             
             <div data-ev-id="ev_22812612fd">
-              <label data-ev-id="ev_6aeca35c7e" className="block text-sm font-medium text-navy mb-2">הערות נוספות</label>
+              <label data-ev-id="ev_6aeca35c7e" className="block text-sm font-medium text-ink mb-2">הערות נוספות</label>
               <textarea data-ev-id="ev_a307e067a2"
               value={formData.additionalNotes}
               onChange={(e) => updateField('additionalNotes', e.target.value)}
@@ -659,11 +659,11 @@ export default function Onboarding() {
             
             <div data-ev-id="ev_ebd918b616" className="grid md:grid-cols-2 gap-4">
               <div data-ev-id="ev_42c99bef9c">
-                <label data-ev-id="ev_e0918ccc5a" className="block text-sm font-medium text-navy mb-2">אמצעי תקשורת מועדף *</label>
+                <label data-ev-id="ev_e0918ccc5a" className="block text-sm font-medium text-ink mb-2">אמצעי תקשורת מועדף *</label>
                 <select data-ev-id="ev_fbae3b6810"
                 value={formData.preferredContact}
                 onChange={(e) => updateField('preferredContact', e.target.value)}
-                className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-gold/50 bg-white">
+                className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-gold/50 bg-surface">
 
                   <option data-ev-id="ev_316c7b7009" value="">בחרו...</option>
                   <option data-ev-id="ev_7d96dc2a28" value="phone">טלפון</option>
@@ -674,11 +674,11 @@ export default function Onboarding() {
               </div>
               
               <div data-ev-id="ev_e0bd48c932">
-                <label data-ev-id="ev_a7056d724b" className="block text-sm font-medium text-navy mb-2">שעות נוחות לשיחה</label>
+                <label data-ev-id="ev_a7056d724b" className="block text-sm font-medium text-ink mb-2">שעות נוחות לשיחה</label>
                 <select data-ev-id="ev_2918921f54"
                 value={formData.bestTimeToCall}
                 onChange={(e) => updateField('bestTimeToCall', e.target.value)}
-                className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-gold/50 bg-white">
+                className="w-full px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-gold/50 bg-surface">
 
                   <option data-ev-id="ev_a88d5e3c99" value="">בחרו...</option>
                   <option data-ev-id="ev_b81b08bf06" value="morning">בוקר (8:00-12:00)</option>
@@ -697,18 +697,18 @@ export default function Onboarding() {
 
   if (isSubmitted) {
     return (
-      <div data-ev-id="ev_b6e274a51c" className="min-h-screen bg-light font-sans flex items-center justify-center p-4">
-        <div data-ev-id="ev_ee04056ed6" className="bg-white rounded-3xl shadow-lg p-8 md:p-12 max-w-lg w-full text-center">
-          <div data-ev-id="ev_bc8dad6188" className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle2 className="w-10 h-10 text-green-600" />
+      <div data-ev-id="ev_b6e274a51c" className="min-h-screen bg-surface-2 font-sans flex items-center justify-center p-4">
+        <div data-ev-id="ev_ee04056ed6" className="bg-surface rounded-3xl shadow-lg p-8 md:p-12 max-w-lg w-full text-center">
+          <div data-ev-id="ev_bc8dad6188" className="w-20 h-20 bg-green-500/15 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle2 className="w-10 h-10 text-green-400" />
           </div>
-          <h2 data-ev-id="ev_4df58998cc" className="text-2xl font-bold text-navy mb-4">תודה רבה!</h2>
-          <p data-ev-id="ev_7b33cee6f5" className="text-slate mb-6">
+          <h2 data-ev-id="ev_4df58998cc" className="text-2xl font-bold text-ink mb-4">תודה רבה!</h2>
+          <p data-ev-id="ev_7b33cee6f5" className="text-ink-muted mb-6">
             קיבלנו את הפרטים שלך בהצלחה. נציג איתך בקרוב כדי לתאם פגישת היכרות.
           </p>
           <Link
             to="/"
-            className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-semibold px-6 py-3 rounded-lg transition-colors">
+            className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-3 rounded-lg transition-colors">
 
             <span data-ev-id="ev_dc23bb6321">חזרה לאתר</span>
           </Link>
@@ -718,19 +718,19 @@ export default function Onboarding() {
   }
 
   return (
-    <div data-ev-id="ev_1c1b276e57" className="min-h-screen bg-light font-sans">
+    <div data-ev-id="ev_1c1b276e57" className="min-h-screen hero-tech font-sans">
       {/* Header */}
-      <header data-ev-id="ev_aa10117d63" className="bg-white border-b border-border">
+      <header data-ev-id="ev_aa10117d63" className="bg-surface border-b border-border">
         <div data-ev-id="ev_746c360b32" className="max-w-4xl mx-auto px-4 py-4">
           <div data-ev-id="ev_2a0c4570da" className="flex items-center justify-between">
             <Logo />
-            <span data-ev-id="ev_1c6d1a23b6" className="text-sm text-slate">שאלון היכרות</span>
+            <span data-ev-id="ev_1c6d1a23b6" className="text-sm text-ink-muted">שאלון היכרות</span>
           </div>
         </div>
       </header>
 
       {/* Progress */}
-      <div data-ev-id="ev_65d97d1341" className="bg-white border-b border-border sticky top-0 z-40">
+      <div data-ev-id="ev_65d97d1341" className="bg-surface border-b border-border sticky top-0 z-40">
         <div data-ev-id="ev_98266da4ae" className="max-w-4xl mx-auto px-4 py-4">
           <div data-ev-id="ev_1c72cf7673" className="flex items-center justify-between mb-4">
             {steps.map((step, index) =>
@@ -740,8 +740,8 @@ export default function Onboarding() {
               currentStep > step.number ?
               'bg-green-500 text-white' :
               currentStep === step.number ?
-              'bg-gold text-navy' :
-              'bg-muted text-slate'}`
+              'bg-gold text-navy-dark' :
+              'bg-surface-2 text-ink-muted'}`
               }>
 
                   {currentStep > step.number ?
@@ -753,7 +753,7 @@ export default function Onboarding() {
                 {index < steps.length - 1 &&
               <div data-ev-id="ev_af7c5190be"
               className={`hidden sm:block w-12 lg:w-24 h-1 mx-2 rounded ${
-              currentStep > step.number ? 'bg-green-500' : 'bg-muted'}`
+              currentStep > step.number ? 'bg-green-500' : 'bg-surface-2'}`
               } />
 
               }
@@ -761,21 +761,21 @@ export default function Onboarding() {
             )}
           </div>
           <div data-ev-id="ev_d619fe2178" className="text-center">
-            <span data-ev-id="ev_624aaed1ac" className="text-sm text-slate">שלב {currentStep} מתוך 6</span>
-            <h3 data-ev-id="ev_9a6e51a080" className="font-semibold text-navy">{steps[currentStep - 1].title}</h3>
+            <span data-ev-id="ev_624aaed1ac" className="text-sm text-ink-muted">שלב {currentStep} מתוך 6</span>
+            <h3 data-ev-id="ev_9a6e51a080" className="font-semibold text-ink">{steps[currentStep - 1].title}</h3>
           </div>
         </div>
       </div>
 
       {/* Form Content */}
       <main data-ev-id="ev_d4a5deec7e" className="max-w-4xl mx-auto px-4 py-8">
-        <div data-ev-id="ev_025015dcc3" className="bg-white rounded-2xl shadow-sm border border-border p-6 md:p-8">
+        <div data-ev-id="ev_025015dcc3" className="bg-surface rounded-2xl shadow-sm border border-border p-6 md:p-8">
           {renderStepContent()}
 
           {submitError &&
-          <div data-ev-id="ev_97f5a2cc59" className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center gap-3">
-              <AlertCircle className="w-5 h-5 text-red-600" />
-              <p data-ev-id="ev_42e066fc08" className="text-red-700">{submitError}</p>
+          <div data-ev-id="ev_97f5a2cc59" className="mt-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg flex items-center gap-3">
+              <AlertCircle className="w-5 h-5 text-red-400" />
+              <p data-ev-id="ev_42e066fc08" className="text-red-400">{submitError}</p>
             </div>
           }
 
@@ -787,8 +787,8 @@ export default function Onboarding() {
             disabled={currentStep === 1}
             className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-colors ${
             currentStep === 1 ?
-            'text-slate/50 cursor-not-allowed' :
-            'text-navy hover:bg-muted'}`
+            'text-ink-muted/50 cursor-not-allowed' :
+            'text-ink hover:bg-surface-2'}`
             }>
 
               <ChevronRight className="w-5 h-5" />
@@ -802,8 +802,8 @@ export default function Onboarding() {
             disabled={!canProceed()}
             className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-colors ${
             canProceed() ?
-            'bg-gold hover:bg-gold-light text-navy' :
-            'bg-muted text-slate cursor-not-allowed'}`
+            'bg-gold hover:bg-gold-light text-navy-dark' :
+            'bg-surface-2 text-ink-muted cursor-not-allowed'}`
             }>
 
                 <span data-ev-id="ev_4fb75f99bf">הבא</span>
@@ -817,7 +817,7 @@ export default function Onboarding() {
             className={`flex items-center gap-2 px-8 py-3 rounded-lg font-semibold transition-colors ${
             canProceed() && !isSubmitting ?
             'bg-green-600 hover:bg-green-700 text-white' :
-            'bg-muted text-slate cursor-not-allowed'}`
+            'bg-surface-2 text-ink-muted cursor-not-allowed'}`
             }>
 
                 {isSubmitting ?

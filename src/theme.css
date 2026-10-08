@@ -5,36 +5,98 @@
 @theme {
 	/* Font Family */
 	--font-sans: 'Heebo', system-ui, sans-serif;
-	
-	/* Brand Colors - Navy & Gold */
-	--color-navy: #1a365d;
-	--color-navy-light: #2d4a6f;
-	--color-navy-dark: #0f2442;
+	--font-display: 'Heebo', system-ui, sans-serif;
+	--font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+	/* Brand Colors - Midnight Navy & Gold (dark premium) */
+	--color-navy: #0f1d3d;
+	--color-navy-light: #1a2c55;
+	--color-navy-dark: #070e20;
 	--color-gold: #d4a853;
-	--color-gold-light: #e4be73;
+	--color-gold-light: #e8c47c;
 	--color-gold-dark: #b8903f;
-	
+
 	/* Neutral Colors */
-	--color-slate: #64748b;
-	--color-slate-light: #94a3b8;
-	
+	--color-slate: #9aa6bf;
+	--color-slate-light: #c3cbdb;
+
+	/* Surfaces (darkest → raised) */
+	--color-surface: #0b1530;
+	--color-surface-2: #081124;
+	--color-surface-3: #13214a;
+
+	/* Text */
+	--color-ink: #f3eee3;
+	--color-ink-muted: #9aa6bf;
+
 	/* Background & Surface */
-	--color-background: #ffffff;
-	--color-foreground: #1a365d;
-	--color-muted: #f8fafc;
-	--color-muted-foreground: #64748b;
-	
+	--color-background: #081124;
+	--color-foreground: #f3eee3;
+	--color-muted: #081124;
+	--color-muted-foreground: #9aa6bf;
+
 	/* Border */
-	--color-border: #e2e8f0;
-	
+	--color-border: #ffffff1a;
+
 	/* Semantic */
-	--color-primary: #1a365d;
-	--color-primary-foreground: #ffffff;
-	--color-secondary: #d4a853;
-	--color-secondary-foreground: #1a365d;
-	
+	--color-primary: #d4a853;
+	--color-primary-foreground: #070e20;
+	--color-secondary: #13214a;
+	--color-secondary-foreground: #f3eee3;
+
 	/* Animation */
 	--animate-marquee: marquee 30s linear infinite;
+}
+
+/* Dark premium base */
+html {
+  color-scheme: dark;
+  background-color: var(--color-background);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background-color: #d4a85366;
+  color: #ffffff;
+}
+
+input, select, textarea {
+  background-color: var(--color-surface-2);
+  color: var(--color-ink);
+}
+
+input::placeholder, textarea::placeholder {
+  color: #9aa6bf99;
+}
+
+/* Recharts on dark */
+.recharts-cartesian-grid line {
+  stroke: #ffffff14;
+}
+
+.recharts-cartesian-axis-tick text,
+.recharts-legend-item-text {
+  fill: #9aa6bf;
+}
+
+.recharts-default-tooltip {
+  background-color: #0b1530 !important;
+  border: 1px solid #d4a85355 !important;
+  border-radius: 10px;
+}
+
+.recharts-tooltip-label {
+  color: #f3eee3 !important;
 }
 
 @keyframes marquee {
@@ -52,7 +114,7 @@
 }
 
 .high-contrast * {
-  border-color: #000 !important;
+  border-color: #fff !important;
 }
 
 .grayscale-mode {
@@ -72,4 +134,136 @@
 .stop-animations *::after {
   animation: none !important;
   transition: none !important;
+}
+
+/* Premium CTA glow */
+.cta-glow {
+  background-image:
+    radial-gradient(ellipse 60% 80% at 50% 0%, #d4a8532e, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 50% 100%, #1a2c5580, transparent 70%);
+}
+
+/* Keep nav items on one line */
+nav a,
+nav button {
+  white-space: nowrap;
+}
+
+/* ---------- Fintech visual system ---------- */
+
+/* Blueprint grid background, faded at the edges */
+.bg-grid {
+  background-image:
+    linear-gradient(#ffffff0a 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff0a 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 40%, transparent 100%);
+}
+
+.glass-panel {
+  background: linear-gradient(160deg, #13214acc, #0b1530e6);
+  border: 1px solid #ffffff1a;
+  box-shadow: 0 30px 80px -20px #000000b3, inset 0 1px 0 #ffffff14;
+  backdrop-filter: blur(12px);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(100deg, #b8903f, #f3d48c 45%, #d4a853 70%, #b8903f);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+@keyframes shimmer {
+  to { background-position: 200% center; }
+}
+
+/* Card with gold edge glow on hover */
+.card-tech {
+  position: relative;
+  background: linear-gradient(160deg, #0f1c3d, #0a142c);
+  border: 1px solid #ffffff14;
+  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+
+.card-tech:hover {
+  transform: translateY(-4px);
+  border-color: #d4a85366;
+  box-shadow: 0 20px 50px -20px #d4a85340;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero dashboard animations */
+.chart-draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw 2.2s .3s ease-out forwards;
+}
+
+.chart-fill,
+.chart-dot {
+  opacity: 0;
+  animation: fade-in .8s 2s ease forwards;
+}
+
+.scan-bar {
+  width: 0;
+  animation: scan 2.6s .4s ease-in-out forwards;
+}
+
+.scan-item {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: item-in .5s ease forwards;
+}
+
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes fade-in { to { opacity: 1; } }
+@keyframes scan { to { width: 100%; } }
+@keyframes item-in { to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .scan-item, .chart-fill, .chart-dot { opacity: 1; transform: none; animation: none; transition: none; }
+  .chart-draw { stroke-dashoffset: 0; animation: none; }
+  .scan-bar { width: 100%; animation: none; }
+  .text-gradient-gold { animation: none; }
+}
+
+/* Accessibility widget "stop animations" must not leave elements hidden */
+.stop-animations .reveal,
+.stop-animations .scan-item,
+.stop-animations .chart-fill,
+.stop-animations .chart-dot { opacity: 1; transform: none; }
+.stop-animations .chart-draw { stroke-dashoffset: 0; }
+.stop-animations .scan-bar { width: 100%; }
+
+/* Page hero: grid + glows, no overlay element needed */
+.hero-tech {
+  background-color: #070e20;
+  background-image:
+    radial-gradient(ellipse 60% 55% at 25% 0%, #d4a8531f, transparent 70%),
+    radial-gradient(ellipse 50% 60% at 100% 100%, #3b82f614, transparent 70%),
+    linear-gradient(#ffffff08 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff08 1px, transparent 1px);
+  background-size: auto, auto, 56px 56px, 56px 56px;
+  border-bottom: 1px solid #ffffff12;
+}
+
+/* Highlighted result / feature panel */
+.panel-accent {
+  background: linear-gradient(160deg, #1a2c55, #0f1d3d 60%, #0b1530);
+  border: 1px solid #d4a85333;
 }

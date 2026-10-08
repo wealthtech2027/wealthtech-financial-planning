@@ -30,8 +30,9 @@ import { supabase } from '@/integrations/supabase/client';
 import articleInvestmentAdvisorImage from '@/assets/uploads/article-investment-advisor.jpg';
 import articleQualifiedInvestorImage from '@/assets/generated/article-qualified-investor.jpg.png';
 import articleMortgageInsuranceImage from '@/assets/generated/article-mortgage-insurance.png';
-import articleHedgeFundsImage from '@/assets/generated/article-hedge-funds.png';
+import articleHedgeFundsImage from '@/assets/generated/article-hedge-funds-wallst.svg';
 import workshopFamilyFinanceImage from '@/assets/uploads/workshop-family-finance.jpg';
+import articleFamilyFinanceImage from '@/assets/generated/article-family-finance.svg';
 
 type MediaTab = 'all' | 'videos' | 'podcasts' | 'articles' | 'press';
 
@@ -142,39 +143,39 @@ export default function Media() {
             e.stopPropagation();
             setShowShareMenu(isOpen ? null : articleId || 'page');
           }}
-          className="flex items-center gap-1 text-slate hover:text-gold transition-colors p-2 rounded-lg hover:bg-gray-100">
+          className="flex items-center gap-1 text-ink-muted hover:text-gold transition-colors p-2 rounded-lg hover:bg-surface-3">
 
             <Share2 className="w-4 h-4" />
             <span data-ev-id="ev_9f0f45d9e0" className="text-sm">שתף</span>
           </button>
           
           {isOpen &&
-          <div data-ev-id="ev_a36920054b" className="absolute left-0 top-full mt-2 bg-white rounded-xl shadow-xl border border-border p-3 z-50 min-w-[200px]">
+          <div data-ev-id="ev_a36920054b" className="absolute left-0 top-full mt-2 bg-surface rounded-xl shadow-xl border border-border p-3 z-50 min-w-[200px]">
               <div data-ev-id="ev_6d3ba747eb" className="flex flex-col gap-2">
                 <button data-ev-id="ev_98cceac37a"
               onClick={(e) => {e.stopPropagation();shareToFacebook(title, articleId);}}
-              className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-blue-50 text-slate hover:text-blue-600 transition-colors">
+              className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-blue-500/10 text-ink-muted hover:text-blue-400 transition-colors">
 
                   <Facebook className="w-5 h-5" />
                   <span data-ev-id="ev_777f381a2f" className="text-sm">Facebook</span>
                 </button>
                 <button data-ev-id="ev_7298b19f64"
               onClick={(e) => {e.stopPropagation();shareToTwitter(title, articleId);}}
-              className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-sky-50 text-slate hover:text-sky-500 transition-colors">
+              className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-sky-500/10 text-ink-muted hover:text-sky-500 transition-colors">
 
                   <Twitter className="w-5 h-5" />
                   <span data-ev-id="ev_e65268ac3e" className="text-sm">X (Twitter)</span>
                 </button>
                 <button data-ev-id="ev_3fcfefe5b9"
               onClick={(e) => {e.stopPropagation();shareToLinkedIn(title, articleId);}}
-              className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-blue-50 text-slate hover:text-blue-700 transition-colors">
+              className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-blue-500/10 text-ink-muted hover:text-blue-400 transition-colors">
 
                   <Linkedin className="w-5 h-5" />
                   <span data-ev-id="ev_a95df35e1c" className="text-sm">LinkedIn</span>
                 </button>
                 <button data-ev-id="ev_ce03e3a636"
               onClick={(e) => {e.stopPropagation();shareToWhatsApp(title, articleId);}}
-              className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-green-50 text-slate hover:text-green-600 transition-colors">
+              className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-green-500/10 text-ink-muted hover:text-green-400 transition-colors">
 
                   <MessageCircle className="w-5 h-5" />
                   <span data-ev-id="ev_5883089742" className="text-sm">WhatsApp</span>
@@ -182,7 +183,7 @@ export default function Media() {
                 <div data-ev-id="ev_17b69ff7f4" className="border-t border-border my-1" />
                 <button data-ev-id="ev_84de74f39e"
               onClick={(e) => {e.stopPropagation();copyLink(title, articleId);}}
-              className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 text-slate transition-colors">
+              className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-3 text-ink-muted transition-colors">
 
                   {copiedLink === (articleId || 'page') ?
                 <>
@@ -205,7 +206,7 @@ export default function Media() {
 
     return (
       <div data-ev-id="ev_f5629fa044" className="flex items-center gap-2">
-        <span data-ev-id="ev_a1fb9949aa" className="text-sm text-slate ml-2">שתף:</span>
+        <span data-ev-id="ev_a1fb9949aa" className="text-sm text-ink-muted ml-2">שתף:</span>
         <button data-ev-id="ev_29a11092d2"
         onClick={() => shareToFacebook(title, articleId)}
         className="w-9 h-9 rounded-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center transition-colors"
@@ -239,7 +240,7 @@ export default function Media() {
         className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors ${
         copiedLink === (articleId || 'page') ?
         'bg-green-500 text-white' :
-        'bg-gray-200 hover:bg-gray-300 text-slate'}`
+        'bg-surface-3 hover:bg-surface-3 text-ink-muted'}`
         }
         title="העתק קישור">
 
@@ -258,15 +259,6 @@ export default function Media() {
 
 
   const videos: Video[] = [
-  {
-    id: '1',
-    title: 'וובינר תקופתי רבעון ראשון 2026',
-    description: 'וובינר תקופתי של פיוניר - סקירת שוק, תובנות והזדמנויות השקעה לרבעון הראשון של 2026.',
-    date: 'ינואר 2026',
-    duration: '',
-    thumbnail: `https://img.youtube.com/vi/dXF8HGhIvTQ/maxresdefault.jpg`,
-    youtubeId: 'dXF8HGhIvTQ'
-  },
   {
     id: '2',
     title: 'אודי חברוני מסביר: איך לתכנן את העתיד הפיננסי שלך',
@@ -592,7 +584,7 @@ export default function Media() {
     date: 'מאי 2026',
     readTime: '5 דקות קריאה',
     author: 'אודי חברוני',
-    image: workshopFamilyFinanceImage,
+    image: articleFamilyFinanceImage,
     hasLeadForm: true,
     flyerImage: workshopFamilyFinanceImage
   },
@@ -707,37 +699,37 @@ export default function Media() {
   };
 
   return (
-    <div data-ev-id="ev_f29efa199e" className="min-h-screen bg-white font-sans">
+    <div data-ev-id="ev_f29efa199e" className="min-h-screen bg-surface font-sans">
       {/* Navigation */}
-      <nav data-ev-id="ev_20d9cec14b" className="fixed top-0 right-0 left-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+      <nav data-ev-id="ev_20d9cec14b" className="fixed top-0 right-0 left-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-border">
         <div data-ev-id="ev_5d320fe5dc" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div data-ev-id="ev_4fa92178ec" className="flex justify-between items-center h-20">
             <Logo />
             
-            <div data-ev-id="ev_977fe5f0c5" className="hidden md:flex items-center gap-8">
-              <Link to="/" className="text-slate hover:text-navy transition-colors font-medium">ראשי</Link>
-              <Link to="/#about" className="text-slate hover:text-navy transition-colors font-medium">אודות</Link>
-              <Link to="/products" className="text-slate hover:text-navy transition-colors font-medium">מוצרים</Link>
+            <div data-ev-id="ev_977fe5f0c5" className="hidden xl:flex items-center gap-4 2xl:gap-7 text-[15px] 2xl:text-base">
+              <Link to="/" className="text-ink-muted hover:text-ink transition-colors font-medium">ראשי</Link>
+              <Link to="/#about" className="text-ink-muted hover:text-ink transition-colors font-medium">אודות</Link>
+              <Link to="/products" className="text-ink-muted hover:text-ink transition-colors font-medium">מוצרים</Link>
               <Link to="/media" className="text-gold font-medium">מדיה</Link>
-              <Link to="/links" className="text-slate hover:text-navy transition-colors font-medium">קישורים</Link>
+              <Link to="/links" className="text-ink-muted hover:text-ink transition-colors font-medium">קישורים</Link>
               <a data-ev-id="ev_76f1c08566"
               href="https://surense.com/app/p/9z3sqal"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-navy hover:bg-navy-light text-white font-semibold px-5 py-2.5 rounded-lg transition-colors flex items-center gap-2">
+              className="bg-gold hover:bg-gold-light text-navy-dark font-semibold px-5 py-2.5 rounded-lg transition-colors flex items-center gap-2">
 
                 <FileText className="w-4 h-4" />
                 להוצאת מידע עדכני
               </a>
               <Link
                 to="/onboarding"
-                className="bg-gold hover:bg-gold-light text-navy font-semibold px-6 py-2.5 rounded-lg transition-colors">
+                className="bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-2.5 rounded-lg transition-colors">
                 התחל תהליך
               </Link>
             </div>
 
             <button data-ev-id="ev_4e2749cdcf"
-            className="md:hidden p-2"
+            className="xl:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -745,24 +737,24 @@ export default function Media() {
         </div>
 
         {mobileMenuOpen &&
-        <div data-ev-id="ev_e80475717e" className="md:hidden bg-white border-t border-border">
+        <div data-ev-id="ev_e80475717e" className="xl:hidden bg-surface border-t border-border">
             <div data-ev-id="ev_b1196b7ba7" className="px-4 py-4 flex flex-col gap-4">
-              <Link to="/" className="text-slate hover:text-navy font-medium py-2">ראשי</Link>
-              <Link to="/products" className="text-slate hover:text-navy font-medium py-2">מוצרים</Link>
+              <Link to="/" className="text-ink-muted hover:text-ink font-medium py-2">ראשי</Link>
+              <Link to="/products" className="text-ink-muted hover:text-ink font-medium py-2">מוצרים</Link>
               <Link to="/media" className="text-gold font-medium py-2">מדיה</Link>
-              <Link to="/links" className="text-slate hover:text-navy font-medium py-2">קישורים</Link>
+              <Link to="/links" className="text-ink-muted hover:text-ink font-medium py-2">קישורים</Link>
               <a data-ev-id="ev_e7fcd50984"
             href="https://surense.com/app/p/9z3sqal"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-navy hover:bg-navy-light text-white font-semibold px-6 py-3 rounded-lg">
+            className="flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-3 rounded-lg">
 
                 <FileText className="w-4 h-4" />
                 להוצאת מידע עדכני
               </a>
               <Link
               to="/onboarding"
-              className="bg-gold hover:bg-gold-light text-navy font-semibold px-6 py-3 rounded-lg text-center">
+              className="bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-3 rounded-lg text-center">
                 התחל תהליך
               </Link>
             </div>
@@ -771,7 +763,7 @@ export default function Media() {
       </nav>
 
       {/* Hero Section */}
-      <section data-ev-id="ev_f6ceb18e8c" className="relative pt-32 pb-20 bg-gradient-to-br from-navy via-navy-light to-navy overflow-hidden">
+      <section data-ev-id="ev_f6ceb18e8c" className="relative pt-32 pb-20 hero-tech overflow-hidden">
         <div data-ev-id="ev_86ccad35e1" className="absolute inset-0">
           <div data-ev-id="ev_9ec9552ae2" className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold/10 rounded-full blur-3xl"></div>
           <div data-ev-id="ev_806b9e10b3" className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gold/5 rounded-full blur-3xl"></div>
@@ -794,14 +786,14 @@ export default function Media() {
           </p>
         </div>
         
-        <div data-ev-id="ev_f184582057" className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-light to-transparent"></div>
+        <div data-ev-id="ev_f184582057" className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-surface-2 to-transparent"></div>
       </section>
 
       {/* Logo Marquee */}
       <LogoMarquee />
 
       {/* Tabs */}
-      <section data-ev-id="ev_67fbe05c80" className="sticky top-20 z-40 bg-light border-b border-border">
+      <section data-ev-id="ev_67fbe05c80" className="sticky top-20 z-40 bg-surface-2 border-b border-border">
         <div data-ev-id="ev_4fb7a02f56" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div data-ev-id="ev_d15c4ded40" className="flex gap-2 py-4 overflow-x-auto">
             {tabs.map((tab) =>
@@ -811,7 +803,7 @@ export default function Media() {
             className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium transition-all whitespace-nowrap ${
             activeTab === tab.id ?
             'bg-navy text-white' :
-            'bg-white text-slate hover:bg-white/80 border border-border'}`
+            'bg-surface text-ink-muted hover:bg-surface/80 border border-border'}`
             }>
                 <tab.icon className="w-4 h-4" />
                 {tab.label}
@@ -822,7 +814,7 @@ export default function Media() {
       </section>
 
       {/* Content */}
-      <section data-ev-id="ev_8d5b216ae3" className="py-12 bg-light">
+      <section data-ev-id="ev_8d5b216ae3" className="py-12 bg-surface-2">
         <div data-ev-id="ev_d5eb45602f" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Videos Section */}
@@ -832,14 +824,14 @@ export default function Media() {
                 <div data-ev-id="ev_e71f4948d9" className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center">
                   <Youtube className="w-5 h-5 text-gold" />
                 </div>
-                <h2 data-ev-id="ev_6187d4bfa4" className="text-2xl font-bold text-navy">סרטוני וידאו</h2>
+                <h2 data-ev-id="ev_6187d4bfa4" className="text-2xl font-bold text-ink">סרטוני וידאו</h2>
               </div>
               
               <div data-ev-id="ev_9678434a8d" className="grid md:grid-cols-2 gap-6">
                 {filteredVideos.map((video) =>
               <div data-ev-id="ev_5b9dfded28"
               key={video.id}
-              className="bg-white rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-shadow group">
+              className="bg-surface rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-shadow group">
                     <div data-ev-id="ev_71a28784c8"
                 className="relative h-56 overflow-hidden cursor-pointer"
                 onClick={() => setSelectedVideo(video)}>
@@ -850,22 +842,22 @@ export default function Media() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                       <div data-ev-id="ev_cd251d576a" className="absolute inset-0 bg-navy/30 flex items-center justify-center group-hover:bg-navy/40 transition-colors">
                         <div data-ev-id="ev_bd85ace4e8" className="w-16 h-16 bg-gold rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                          <Play className="w-7 h-7 text-navy mr-[-2px]" fill="currentColor" />
+                          <Play className="w-7 h-7 text-ink mr-[-2px]" fill="currentColor" />
                         </div>
                       </div>
                     </div>
                     
                     <div data-ev-id="ev_75d88494ec" className="p-6">
                       <h3 data-ev-id="ev_5197df3d2d"
-                  className="text-lg font-bold text-navy mb-2 group-hover:text-gold transition-colors cursor-pointer"
+                  className="text-lg font-bold text-ink mb-2 group-hover:text-gold transition-colors cursor-pointer"
                   onClick={() => setSelectedVideo(video)}>
 
                         {video.title}
                       </h3>
-                      <p data-ev-id="ev_b379ee1549" className="text-slate text-sm mb-4">{video.description}</p>
+                      <p data-ev-id="ev_b379ee1549" className="text-ink-muted text-sm mb-4">{video.description}</p>
                       
                       <div data-ev-id="ev_1962528914" className="flex items-center justify-between">
-                        <div data-ev-id="ev_7e3a4320ce" className="flex items-center gap-2 text-xs text-slate">
+                        <div data-ev-id="ev_7e3a4320ce" className="flex items-center gap-2 text-xs text-ink-muted">
                           <Calendar className="w-3.5 h-3.5" />
                           <span data-ev-id="ev_d3617ddd77">{video.date}</span>
                         </div>
@@ -885,7 +877,7 @@ export default function Media() {
                 <div data-ev-id="ev_332e02986c" className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center">
                   <Newspaper className="w-5 h-5 text-gold" />
                 </div>
-                <h2 data-ev-id="ev_5e1b7e4079" className="text-2xl font-bold text-navy">כתבות ומאמרים</h2>
+                <h2 data-ev-id="ev_5e1b7e4079" className="text-2xl font-bold text-ink">כתבות ומאמרים</h2>
               </div>
               
               <div data-ev-id="ev_30e686bb73" className="flex flex-col gap-6">
@@ -894,7 +886,7 @@ export default function Media() {
                 return (
                   <div data-ev-id="ev_a25b962a4e"
                   key={article.id}
-                  className="bg-white rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-shadow">
+                  className="bg-surface rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-shadow">
 
                       {article.image &&
                     <div data-ev-id="ev_adbbc620ad" className="relative h-64 md:h-80 overflow-hidden">
@@ -909,10 +901,10 @@ export default function Media() {
                       <div data-ev-id="ev_d6700242b2" className="p-6 md:p-8">
                         <div data-ev-id="ev_59968b8b86" className="flex items-start justify-between gap-4 mb-4">
                           <div data-ev-id="ev_01d95b3c65" className="flex-1">
-                            <h3 data-ev-id="ev_64591f488e" className="text-xl md:text-2xl font-bold text-navy mb-2 leading-tight">
+                            <h3 data-ev-id="ev_64591f488e" className="text-xl md:text-2xl font-bold text-ink mb-2 leading-tight">
                               {article.title}
                             </h3>
-                            <div data-ev-id="ev_3d52255653" className="flex flex-wrap items-center gap-4 text-sm text-slate">
+                            <div data-ev-id="ev_3d52255653" className="flex flex-wrap items-center gap-4 text-sm text-ink-muted">
                               <span data-ev-id="ev_28cf6a1abd" className="flex items-center gap-1">
                                 <Calendar className="w-4 h-4" />
                                 {article.date}
@@ -927,18 +919,18 @@ export default function Media() {
                           <ShareButtons title={article.title} articleId={article.id} variant="compact" />
                         </div>
                         
-                        <p data-ev-id="ev_24e96e79dc" className="text-slate text-lg leading-relaxed mb-4">
+                        <p data-ev-id="ev_24e96e79dc" className="text-ink-muted text-lg leading-relaxed mb-4">
                           {article.summary}
                         </p>
                         
                         {isExpanded &&
                       <div data-ev-id="ev_8f854f65e3" className="border-t border-border pt-6 mt-4">
-                              <div data-ev-id="ev_5dd9529eae" className="prose prose-lg max-w-none text-slate leading-relaxed whitespace-pre-line">
+                              <div data-ev-id="ev_5dd9529eae" className="prose prose-lg max-w-none text-ink-muted leading-relaxed whitespace-pre-line">
                                 {article.content}
                               </div>
                               
                               {article.hasLeadForm &&
-                        <div data-ev-id="ev_fccd0ed22e" className="mt-10 bg-gradient-to-br from-navy to-navy-light rounded-2xl p-8 text-white">
+                        <div data-ev-id="ev_fccd0ed22e" className="mt-10 panel-accent rounded-2xl p-8 text-white">
                                   <div data-ev-id="ev_addb6d25c3" className="grid md:grid-cols-2 gap-8 items-center">
                                     {article.flyerImage &&
                             <div data-ev-id="ev_33a5d6853c" className="rounded-xl overflow-hidden shadow-2xl">
@@ -959,7 +951,7 @@ export default function Media() {
                                           <input data-ev-id="ev_6aeed00a68" type="text" placeholder="שם מלא" value={workshopForm.name} onChange={(e) => setWorkshopForm((prev) => ({ ...prev, name: e.target.value }))} required className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-gold" />
                                           <input data-ev-id="ev_15957d3acd" type="tel" placeholder="טלפון" value={workshopForm.phone} onChange={(e) => setWorkshopForm((prev) => ({ ...prev, phone: e.target.value }))} required className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-gold" />
                                           <input data-ev-id="ev_c3a7dc497b" type="email" placeholder="אימייל" value={workshopForm.email} onChange={(e) => setWorkshopForm((prev) => ({ ...prev, email: e.target.value }))} required className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-gold" />
-                                          <button data-ev-id="ev_17f28d2825" type="submit" disabled={workshopSubmitting} className="w-full bg-gold hover:bg-gold-light text-navy font-bold py-4 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50">
+                                          <button data-ev-id="ev_17f28d2825" type="submit" disabled={workshopSubmitting} className="w-full bg-gold hover:bg-gold-light text-navy-dark font-bold py-4 rounded-lg transition-colors flex items-center justify-center gap-2 disabled:opacity-50">
                                             {workshopSubmitting ? <><Loader2 className="w-5 h-5 animate-spin" />שולח...</> : 'שלחו לי פרטים'}
                                           </button>
                                         </form>
@@ -1003,7 +995,7 @@ export default function Media() {
                 <div data-ev-id="ev_5ea986c9fc" className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center">
                   <Newspaper className="w-5 h-5 text-gold" />
                 </div>
-                <h2 data-ev-id="ev_6400ba91db" className="text-2xl font-bold text-navy">כתבות כלכליות חשובות בתחום החיסכון המשפחתי</h2>
+                <h2 data-ev-id="ev_6400ba91db" className="text-2xl font-bold text-ink">כתבות כלכליות חשובות בתחום החיסכון המשפחתי</h2>
               </div>
               
               <div data-ev-id="ev_baed9551c1" className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1013,22 +1005,22 @@ export default function Media() {
               href={article.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-white rounded-2xl border border-border hover:shadow-lg transition-all overflow-hidden">
+              className="group bg-surface rounded-2xl border border-border hover:shadow-lg transition-all overflow-hidden">
 
                     <div data-ev-id="ev_3e74ba795d" className="p-6">
                       <div data-ev-id="ev_f95a5faa0e" className="flex items-center flex-wrap gap-2 mb-3">
-                        <span data-ev-id="ev_ca7f446736" className="px-3 py-1 bg-red-100 text-red-700 text-xs font-medium rounded-full">
+                        <span data-ev-id="ev_ca7f446736" className="px-3 py-1 bg-red-500/15 text-red-400 text-xs font-medium rounded-full">
                           {article.source}
                         </span>
-                        <span data-ev-id="ev_5bf7f422a6" className="text-slate text-xs">{article.date}</span>
+                        <span data-ev-id="ev_5bf7f422a6" className="text-ink-muted text-xs">{article.date}</span>
                         {article.author &&
-                    <span data-ev-id="ev_f8061b8d92" className="text-slate text-xs">| {article.author}</span>
+                    <span data-ev-id="ev_f8061b8d92" className="text-ink-muted text-xs">| {article.author}</span>
                     }
                       </div>
-                      <h3 data-ev-id="ev_b78665f8bf" className="text-lg font-bold text-navy mb-3 group-hover:text-gold transition-colors line-clamp-2">
+                      <h3 data-ev-id="ev_b78665f8bf" className="text-lg font-bold text-ink mb-3 group-hover:text-gold transition-colors line-clamp-2">
                         {article.title}
                       </h3>
-                      <p data-ev-id="ev_291b0bf509" className="text-slate text-sm mb-4 line-clamp-3">
+                      <p data-ev-id="ev_291b0bf509" className="text-ink-muted text-sm mb-4 line-clamp-3">
                         {article.summary}
                       </p>
                       <div data-ev-id="ev_cb8c565e53" className="flex items-center gap-2 text-gold font-medium text-sm">
@@ -1049,12 +1041,12 @@ export default function Media() {
                 <div data-ev-id="ev_6383d6cbf5" className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center">
                   <Mic2 className="w-5 h-5 text-gold" />
                 </div>
-                <h2 data-ev-id="ev_861dc3221b" className="text-2xl font-bold text-navy">הפודקאסטים שלנו</h2>
+                <h2 data-ev-id="ev_861dc3221b" className="text-2xl font-bold text-ink">הפודקאסטים שלנו</h2>
               </div>
               
               <div data-ev-id="ev_83c470597e" className="grid md:grid-cols-2 gap-8">
                 {/* Podcast 1 - השוק הפיננסי */}
-                <div data-ev-id="ev_cb9be097e7" className="bg-gradient-to-br from-navy to-navy-light rounded-3xl p-6">
+                <div data-ev-id="ev_cb9be097e7" className="panel-accent rounded-3xl p-6">
                   <div data-ev-id="ev_9f90c1dfa9" className="bg-white/10 backdrop-blur-sm rounded-2xl p-5">
                     <div data-ev-id="ev_e11e606779" className="text-center mb-4">
                       <h3 data-ev-id="ev_d41f8073ab" className="text-xl font-bold text-white mb-2">השוק הפיננסי</h3>
@@ -1083,7 +1075,7 @@ export default function Media() {
                 </div>
 
                 {/* Podcast 2 - פודקאסט נוסף */}
-                <div data-ev-id="ev_a038ecb6c5" className="bg-gradient-to-br from-navy to-navy-light rounded-3xl p-6">
+                <div data-ev-id="ev_a038ecb6c5" className="panel-accent rounded-3xl p-6">
                   <div data-ev-id="ev_b456854cb5" className="bg-white/10 backdrop-blur-sm rounded-2xl p-5">
                     <div data-ev-id="ev_77625e7693" className="text-center mb-4">
                       <h3 data-ev-id="ev_579642a830" className="text-xl font-bold text-white mb-2">פודקאסט ההשקעות של Pioneer Wealth Management</h3>
@@ -1115,17 +1107,17 @@ export default function Media() {
           }
 
           {/* Newsletter */}
-          <div data-ev-id="ev_f7100318fb" className="bg-white rounded-3xl p-8 md:p-12 border border-border">
+          <div data-ev-id="ev_f7100318fb" className="bg-surface rounded-3xl p-8 md:p-12 border border-border">
             <div data-ev-id="ev_53cab07cde" className="max-w-2xl mx-auto text-center">
-              <h2 data-ev-id="ev_123a783873" className="text-2xl md:text-3xl font-bold text-navy mb-4">
+              <h2 data-ev-id="ev_123a783873" className="text-2xl md:text-3xl font-bold text-ink mb-4">
                 הישארו מעודכנים
               </h2>
-              <p data-ev-id="ev_b0d1ee182d" className="text-slate mb-8">
+              <p data-ev-id="ev_b0d1ee182d" className="text-ink-muted mb-8">
                 הירשמו לניוזלטר שלנו וקבלו עדכונים על תוכן חדש, תובנות שוק ומידע בלעדי.
               </p>
               
               {subscribed ?
-              <div data-ev-id="ev_262c9b217e" className="flex items-center justify-center gap-2 text-green-600">
+              <div data-ev-id="ev_262c9b217e" className="flex items-center justify-center gap-2 text-green-400">
                   <Check className="w-5 h-5" />
                   <span data-ev-id="ev_162395c431">תודה! נרשמת בהצלחה</span>
                 </div> :
@@ -1142,7 +1134,7 @@ export default function Media() {
 
                   <button data-ev-id="ev_894c911298"
                 type="submit"
-                className="bg-gold hover:bg-gold-light text-navy font-semibold px-8 py-3 rounded-lg transition-colors">
+                className="bg-gold hover:bg-gold-light text-navy-dark font-semibold px-8 py-3 rounded-lg transition-colors">
 
                     הרשמה
                   </button>
@@ -1162,7 +1154,7 @@ export default function Media() {
             href="https://surense.com/app/p/9z3sqal"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-navy font-bold px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            className="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
 
               <FileText className="w-5 h-5" />
               להוצאת מידע פנסיוני עדכני
@@ -1190,7 +1182,7 @@ export default function Media() {
       className="fixed inset-0 z-50 bg-navy/90 flex items-center justify-center p-4"
       onClick={() => setSelectedVideo(null)}>
           <div data-ev-id="ev_276524b46d"
-        className="bg-white rounded-2xl overflow-hidden max-w-4xl w-full relative"
+        className="bg-surface rounded-2xl overflow-hidden max-w-4xl w-full relative"
         onClick={(e) => e.stopPropagation()}>
             <div data-ev-id="ev_9c0fcf86c8" className="relative pb-[56.25%]">
               <iframe data-ev-id="ev_99f244c823"
@@ -1203,8 +1195,8 @@ export default function Media() {
             <div data-ev-id="ev_d2e7915319" className="p-6">
               <div data-ev-id="ev_0bc3f5a3ab" className="flex items-start justify-between gap-4">
                 <div data-ev-id="ev_ccfc4dedff" className="flex-1">
-                  <h3 data-ev-id="ev_ef81ed898d" className="text-xl font-bold text-navy mb-2">{selectedVideo.title}</h3>
-                  <p data-ev-id="ev_2566c249c2" className="text-slate">{selectedVideo.description}</p>
+                  <h3 data-ev-id="ev_ef81ed898d" className="text-xl font-bold text-ink mb-2">{selectedVideo.title}</h3>
+                  <p data-ev-id="ev_2566c249c2" className="text-ink-muted">{selectedVideo.description}</p>
                 </div>
               </div>
               <div data-ev-id="ev_7d5bc19d46" className="mt-4 pt-4 border-t border-border">
@@ -1213,7 +1205,7 @@ export default function Media() {
             </div>
             <button data-ev-id="ev_07205f8882"
           onClick={() => setSelectedVideo(null)}
-          className="absolute top-4 left-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-muted transition-colors">
+          className="absolute top-4 left-4 w-10 h-10 bg-surface rounded-full flex items-center justify-center shadow-lg hover:bg-surface-2 transition-colors">
               <X className="w-5 h-5" />
             </button>
           </div>

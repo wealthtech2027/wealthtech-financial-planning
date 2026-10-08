@@ -110,7 +110,7 @@ export function AccessibilityWidget() {
 
       {/* Accessibility Panel */}
       {isOpen &&
-      <div data-ev-id="ev_47a44e4b3f" className="fixed bottom-24 left-6 z-50 w-80 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden" dir="rtl">
+      <div data-ev-id="ev_47a44e4b3f" className="fixed bottom-24 left-6 z-50 w-80 bg-surface rounded-2xl shadow-2xl border border-border overflow-hidden" dir="rtl">
           {/* Header */}
           <div data-ev-id="ev_c75d0a44d6" className="bg-navy text-white px-5 py-4 flex items-center justify-between">
             <div data-ev-id="ev_9acbc5716f" className="flex items-center gap-3">
@@ -129,13 +129,13 @@ export function AccessibilityWidget() {
           {/* Content */}
           <div data-ev-id="ev_3772d8e3b0" className="p-4 flex flex-col gap-3">
             {/* Font Size */}
-            <div data-ev-id="ev_e2e1807574" className="bg-muted/50 rounded-xl p-4">
-              <div data-ev-id="ev_ebab34c72c" className="text-sm font-medium text-navy mb-3">גודל טקסט ({settings.fontSize}%)</div>
+            <div data-ev-id="ev_e2e1807574" className="bg-surface-2/50 rounded-xl p-4">
+              <div data-ev-id="ev_ebab34c72c" className="text-sm font-medium text-ink mb-3">גודל טקסט ({settings.fontSize}%)</div>
               <div data-ev-id="ev_9f1d6da364" className="flex items-center gap-3">
                 <button data-ev-id="ev_1e82b02dde"
               onClick={decreaseFontSize}
               disabled={settings.fontSize <= 80}
-              className="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center hover:bg-navy hover:text-white hover:border-navy transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-12 h-12 rounded-xl bg-surface border border-border flex items-center justify-center hover:bg-navy hover:text-white hover:border-gold/40 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               aria-label="הקטן טקסט">
 
                   <Minus className="w-5 h-5" />
@@ -149,7 +149,7 @@ export function AccessibilityWidget() {
                 <button data-ev-id="ev_c6847c5fcd"
               onClick={increaseFontSize}
               disabled={settings.fontSize >= 150}
-              className="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center hover:bg-navy hover:text-white hover:border-navy transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-12 h-12 rounded-xl bg-surface border border-border flex items-center justify-center hover:bg-navy hover:text-white hover:border-gold/40 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               aria-label="הגדל טקסט">
 
                   <Plus className="w-5 h-5" />
@@ -163,8 +163,8 @@ export function AccessibilityWidget() {
             onClick={toggleHighContrast}
             className={`p-4 rounded-xl border-2 flex flex-col items-center gap-2 transition-all ${
             settings.highContrast ?
-            'border-navy bg-navy text-white' :
-            'border-border bg-white hover:border-navy/50'}`
+            'border-gold/40 bg-navy text-white' :
+            'border-border bg-surface hover:border-gold/50'}`
             }>
 
                 <Eye className="w-6 h-6" />
@@ -175,8 +175,8 @@ export function AccessibilityWidget() {
             onClick={toggleGrayscale}
             className={`p-4 rounded-xl border-2 flex flex-col items-center gap-2 transition-all ${
             settings.grayscale ?
-            'border-navy bg-navy text-white' :
-            'border-border bg-white hover:border-navy/50'}`
+            'border-gold/40 bg-navy text-white' :
+            'border-border bg-surface hover:border-gold/50'}`
             }>
 
                 <EyeOff className="w-6 h-6" />
@@ -187,8 +187,8 @@ export function AccessibilityWidget() {
             onClick={toggleHighlightLinks}
             className={`p-4 rounded-xl border-2 flex flex-col items-center gap-2 transition-all ${
             settings.highlightLinks ?
-            'border-navy bg-navy text-white' :
-            'border-border bg-white hover:border-navy/50'}`
+            'border-gold/40 bg-navy text-white' :
+            'border-border bg-surface hover:border-gold/50'}`
             }>
 
                 <Link2 className="w-6 h-6" />
@@ -199,8 +199,8 @@ export function AccessibilityWidget() {
             onClick={toggleStopAnimations}
             className={`p-4 rounded-xl border-2 flex flex-col items-center gap-2 transition-all ${
             settings.stopAnimations ?
-            'border-navy bg-navy text-white' :
-            'border-border bg-white hover:border-navy/50'}`
+            'border-gold/40 bg-navy text-white' :
+            'border-border bg-surface hover:border-gold/50'}`
             }>
 
                 <Pause className="w-6 h-6" />
@@ -211,7 +211,7 @@ export function AccessibilityWidget() {
             {/* Reset Button */}
             <button data-ev-id="ev_c9ab184d28"
           onClick={resetAll}
-          className="w-full py-3 rounded-xl border-2 border-border hover:border-red-500 hover:bg-red-50 hover:text-red-600 flex items-center justify-center gap-2 transition-all">
+          className="w-full py-3 rounded-xl border-2 border-border hover:border-red-500 hover:bg-red-500/10 hover:text-red-400 flex items-center justify-center gap-2 transition-all">
 
               <RotateCcw className="w-5 h-5" />
               <span data-ev-id="ev_7211b2a80a" className="font-medium">איפוס הגדרות</span>
@@ -219,8 +219,8 @@ export function AccessibilityWidget() {
           </div>
 
           {/* Footer */}
-          <div data-ev-id="ev_67ffe02d9f" className="px-4 py-3 bg-muted/30 border-t border-border">
-            <p data-ev-id="ev_d401d70e3f" className="text-xs text-slate text-center">אנו מחויבים להנגשת האתר לכלל המשתמשים</p>
+          <div data-ev-id="ev_67ffe02d9f" className="px-4 py-3 bg-surface-2/30 border-t border-border">
+            <p data-ev-id="ev_d401d70e3f" className="text-xs text-ink-muted text-center">אנו מחויבים להנגשת האתר לכלל המשתמשים</p>
           </div>
         </div>
       }

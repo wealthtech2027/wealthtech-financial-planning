@@ -23,13 +23,13 @@ interface LogoMarqueeProps {
 export function LogoMarquee({ variant = 'light', title = 'מטפלים בלקוחות מהחברות המובילות' }: LogoMarqueeProps) {
   const bgClass = variant === 'dark' ?
   'bg-navy-light/50' :
-  'bg-muted/50';
+  'bg-surface-2/50';
   const textClass = variant === 'dark' ?
   'text-white/60' :
-  'text-slate';
+  'text-ink-muted';
   const logoTextClass = variant === 'dark' ?
   'text-white/80 hover:text-white' :
-  'text-navy/70 hover:text-navy';
+  'text-ink/70 hover:text-ink';
   const borderClass = variant === 'dark' ?
   'border-white/10' :
   'border-border';
@@ -48,12 +48,12 @@ export function LogoMarquee({ variant = 'light', title = 'מטפלים בלקו�
         <div data-ev-id="ev_431f6c0b51" className={`absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none ${
         variant === 'dark' ?
         'bg-gradient-to-r from-navy-light/50 to-transparent' :
-        'bg-gradient-to-r from-muted/50 to-transparent'}`
+        'bg-gradient-to-r from-surface-2/50 to-transparent'}`
         } />
         <div data-ev-id="ev_f3b536de29" className={`absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none ${
         variant === 'dark' ?
         'bg-gradient-to-l from-navy-light/50 to-transparent' :
-        'bg-gradient-to-l from-muted/50 to-transparent'}`
+        'bg-gradient-to-l from-surface-2/50 to-transparent'}`
         } />
         
         {/* Scrolling container */}

@@ -420,10 +420,10 @@ export default function WealthSnapshot() {
       disabled={step > currentStep + 1}
       className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-all ${
       step === currentStep ?
-      'bg-gold text-navy scale-110' :
+      'bg-gold text-navy-dark scale-110' :
       step < currentStep ?
       'bg-green-500 text-white' :
-      'bg-navy/20 text-navy/50'} ${
+      'bg-navy/20 text-ink/50'} ${
       step <= currentStep ? 'cursor-pointer hover:scale-105' : 'cursor-not-allowed'}`}>
 
             {step < currentStep ? <CheckCircle className="w-5 h-5" /> : step}
@@ -440,46 +440,46 @@ export default function WealthSnapshot() {
 
   // Step 1: Personal Info
   const renderStep1 = () =>
-  <div data-ev-id="ev_80dc7ccc4a" className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+  <div data-ev-id="ev_80dc7ccc4a" className="bg-surface rounded-2xl shadow-xl p-6 md:p-8">
       <div data-ev-id="ev_1eacc21e18" className="flex items-center gap-3 mb-6">
         <div data-ev-id="ev_76790d3d5a" className="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center">
           <User className="w-6 h-6 text-gold" />
         </div>
         <div data-ev-id="ev_9bf1ec0e29">
-          <h2 data-ev-id="ev_7f5cb41e27" className="text-2xl font-bold text-navy">פרטים בסיסיים</h2>
-          <p data-ev-id="ev_652633071b" className="text-slate">נתחיל בהכרת הפרטים שלך</p>
+          <h2 data-ev-id="ev_7f5cb41e27" className="text-2xl font-bold text-ink">פרטים בסיסיים</h2>
+          <p data-ev-id="ev_652633071b" className="text-ink-muted">נתחיל בהכרת הפרטים שלך</p>
         </div>
       </div>
       
       <div data-ev-id="ev_5614a405f1" className="grid md:grid-cols-2 gap-6">
         <div data-ev-id="ev_d724a7234c">
-          <label data-ev-id="ev_c18dfa9064" className="block text-navy font-medium mb-2">שם מלא *</label>
+          <label data-ev-id="ev_c18dfa9064" className="block text-ink font-medium mb-2">שם מלא *</label>
           <input data-ev-id="ev_9a582ae191"
         type="text"
         value={personalInfo.name}
         onChange={(e) => setPersonalInfo({ ...personalInfo, name: e.target.value })}
-        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all"
+        className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all"
         placeholder="הזן את שמך המלא" />
 
         </div>
         
         <div data-ev-id="ev_669a048203">
-          <label data-ev-id="ev_671078e0c5" className="block text-navy font-medium mb-2">גיל</label>
+          <label data-ev-id="ev_671078e0c5" className="block text-ink font-medium mb-2">גיל</label>
           <input data-ev-id="ev_0c3cbbd071"
         type="number"
         value={personalInfo.age}
         onChange={(e) => setPersonalInfo({ ...personalInfo, age: e.target.value })}
-        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all"
+        className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all"
         placeholder="למשל 45" />
 
         </div>
         
         <div data-ev-id="ev_ea435ffd02">
-          <label data-ev-id="ev_749c21b9f0" className="block text-navy font-medium mb-2">מצב משפחתי</label>
+          <label data-ev-id="ev_749c21b9f0" className="block text-ink font-medium mb-2">מצב משפחתי</label>
           <select data-ev-id="ev_bd7602dea2"
         value={personalInfo.familyStatus}
         onChange={(e) => setPersonalInfo({ ...personalInfo, familyStatus: e.target.value })}
-        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
+        className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
 
             <option data-ev-id="ev_9d3763813d" value="">בחר מצב</option>
             <option data-ev-id="ev_84486093ce" value="single">רווק/ה</option>
@@ -491,24 +491,24 @@ export default function WealthSnapshot() {
         </div>
         
         <div data-ev-id="ev_d3bc220a71">
-          <label data-ev-id="ev_07db1ae53b" className="block text-navy font-medium mb-2">טלפון *</label>
+          <label data-ev-id="ev_07db1ae53b" className="block text-ink font-medium mb-2">טלפון *</label>
           <input data-ev-id="ev_e8ee1d6cc6"
         type="tel"
         value={personalInfo.phone}
         onChange={(e) => setPersonalInfo({ ...personalInfo, phone: e.target.value })}
-        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all"
+        className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all"
         placeholder="050-0000000"
         dir="ltr" />
 
         </div>
         
         <div data-ev-id="ev_03faa13603" className="md:col-span-2">
-          <label data-ev-id="ev_7ac2649bd0" className="block text-navy font-medium mb-2">אימייל</label>
+          <label data-ev-id="ev_7ac2649bd0" className="block text-ink font-medium mb-2">אימייל</label>
           <input data-ev-id="ev_6105c274b2"
         type="email"
         value={personalInfo.email}
         onChange={(e) => setPersonalInfo({ ...personalInfo, email: e.target.value })}
-        className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all"
+        className="w-full px-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-gold focus:border-transparent transition-all"
         placeholder="your@email.com"
         dir="ltr" />
 
@@ -519,7 +519,7 @@ export default function WealthSnapshot() {
         <button data-ev-id="ev_f6ae61320f"
       onClick={() => goToStep(2)}
       disabled={!canProceed(1)}
-      className="flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-bold px-8 py-3 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+      className="flex items-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-3 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed">
 
           <span data-ev-id="ev_492c0bb452">המשך לנכסים</span>
           <ArrowLeft className="w-5 h-5" />
@@ -530,14 +530,14 @@ export default function WealthSnapshot() {
 
   // Step 2: Assets
   const renderStep2 = () =>
-  <div data-ev-id="ev_156bbf9718" className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+  <div data-ev-id="ev_156bbf9718" className="bg-surface rounded-2xl shadow-xl p-6 md:p-8">
       <div data-ev-id="ev_77ed451195" className="flex items-center gap-3 mb-6">
-        <div data-ev-id="ev_257a206d21" className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
-          <TrendingUp className="w-6 h-6 text-emerald-600" />
+        <div data-ev-id="ev_257a206d21" className="w-12 h-12 bg-emerald-500/15 rounded-xl flex items-center justify-center">
+          <TrendingUp className="w-6 h-6 text-emerald-400" />
         </div>
         <div data-ev-id="ev_cbf0a47f67">
-          <h2 data-ev-id="ev_97e358043f" className="text-2xl font-bold text-navy">הנכסים שלך</h2>
-          <p data-ev-id="ev_f674991034" className="text-slate">הוסף את כל הנכסים שברשותך</p>
+          <h2 data-ev-id="ev_97e358043f" className="text-2xl font-bold text-ink">הנכסים שלך</h2>
+          <p data-ev-id="ev_f674991034" className="text-ink-muted">הוסף את כל הנכסים שברשותך</p>
         </div>
       </div>
       
@@ -549,19 +549,19 @@ export default function WealthSnapshot() {
         const isExpanded = expandedCategory === category.id;
 
         return (
-          <div data-ev-id="ev_e5bf19ce4e" key={category.id} className="border border-gray-200 rounded-xl overflow-hidden">
+          <div data-ev-id="ev_e5bf19ce4e" key={category.id} className="border border-border rounded-xl overflow-hidden">
               {/* Category Header */}
               <button data-ev-id="ev_47d8677fa4"
             onClick={() => setExpandedCategory(isExpanded ? null : category.id)}
-            className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-colors">
+            className="w-full flex items-center justify-between p-4 bg-surface-3 hover:bg-surface-3 transition-colors">
 
                 <div data-ev-id="ev_185bf6cd4d" className="flex items-center gap-3">
                   <div data-ev-id="ev_fb8fa28fbf" className={`w-10 h-10 ${category.color} rounded-lg flex items-center justify-center`}>
                     <CategoryIcon className="w-5 h-5 text-white" />
                   </div>
                   <div data-ev-id="ev_ec8b86682f" className="text-right">
-                    <h3 data-ev-id="ev_31b6e3075f" className="font-bold text-navy">{category.label}</h3>
-                    <p data-ev-id="ev_aafe3a7664" className="text-sm text-slate">
+                    <h3 data-ev-id="ev_31b6e3075f" className="font-bold text-ink">{category.label}</h3>
+                    <p data-ev-id="ev_aafe3a7664" className="text-sm text-ink-muted">
                       {categoryAssets.length > 0 ?
                     `${categoryAssets.length} נכסים · ${formatCurrency(categoryAssets.reduce((sum, a) => sum + toILS(a.value, a.currency), 0))}` :
                     'לחץ להוספה'
@@ -569,19 +569,19 @@ export default function WealthSnapshot() {
                     </p>
                   </div>
                 </div>
-                {isExpanded ? <ChevronUp className="w-5 h-5 text-slate" /> : <ChevronDown className="w-5 h-5 text-slate" />}
+                {isExpanded ? <ChevronUp className="w-5 h-5 text-ink-muted" /> : <ChevronDown className="w-5 h-5 text-ink-muted" />}
               </button>
               
               {/* Expanded Content */}
               {isExpanded &&
-            <div data-ev-id="ev_8a021b1b8a" className="p-4 flex flex-col gap-4 border-t border-gray-200">
+            <div data-ev-id="ev_8a021b1b8a" className="p-4 flex flex-col gap-4 border-t border-border">
                   {/* Subcategory buttons */}
                   <div data-ev-id="ev_2c900285e8" className="flex flex-wrap gap-2">
                     {category.subcategories.map((sub) =>
                 <button data-ev-id="ev_e2fed431de"
                 key={sub.id}
                 onClick={() => addAsset(category.id, sub.id)}
-                className="flex items-center gap-1 px-3 py-2 bg-gray-100 hover:bg-gold/20 text-navy rounded-lg text-sm transition-colors">
+                className="flex items-center gap-1 px-3 py-2 bg-surface-3 hover:bg-gold/20 text-ink rounded-lg text-sm transition-colors">
 
                         <PlusCircle className="w-4 h-4" />
                         {sub.label}
@@ -593,12 +593,12 @@ export default function WealthSnapshot() {
                   {categoryAssets.map((asset) => {
                 const subcat = category.subcategories.find((s) => s.id === asset.subcategory);
                 return (
-                  <div data-ev-id="ev_17ae498fdb" key={asset.id} className="bg-gray-50 rounded-xl p-4">
+                  <div data-ev-id="ev_17ae498fdb" key={asset.id} className="bg-surface-3 rounded-xl p-4">
                         <div data-ev-id="ev_2b524e1cbd" className="flex items-center justify-between mb-3">
-                          <span data-ev-id="ev_1c556c17f7" className="font-medium text-navy">{subcat?.label}</span>
+                          <span data-ev-id="ev_1c556c17f7" className="font-medium text-ink">{subcat?.label}</span>
                           <button data-ev-id="ev_38a3ad2486"
                       onClick={() => removeAsset(asset.id)}
-                      className="text-red-500 hover:text-red-700 p-1">
+                      className="text-red-500 hover:text-red-400 p-1">
 
                             <Trash2 className="w-4 h-4" />
                           </button>
@@ -606,23 +606,23 @@ export default function WealthSnapshot() {
                         
                         <div data-ev-id="ev_376ec17850" className="grid grid-cols-2 md:grid-cols-4 gap-3">
                           <div data-ev-id="ev_f434bcbb94" className="col-span-2">
-                            <label data-ev-id="ev_7fa9186b75" className="text-xs text-slate mb-1 block">שווי</label>
+                            <label data-ev-id="ev_7fa9186b75" className="text-xs text-ink-muted mb-1 block">שווי</label>
                             <input data-ev-id="ev_857604c5f7"
                         type="number"
                         value={asset.value || ''}
                         onChange={(e) => updateAsset(asset.id, 'value', parseFloat(e.target.value) || 0)}
-                        className="w-full px-3 py-2 border border-gray-200 rounded-lg text-left"
+                        className="w-full px-3 py-2 border border-border rounded-lg text-left"
                         placeholder="0"
                         dir="ltr" />
 
                           </div>
                           
                           <div data-ev-id="ev_966aa6dd38">
-                            <label data-ev-id="ev_e2e984c0b3" className="text-xs text-slate mb-1 block">מטבע</label>
+                            <label data-ev-id="ev_e2e984c0b3" className="text-xs text-ink-muted mb-1 block">מטבע</label>
                             <select data-ev-id="ev_7631e99ba8"
                         value={asset.currency}
                         onChange={(e) => updateAsset(asset.id, 'currency', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-200 rounded-lg">
+                        className="w-full px-3 py-2 border border-border rounded-lg">
 
                               <option data-ev-id="ev_1371fbc146" value="ILS">₪ ILS</option>
                               <option data-ev-id="ev_863eaaf646" value="USD">$ USD</option>
@@ -631,12 +631,12 @@ export default function WealthSnapshot() {
                           </div>
                           
                           <div data-ev-id="ev_15e373edbf">
-                            <label data-ev-id="ev_1751e784ff" className="text-xs text-slate mb-1 block">גוף מנהל</label>
+                            <label data-ev-id="ev_1751e784ff" className="text-xs text-ink-muted mb-1 block">גוף מנהל</label>
                             <input data-ev-id="ev_50eba727ae"
                         type="text"
                         value={asset.institution || ''}
                         onChange={(e) => updateAsset(asset.id, 'institution', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-200 rounded-lg"
+                        className="w-full px-3 py-2 border border-border rounded-lg"
                         placeholder="אופציונלי" />
 
                           </div>
@@ -653,10 +653,10 @@ export default function WealthSnapshot() {
       
       {/* Summary */}
       {assets.length > 0 &&
-    <div data-ev-id="ev_02f5c652e0" className="mt-6 p-4 bg-emerald-50 rounded-xl border border-emerald-200">
+    <div data-ev-id="ev_02f5c652e0" className="mt-6 p-4 bg-emerald-500/10 rounded-xl border border-emerald-500/30">
           <div data-ev-id="ev_96abb1dbae" className="flex items-center justify-between">
-            <span data-ev-id="ev_0cd32fc454" className="font-bold text-emerald-800">סה"כ נכסים:</span>
-            <span data-ev-id="ev_f48a1a9ca1" className="text-2xl font-bold text-emerald-700">{formatCurrency(calculations.totalAssets)}</span>
+            <span data-ev-id="ev_0cd32fc454" className="font-bold text-emerald-400">סה"כ נכסים:</span>
+            <span data-ev-id="ev_f48a1a9ca1" className="text-2xl font-bold text-emerald-400">{formatCurrency(calculations.totalAssets)}</span>
           </div>
         </div>
     }
@@ -664,7 +664,7 @@ export default function WealthSnapshot() {
       <div data-ev-id="ev_17e7331d81" className="mt-8 flex justify-between">
         <button data-ev-id="ev_37f30c68e8"
       onClick={() => goToStep(1)}
-      className="flex items-center gap-2 text-navy hover:text-gold font-medium px-4 py-3 transition-colors">
+      className="flex items-center gap-2 text-ink hover:text-gold font-medium px-4 py-3 transition-colors">
 
           <ArrowRight className="w-5 h-5" />
           <span data-ev-id="ev_c0ce5c1b40">חזרה</span>
@@ -672,7 +672,7 @@ export default function WealthSnapshot() {
         <button data-ev-id="ev_b387564ecf"
       onClick={() => goToStep(3)}
       disabled={!canProceed(2)}
-      className="flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-bold px-8 py-3 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+      className="flex items-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-3 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed">
 
           <span data-ev-id="ev_b6a342b75b">המשך להתחייבויות</span>
           <ArrowLeft className="w-5 h-5" />
@@ -683,14 +683,14 @@ export default function WealthSnapshot() {
 
   // Step 3: Liabilities
   const renderStep3 = () =>
-  <div data-ev-id="ev_ca2718a9d8" className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+  <div data-ev-id="ev_ca2718a9d8" className="bg-surface rounded-2xl shadow-xl p-6 md:p-8">
       <div data-ev-id="ev_0bf7f91b4d" className="flex items-center gap-3 mb-6">
-        <div data-ev-id="ev_6f7aeff673" className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
-          <CreditCard className="w-6 h-6 text-red-600" />
+        <div data-ev-id="ev_6f7aeff673" className="w-12 h-12 bg-red-500/15 rounded-xl flex items-center justify-center">
+          <CreditCard className="w-6 h-6 text-red-400" />
         </div>
         <div data-ev-id="ev_30626349a3">
-          <h2 data-ev-id="ev_2307559c51" className="text-2xl font-bold text-navy">התחייבויות</h2>
-          <p data-ev-id="ev_986a9deb66" className="text-slate">הוסף הלוואות והתחייבויות (אופציונלי)</p>
+          <h2 data-ev-id="ev_2307559c51" className="text-2xl font-bold text-ink">התחייבויות</h2>
+          <p data-ev-id="ev_986a9deb66" className="text-ink-muted">הוסף הלוואות והתחייבויות (אופציונלי)</p>
         </div>
       </div>
       
@@ -702,7 +702,7 @@ export default function WealthSnapshot() {
           <button data-ev-id="ev_f34625417d"
           key={cat.id}
           onClick={() => addLiability(cat.id)}
-          className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-red-50 text-navy rounded-lg transition-colors">
+          className="flex items-center gap-2 px-4 py-2 bg-surface-3 hover:bg-red-500/10 text-ink rounded-lg transition-colors">
 
               <Icon className="w-4 h-4" />
               <PlusCircle className="w-4 h-4" />
@@ -718,15 +718,15 @@ export default function WealthSnapshot() {
         const cat = LIABILITY_CATEGORIES.find((c) => c.id === liability.type);
         const Icon = cat?.icon || CreditCard;
         return (
-          <div data-ev-id="ev_3aa9d6f7ed" key={liability.id} className="bg-gray-50 rounded-xl p-4">
+          <div data-ev-id="ev_3aa9d6f7ed" key={liability.id} className="bg-surface-3 rounded-xl p-4">
               <div data-ev-id="ev_39d57b5030" className="flex items-center justify-between mb-3">
                 <div data-ev-id="ev_6d3b5c1511" className="flex items-center gap-2">
                   <Icon className="w-5 h-5 text-red-500" />
-                  <span data-ev-id="ev_3277fa20a1" className="font-medium text-navy">{cat?.label}</span>
+                  <span data-ev-id="ev_3277fa20a1" className="font-medium text-ink">{cat?.label}</span>
                 </div>
                 <button data-ev-id="ev_aa6c96b144"
               onClick={() => removeLiability(liability.id)}
-              className="text-red-500 hover:text-red-700 p-1">
+              className="text-red-500 hover:text-red-400 p-1">
 
                   <Trash2 className="w-4 h-4" />
                 </button>
@@ -734,23 +734,23 @@ export default function WealthSnapshot() {
               
               <div data-ev-id="ev_af1e78e7f3" className="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div data-ev-id="ev_f99c7565b4">
-                  <label data-ev-id="ev_ac024fe084" className="text-xs text-slate mb-1 block">יתרת חוב</label>
+                  <label data-ev-id="ev_ac024fe084" className="text-xs text-ink-muted mb-1 block">יתרת חוב</label>
                   <input data-ev-id="ev_93071d6431"
                 type="number"
                 value={liability.balance || ''}
                 onChange={(e) => updateLiability(liability.id, 'balance', parseFloat(e.target.value) || 0)}
-                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-left"
+                className="w-full px-3 py-2 border border-border rounded-lg text-left"
                 placeholder="0"
                 dir="ltr" />
 
                 </div>
                 
                 <div data-ev-id="ev_701e7a6a45">
-                  <label data-ev-id="ev_93ef98c61c" className="text-xs text-slate mb-1 block">מטבע</label>
+                  <label data-ev-id="ev_93ef98c61c" className="text-xs text-ink-muted mb-1 block">מטבע</label>
                   <select data-ev-id="ev_dbaa2d0ebb"
                 value={liability.currency}
                 onChange={(e) => updateLiability(liability.id, 'currency', e.target.value as 'ILS' | 'USD' | 'EUR')}
-                className="w-full px-3 py-2 border border-gray-200 rounded-lg">
+                className="w-full px-3 py-2 border border-border rounded-lg">
 
                     <option data-ev-id="ev_6b9575a2cc" value="ILS">₪ ILS</option>
                     <option data-ev-id="ev_a6ace5deb3" value="USD">$ USD</option>
@@ -759,25 +759,25 @@ export default function WealthSnapshot() {
                 </div>
                 
                 <div data-ev-id="ev_6098a519de">
-                  <label data-ev-id="ev_57d9a6deea" className="text-xs text-slate mb-1 block">החזר חודשי</label>
+                  <label data-ev-id="ev_57d9a6deea" className="text-xs text-ink-muted mb-1 block">החזר חודשי</label>
                   <input data-ev-id="ev_026f3847e6"
                 type="number"
                 value={liability.monthlyPayment || ''}
                 onChange={(e) => updateLiability(liability.id, 'monthlyPayment', parseFloat(e.target.value) || 0)}
-                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-left"
+                className="w-full px-3 py-2 border border-border rounded-lg text-left"
                 placeholder="0"
                 dir="ltr" />
 
                 </div>
                 
                 <div data-ev-id="ev_255d345bcf">
-                  <label data-ev-id="ev_575c6895a8" className="text-xs text-slate mb-1 block">ריבית %</label>
+                  <label data-ev-id="ev_575c6895a8" className="text-xs text-ink-muted mb-1 block">ריבית %</label>
                   <input data-ev-id="ev_2a587b8e01"
                 type="number"
                 step="0.1"
                 value={liability.interestRate || ''}
                 onChange={(e) => updateLiability(liability.id, 'interestRate', parseFloat(e.target.value) || 0)}
-                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-left"
+                className="w-full px-3 py-2 border border-border rounded-lg text-left"
                 placeholder="0"
                 dir="ltr" />
 
@@ -789,7 +789,7 @@ export default function WealthSnapshot() {
       </div>
       
       {liabilities.length === 0 &&
-    <div data-ev-id="ev_197b6b1042" className="text-center py-8 text-slate">
+    <div data-ev-id="ev_197b6b1042" className="text-center py-8 text-ink-muted">
           <CreditCard className="w-12 h-12 mx-auto mb-3 opacity-30" />
           <p data-ev-id="ev_144f414f2b">אין התחייבויות? מצוין! אפשר להמשיך.</p>
         </div>
@@ -797,10 +797,10 @@ export default function WealthSnapshot() {
       
       {/* Summary */}
       {liabilities.length > 0 &&
-    <div data-ev-id="ev_9e0ce5ce44" className="mt-6 p-4 bg-red-50 rounded-xl border border-red-200">
+    <div data-ev-id="ev_9e0ce5ce44" className="mt-6 p-4 bg-red-500/10 rounded-xl border border-red-500/30">
           <div data-ev-id="ev_2d38ef2e01" className="flex items-center justify-between">
-            <span data-ev-id="ev_7a756ed99d" className="font-bold text-red-800">סה"כ התחייבויות:</span>
-            <span data-ev-id="ev_3ac52700f9" className="text-2xl font-bold text-red-700">{formatCurrency(calculations.totalLiabilities)}</span>
+            <span data-ev-id="ev_7a756ed99d" className="font-bold text-red-400">סה"כ התחייבויות:</span>
+            <span data-ev-id="ev_3ac52700f9" className="text-2xl font-bold text-red-400">{formatCurrency(calculations.totalLiabilities)}</span>
           </div>
         </div>
     }
@@ -808,14 +808,14 @@ export default function WealthSnapshot() {
       <div data-ev-id="ev_db7561d87f" className="mt-8 flex justify-between">
         <button data-ev-id="ev_8473193c98"
       onClick={() => goToStep(2)}
-      className="flex items-center gap-2 text-navy hover:text-gold font-medium px-4 py-3 transition-colors">
+      className="flex items-center gap-2 text-ink hover:text-gold font-medium px-4 py-3 transition-colors">
 
           <ArrowRight className="w-5 h-5" />
           <span data-ev-id="ev_9a871ec668">חזרה</span>
         </button>
         <button data-ev-id="ev_0047d8dfe6"
       onClick={() => goToStep(4)}
-      className="flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-bold px-8 py-3 rounded-xl transition-all">
+      className="flex items-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-3 rounded-xl transition-all">
 
           <span data-ev-id="ev_8cec2c9876">צפה בתוצאות</span>
           <ArrowLeft className="w-5 h-5" />
@@ -829,23 +829,23 @@ export default function WealthSnapshot() {
   <div data-ev-id="ev_9049c22c7d" className="flex flex-col gap-6">
       {/* Hero Stats */}
       <div data-ev-id="ev_5b61a9855b" className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <div data-ev-id="ev_1d92e2c515" className="bg-white rounded-2xl shadow-lg p-6 text-center">
-          <div data-ev-id="ev_874c3a8c06" className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-3">
-            <TrendingUp className="w-6 h-6 text-emerald-600" />
+        <div data-ev-id="ev_1d92e2c515" className="bg-surface rounded-2xl shadow-lg p-6 text-center">
+          <div data-ev-id="ev_874c3a8c06" className="w-12 h-12 bg-emerald-500/15 rounded-xl flex items-center justify-center mx-auto mb-3">
+            <TrendingUp className="w-6 h-6 text-emerald-400" />
           </div>
-          <p data-ev-id="ev_7c6e53709d" className="text-slate text-sm mb-1">סה"כ נכסים</p>
-          <p data-ev-id="ev_08c4635c2f" className="text-2xl lg:text-3xl font-bold text-emerald-600">{formatCurrency(calculations.totalAssets)}</p>
+          <p data-ev-id="ev_7c6e53709d" className="text-ink-muted text-sm mb-1">סה"כ נכסים</p>
+          <p data-ev-id="ev_08c4635c2f" className="text-2xl lg:text-3xl font-bold text-emerald-400">{formatCurrency(calculations.totalAssets)}</p>
         </div>
         
-        <div data-ev-id="ev_7441547023" className="bg-white rounded-2xl shadow-lg p-6 text-center">
-          <div data-ev-id="ev_e242013e6d" className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-3">
-            <CreditCard className="w-6 h-6 text-red-600" />
+        <div data-ev-id="ev_7441547023" className="bg-surface rounded-2xl shadow-lg p-6 text-center">
+          <div data-ev-id="ev_e242013e6d" className="w-12 h-12 bg-red-500/15 rounded-xl flex items-center justify-center mx-auto mb-3">
+            <CreditCard className="w-6 h-6 text-red-400" />
           </div>
-          <p data-ev-id="ev_505c3aee9d" className="text-slate text-sm mb-1">סה"כ התחייבויות</p>
-          <p data-ev-id="ev_34bbf9eea2" className="text-2xl lg:text-3xl font-bold text-red-600">{formatCurrency(calculations.totalLiabilities)}</p>
+          <p data-ev-id="ev_505c3aee9d" className="text-ink-muted text-sm mb-1">סה"כ התחייבויות</p>
+          <p data-ev-id="ev_34bbf9eea2" className="text-2xl lg:text-3xl font-bold text-red-400">{formatCurrency(calculations.totalLiabilities)}</p>
         </div>
         
-        <div data-ev-id="ev_3d8075e472" className="bg-gradient-to-br from-navy to-navy-light rounded-2xl shadow-lg p-6 text-center col-span-2">
+        <div data-ev-id="ev_3d8075e472" className="panel-accent rounded-2xl shadow-lg p-6 text-center col-span-2">
           <div data-ev-id="ev_9cdcec6614" className="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center mx-auto mb-3">
             <Landmark className="w-6 h-6 text-gold" />
           </div>
@@ -857,8 +857,8 @@ export default function WealthSnapshot() {
       {/* Charts Row */}
       <div data-ev-id="ev_6b842e48b5" className="grid lg:grid-cols-2 gap-6">
         {/* Pie Chart - Asset Distribution */}
-        <div data-ev-id="ev_746f13d6c6" className="bg-white rounded-2xl shadow-lg p-6">
-          <h3 data-ev-id="ev_6b376d1041" className="text-xl font-bold text-navy mb-4 flex items-center gap-2">
+        <div data-ev-id="ev_746f13d6c6" className="bg-surface rounded-2xl shadow-lg p-6">
+          <h3 data-ev-id="ev_6b376d1041" className="text-xl font-bold text-ink mb-4 flex items-center gap-2">
             <PieChart className="w-5 h-5 text-gold" />
             חלוקת נכסים
           </h3>
@@ -905,23 +905,23 @@ export default function WealthSnapshot() {
             <div data-ev-id="ev_1fcf1ced19" className="flex flex-col gap-3">
               <div data-ev-id="ev_53a8339b45" className="flex items-center gap-2">
                 <div data-ev-id="ev_3b5bafe12c" className="w-4 h-4 bg-blue-500 rounded" />
-                <span data-ev-id="ev_e93af89b73" className="text-sm text-slate">פיננסי: {calculations.financialPercent.toFixed(0)}%</span>
+                <span data-ev-id="ev_e93af89b73" className="text-sm text-ink-muted">פיננסי: {calculations.financialPercent.toFixed(0)}%</span>
               </div>
               <div data-ev-id="ev_abd4213d22" className="flex items-center gap-2">
                 <div data-ev-id="ev_7515d1e0dc" className="w-4 h-4 bg-emerald-500 rounded" />
-                <span data-ev-id="ev_aba3e47b22" className="text-sm text-slate">נדל"ן: {calculations.realestatePercent.toFixed(0)}%</span>
+                <span data-ev-id="ev_aba3e47b22" className="text-sm text-ink-muted">נדל"ן: {calculations.realestatePercent.toFixed(0)}%</span>
               </div>
               <div data-ev-id="ev_9492e121bb" className="flex items-center gap-2">
                 <div data-ev-id="ev_27ad6b0cc9" className="w-4 h-4 bg-purple-500 rounded" />
-                <span data-ev-id="ev_8ed4a78e2f" className="text-sm text-slate">עסקי: {calculations.businessPercent.toFixed(0)}%</span>
+                <span data-ev-id="ev_8ed4a78e2f" className="text-sm text-ink-muted">עסקי: {calculations.businessPercent.toFixed(0)}%</span>
               </div>
             </div>
           </div>
         </div>
         
         {/* Liquidity & Debt Gauges */}
-        <div data-ev-id="ev_816fd83936" className="bg-white rounded-2xl shadow-lg p-6">
-          <h3 data-ev-id="ev_c79e1578a1" className="text-xl font-bold text-navy mb-4 flex items-center gap-2">
+        <div data-ev-id="ev_816fd83936" className="bg-surface rounded-2xl shadow-lg p-6">
+          <h3 data-ev-id="ev_c79e1578a1" className="text-xl font-bold text-ink mb-4 flex items-center gap-2">
             <BarChart3 className="w-5 h-5 text-gold" />
             מדדים מרכזיים
           </h3>
@@ -930,28 +930,28 @@ export default function WealthSnapshot() {
             {/* Liquidity */}
             <div data-ev-id="ev_304d433a12">
               <div data-ev-id="ev_8e9471e428" className="flex justify-between mb-2">
-                <span data-ev-id="ev_bf110a848b" className="text-sm font-medium text-navy">נזילות</span>
-                <span data-ev-id="ev_15a414c45c" className="text-sm font-bold text-blue-600">{calculations.liquidityPercent.toFixed(0)}%</span>
+                <span data-ev-id="ev_bf110a848b" className="text-sm font-medium text-ink">נזילות</span>
+                <span data-ev-id="ev_15a414c45c" className="text-sm font-bold text-blue-400">{calculations.liquidityPercent.toFixed(0)}%</span>
               </div>
-              <div data-ev-id="ev_ebf816b9ed" className="h-4 bg-gray-200 rounded-full overflow-hidden">
+              <div data-ev-id="ev_ebf816b9ed" className="h-4 bg-surface-3 rounded-full overflow-hidden">
                 <div data-ev-id="ev_8eb161fa8d"
               className="h-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full transition-all duration-500"
               style={{ width: `${Math.min(calculations.liquidityPercent, 100)}%` }} />
 
               </div>
-              <p data-ev-id="ev_14b33005f6" className="text-xs text-slate mt-1">מומלץ: 20-40% נכסים נזילים</p>
+              <p data-ev-id="ev_14b33005f6" className="text-xs text-ink-muted mt-1">מומלץ: 20-40% נכסים נזילים</p>
             </div>
             
             {/* Debt Ratio */}
             <div data-ev-id="ev_7da2d50206">
               <div data-ev-id="ev_ece6a8097f" className="flex justify-between mb-2">
-                <span data-ev-id="ev_08d43f1fd5" className="text-sm font-medium text-navy">יחס חוב לנכסים</span>
+                <span data-ev-id="ev_08d43f1fd5" className="text-sm font-medium text-ink">יחס חוב לנכסים</span>
                 <span data-ev-id="ev_bfb473ad56" className={`text-sm font-bold ${
-              calculations.debtRatio > 50 ? 'text-red-600' :
-              calculations.debtRatio > 30 ? 'text-orange-500' : 'text-green-600'}`
+              calculations.debtRatio > 50 ? 'text-red-400' :
+              calculations.debtRatio > 30 ? 'text-orange-500' : 'text-green-400'}`
               }>{calculations.debtRatio.toFixed(0)}%</span>
               </div>
-              <div data-ev-id="ev_7abf040561" className="h-4 bg-gray-200 rounded-full overflow-hidden">
+              <div data-ev-id="ev_7abf040561" className="h-4 bg-surface-3 rounded-full overflow-hidden">
                 <div data-ev-id="ev_404705e6e3"
               className={`h-full rounded-full transition-all duration-500 ${
               calculations.debtRatio > 50 ? 'bg-gradient-to-r from-red-400 to-red-600' :
@@ -961,13 +961,13 @@ export default function WealthSnapshot() {
               style={{ width: `${Math.min(calculations.debtRatio, 100)}%` }} />
 
               </div>
-              <p data-ev-id="ev_25e3e47585" className="text-xs text-slate mt-1">מומלץ: מתחת 30%</p>
+              <p data-ev-id="ev_25e3e47585" className="text-xs text-ink-muted mt-1">מומלץ: מתחת 30%</p>
             </div>
             
             {/* Net Worth Bar */}
-            <div data-ev-id="ev_be966e1a0f" className="pt-4 border-t border-gray-200">
+            <div data-ev-id="ev_be966e1a0f" className="pt-4 border-t border-border">
               <div data-ev-id="ev_14a2ed0b15" className="flex justify-between mb-2">
-                <span data-ev-id="ev_7522ad6df4" className="text-sm font-medium text-navy">נכסים מול התחייבויות</span>
+                <span data-ev-id="ev_7522ad6df4" className="text-sm font-medium text-ink">נכסים מול התחייבויות</span>
               </div>
               <div data-ev-id="ev_950b8e2049" className="flex gap-1 h-8">
                 <div data-ev-id="ev_6edbc54966"
@@ -991,8 +991,8 @@ export default function WealthSnapshot() {
       </div>
       
       {/* Insights */}
-      <div data-ev-id="ev_5a37b3b1f0" className="bg-white rounded-2xl shadow-lg p-6">
-        <h3 data-ev-id="ev_ad299e82be" className="text-xl font-bold text-navy mb-4 flex items-center gap-2">
+      <div data-ev-id="ev_5a37b3b1f0" className="bg-surface rounded-2xl shadow-lg p-6">
+        <h3 data-ev-id="ev_ad299e82be" className="text-xl font-bold text-ink mb-4 flex items-center gap-2">
           <Lightbulb className="w-5 h-5 text-gold" />
           תובנות והמלצות
         </h3>
@@ -1002,9 +1002,9 @@ export default function WealthSnapshot() {
         <div data-ev-id="ev_47bed3b56e"
         key={index}
         className={`flex items-start gap-3 p-4 rounded-xl ${
-        insight.type === 'warning' ? 'bg-orange-50 border border-orange-200' :
-        insight.type === 'success' ? 'bg-green-50 border border-green-200' :
-        'bg-blue-50 border border-blue-200'}`
+        insight.type === 'warning' ? 'bg-orange-500/10 border border-orange-500/30' :
+        insight.type === 'success' ? 'bg-green-500/10 border border-green-500/30' :
+        'bg-blue-500/10 border border-blue-500/30'}`
         }>
 
               {insight.type === 'warning' ?
@@ -1015,9 +1015,9 @@ export default function WealthSnapshot() {
           <Lightbulb className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
           }
               <p data-ev-id="ev_e4f405932c" className={`text-sm ${
-          insight.type === 'warning' ? 'text-orange-800' :
-          insight.type === 'success' ? 'text-green-800' :
-          'text-blue-800'}`
+          insight.type === 'warning' ? 'text-orange-400' :
+          insight.type === 'success' ? 'text-green-400' :
+          'text-blue-400'}`
           }>{insight.message}</p>
             </div>
         )}
@@ -1026,7 +1026,7 @@ export default function WealthSnapshot() {
       
       {/* CTA */}
       {!leadSubmitted ?
-    <div data-ev-id="ev_161484bf70" className="bg-gradient-to-br from-navy to-navy-light rounded-2xl shadow-xl p-8 text-center">
+    <div data-ev-id="ev_161484bf70" className="panel-accent rounded-2xl shadow-xl p-8 text-center">
           <h3 data-ev-id="ev_f023493e32" className="text-2xl font-bold text-white mb-3">רוצה ניתוח מעמיק עם מומחה?</h3>
           <p data-ev-id="ev_4d63692ae4" className="text-white/70 mb-6 max-w-xl mx-auto">
             צוות המתכננים הפיננסיים שלנו ינתח את תמונת ההון שלך ויבנה איתך תוכנית מותאמת אישית.
@@ -1034,7 +1034,7 @@ export default function WealthSnapshot() {
           <button data-ev-id="ev_695263b5ac"
       onClick={handleSubmitLead}
       disabled={isSubmitting}
-      className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy font-bold px-8 py-4 rounded-xl transition-all disabled:opacity-50">
+      className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-4 rounded-xl transition-all disabled:opacity-50">
 
             {isSubmitting ?
         <>
@@ -1050,10 +1050,10 @@ export default function WealthSnapshot() {
           </button>
         </div> :
 
-    <div data-ev-id="ev_dfd3c0a464" className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
+    <div data-ev-id="ev_dfd3c0a464" className="bg-green-500/10 border border-green-500/30 rounded-2xl p-8 text-center">
           <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-          <h3 data-ev-id="ev_19e1650c69" className="text-2xl font-bold text-green-800 mb-2">תודה! קיבלנו את הפרטים</h3>
-          <p data-ev-id="ev_28dc430fbd" className="text-green-700">נציג עמך בקרוב לתיאום שיחת ייעוץ.</p>
+          <h3 data-ev-id="ev_19e1650c69" className="text-2xl font-bold text-green-400 mb-2">תודה! קיבלנו את הפרטים</h3>
+          <p data-ev-id="ev_28dc430fbd" className="text-green-400">נציג עמך בקרוב לתיאום שיחת ייעוץ.</p>
         </div>
     }
       
@@ -1061,7 +1061,7 @@ export default function WealthSnapshot() {
       <div data-ev-id="ev_6c9b74be19" className="flex justify-start">
         <button data-ev-id="ev_06a740b366"
       onClick={() => goToStep(3)}
-      className="flex items-center gap-2 text-navy hover:text-gold font-medium px-4 py-3 transition-colors">
+      className="flex items-center gap-2 text-ink hover:text-gold font-medium px-4 py-3 transition-colors">
 
           <ArrowRight className="w-5 h-5" />
           <span data-ev-id="ev_3b3c291632">חזרה לעריכה</span>
@@ -1071,7 +1071,7 @@ export default function WealthSnapshot() {
 
 
   return (
-    <div data-ev-id="ev_26c1329ace" className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div data-ev-id="ev_26c1329ace" className="min-h-screen bg-gradient-to-b from-surface-3 to-surface-3">
       {/* Header */}
       <header data-ev-id="ev_7a75aa82f4" className="bg-navy shadow-lg sticky top-0 z-50">
         <div data-ev-id="ev_356005a4e1" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1079,10 +1079,10 @@ export default function WealthSnapshot() {
             <Logo variant="light" />
             
             {/* Desktop Nav */}
-            <nav data-ev-id="ev_05d00f4928" className="hidden md:flex items-center gap-6">
+            <nav data-ev-id="ev_05d00f4928" className="hidden xl:flex items-center gap-6">
               <Link to="/" className="text-white/80 hover:text-white transition-colors">בית</Link>
               <Link to="/products" className="text-white/80 hover:text-white transition-colors">שירותים</Link>
-              <Link to="/#contact" className="bg-gold hover:bg-gold-light text-navy font-semibold px-4 py-2 rounded-lg transition-colors">צור קשר</Link>
+              <Link to="/#contact" className="bg-gold hover:bg-gold-light text-navy-dark font-semibold px-4 py-2 rounded-lg transition-colors">צור קשר</Link>
             </nav>
             
             {/* Mobile menu button */}
@@ -1098,14 +1098,14 @@ export default function WealthSnapshot() {
             <div data-ev-id="ev_8d3d4411b2" className="px-4 py-3 flex flex-col gap-2">
               <Link to="/" className="text-white/80 hover:text-white py-2">בית</Link>
               <Link to="/products" className="text-white/80 hover:text-white py-2">שירותים</Link>
-              <Link to="/#contact" className="bg-gold text-navy font-semibold px-4 py-2 rounded-lg text-center">צור קשר</Link>
+              <Link to="/#contact" className="bg-gold text-navy-dark font-semibold px-4 py-2 rounded-lg text-center">צור קשר</Link>
             </div>
           </div>
         }
       </header>
       
       {/* Hero */}
-      <section data-ev-id="ev_b054ffcdab" className="bg-gradient-to-br from-navy via-navy to-navy-light py-16 text-center">
+      <section data-ev-id="ev_b054ffcdab" className="hero-tech py-16 text-center">
         <div data-ev-id="ev_5e05033533" className="max-w-4xl mx-auto px-4">
           <div data-ev-id="ev_59b8c5637c" className="inline-flex items-center gap-2 bg-gold/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
             <Target className="w-4 h-4 text-gold" />
@@ -1125,7 +1125,7 @@ export default function WealthSnapshot() {
         {renderStepIndicator()}
         
         <div data-ev-id="ev_ecae928fdb" className="text-center mb-6">
-          <p data-ev-id="ev_67cb7c2477" className="text-slate">
+          <p data-ev-id="ev_67cb7c2477" className="text-ink-muted">
             {currentStep === 1 && 'שלב 1: פרטים בסיסיים'}
             {currentStep === 2 && 'שלב 2: הנכסים שלך'}
             {currentStep === 3 && 'שלב 3: התחייבויות'}

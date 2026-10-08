@@ -19,6 +19,9 @@ import LifeInsuranceCalculator from '@/pages/LifeInsuranceCalculator';
 import SavingsCalculator from '@/pages/SavingsCalculator';
 import TaxRefundEligibility from '@/pages/TaxRefundEligibility';
 import WealthSnapshot from '@/pages/WealthSnapshot';
+import WealthTechOne from '@/pages/WealthTechOne';
+import RightsCheck from '@/pages/RightsCheck';
+import FamilyOffice from '@/pages/FamilyOffice';
 
 export default function App() {
 	return (
@@ -36,6 +39,9 @@ export default function App() {
 			<Route path="/savings-calculator" element={<SavingsCalculator />} />
 			<Route path="/tax-refund-eligibility" element={<TaxRefundEligibility />} />
 			<Route path="/wealth-snapshot" element={<WealthSnapshot />} />
+			<Route path="/wealthtech-one" element={<WealthTechOne />} />
+			<Route path="/rights-check" element={<RightsCheck />} />
+			<Route path="/family-office" element={<FamilyOffice />} />
 		</Routes>
 	);
 }

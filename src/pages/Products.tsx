@@ -269,40 +269,40 @@ export default function Products() {
 
 
   return (
-    <div data-ev-id="ev_f8cdf02dda" className="min-h-screen bg-white font-sans">
+    <div data-ev-id="ev_f8cdf02dda" className="min-h-screen bg-surface font-sans">
       {/* Navigation */}
-      <nav data-ev-id="ev_600055a738" className="fixed top-0 right-0 left-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+      <nav data-ev-id="ev_600055a738" className="fixed top-0 right-0 left-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-border">
         <div data-ev-id="ev_6ba182f557" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div data-ev-id="ev_be4b41a41d" className="flex justify-between items-center h-20">
             <Logo />
             
-            <div data-ev-id="ev_dbce5ef140" className="hidden md:flex items-center gap-8">
-              <Link to="/" className="text-slate hover:text-navy transition-colors font-medium">ראשי</Link>
-              <Link to="/#about" className="text-slate hover:text-navy transition-colors font-medium">אודות</Link>
+            <div data-ev-id="ev_dbce5ef140" className="hidden xl:flex items-center gap-4 2xl:gap-7 text-[15px] 2xl:text-base">
+              <Link to="/" className="text-ink-muted hover:text-ink transition-colors font-medium">ראשי</Link>
+              <Link to="/#about" className="text-ink-muted hover:text-ink transition-colors font-medium">אודות</Link>
               <Link to="/products" className="text-gold font-medium">מוצרים</Link>
-              <Link to="/#services" className="text-slate hover:text-navy transition-colors font-medium">שירותים</Link>
-              <Link to="/process" className="text-slate hover:text-navy transition-colors font-medium">תהליך העבודה</Link>
-              <Link to="/media" className="text-slate hover:text-navy transition-colors font-medium">מדיה</Link>
-              <Link to="/pension-returns" className="text-slate hover:text-navy transition-colors font-medium">תשואות פנסיה</Link>
-              <Link to="/links" className="text-slate hover:text-navy transition-colors font-medium">קישורים שימושיים</Link>
+              <Link to="/#services" className="text-ink-muted hover:text-ink transition-colors font-medium">שירותים</Link>
+              <Link to="/process" className="text-ink-muted hover:text-ink transition-colors font-medium">תהליך העבודה</Link>
+              <Link to="/media" className="text-ink-muted hover:text-ink transition-colors font-medium">מדיה</Link>
+              <Link to="/pension-returns" className="text-ink-muted hover:text-ink transition-colors font-medium">תשואות פנסיה</Link>
+              <Link to="/links" className="text-ink-muted hover:text-ink transition-colors font-medium">קישורים שימושיים</Link>
               <a data-ev-id="ev_149bfbbd8e"
               href="https://surense.com/app/p/9z3sqal"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-navy hover:bg-navy-light text-white font-semibold px-5 py-2.5 rounded-lg transition-colors flex items-center gap-2">
+              className="bg-gold hover:bg-gold-light text-navy-dark font-semibold px-5 py-2.5 rounded-lg transition-colors flex items-center gap-2">
 
                 <FileText className="w-4 h-4" />
                 להוצאת מידע עדכני
               </a>
               <Link
                 to="/onboarding"
-                className="bg-gold hover:bg-gold-light text-navy font-semibold px-6 py-2.5 rounded-lg transition-colors">
+                className="bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-2.5 rounded-lg transition-colors">
                 התחל תהליך
               </Link>
             </div>
 
             <button data-ev-id="ev_942caaa8c0"
-            className="md:hidden p-2"
+            className="xl:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
 
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -311,28 +311,28 @@ export default function Products() {
         </div>
 
         {mobileMenuOpen &&
-        <div data-ev-id="ev_a04b33d94b" className="md:hidden bg-white border-t border-border">
+        <div data-ev-id="ev_a04b33d94b" className="xl:hidden bg-surface border-t border-border">
             <div data-ev-id="ev_d565622f26" className="px-4 py-4 flex flex-col gap-4">
-              <Link to="/" className="text-slate hover:text-navy font-medium py-2">ראשי</Link>
-              <Link to="/#about" className="text-slate hover:text-navy font-medium py-2">אודות</Link>
+              <Link to="/" className="text-ink-muted hover:text-ink font-medium py-2">ראשי</Link>
+              <Link to="/#about" className="text-ink-muted hover:text-ink font-medium py-2">אודות</Link>
               <Link to="/products" className="text-gold font-medium py-2">מוצרים</Link>
-              <Link to="/#services" className="text-slate hover:text-navy font-medium py-2">שירותים</Link>
-              <Link to="/process" className="text-slate hover:text-navy font-medium py-2">תהליך העבודה</Link>
-              <Link to="/media" className="text-slate hover:text-navy font-medium py-2">מדיה</Link>
-              <Link to="/pension-returns" className="text-slate hover:text-navy font-medium py-2">תשואות פנסיה</Link>
-              <Link to="/links" className="text-slate hover:text-navy font-medium py-2">קישורים שימושיים</Link>
+              <Link to="/#services" className="text-ink-muted hover:text-ink font-medium py-2">שירותים</Link>
+              <Link to="/process" className="text-ink-muted hover:text-ink font-medium py-2">תהליך העבודה</Link>
+              <Link to="/media" className="text-ink-muted hover:text-ink font-medium py-2">מדיה</Link>
+              <Link to="/pension-returns" className="text-ink-muted hover:text-ink font-medium py-2">תשואות פנסיה</Link>
+              <Link to="/links" className="text-ink-muted hover:text-ink font-medium py-2">קישורים שימושיים</Link>
               <a data-ev-id="ev_b47f54c4b0"
             href="https://surense.com/app/p/9z3sqal"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-navy hover:bg-navy-light text-white font-semibold px-6 py-3 rounded-lg">
+            className="flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-3 rounded-lg">
 
                 <FileText className="w-4 h-4" />
                 להוצאת מידע עדכני
               </a>
               <Link
               to="/onboarding"
-              className="bg-gold hover:bg-gold-light text-navy font-semibold px-6 py-3 rounded-lg text-center">
+              className="bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-3 rounded-lg text-center">
                 התחל תהליך
               </Link>
             </div>
@@ -341,7 +341,7 @@ export default function Products() {
       </nav>
 
       {/* Hero Section */}
-      <section data-ev-id="ev_aeaf191e38" className="relative pt-32 pb-20 bg-gradient-to-br from-navy via-navy-light to-navy">
+      <section data-ev-id="ev_aeaf191e38" className="relative pt-32 pb-20 hero-tech">
         <div data-ev-id="ev_fd38e6002d" className="absolute inset-0 overflow-hidden">
           <div data-ev-id="ev_e638119b49" className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold/10 rounded-full blur-3xl"></div>
           <div data-ev-id="ev_b7dadad64d" className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gold/5 rounded-full blur-3xl"></div>
@@ -367,21 +367,21 @@ export default function Products() {
           </div>
         </div>
         
-        <div data-ev-id="ev_852b1e80bf" className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-light to-transparent"></div>
+        <div data-ev-id="ev_852b1e80bf" className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-surface-2 to-transparent"></div>
       </section>
 
       {/* Logo Marquee - Client Companies */}
       <LogoMarquee />
 
       {/* Quick Navigation */}
-      <section data-ev-id="ev_036dd436bc" className="py-8 bg-light border-b border-border">
+      <section data-ev-id="ev_036dd436bc" className="py-8 bg-surface-2 border-b border-border">
         <div data-ev-id="ev_7dddf263cc" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div data-ev-id="ev_7bf219485e" className="flex flex-wrap gap-3 justify-center">
             {products.map((product) =>
             <a data-ev-id="ev_d3fea75ac8"
             key={product.id}
             href={`#${product.id}`}
-            className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-border hover:border-gold hover:shadow-sm transition-all text-sm font-medium text-navy">
+            className="flex items-center gap-2 px-4 py-2 bg-surface rounded-lg border border-border hover:border-gold hover:shadow-sm transition-all text-sm font-medium text-ink">
 
                 <product.icon className="w-4 h-4 text-gold" />
                 <span data-ev-id="ev_16576795d5" className="hidden sm:inline">{product.title.split(' ').slice(0, 2).join(' ')}</span>
@@ -393,30 +393,30 @@ export default function Products() {
       </section>
 
       {/* Products List */}
-      <section data-ev-id="ev_1486adecf0" className="py-16 bg-light">
+      <section data-ev-id="ev_1486adecf0" className="py-16 bg-surface-2">
         <div data-ev-id="ev_2c292003d9" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div data-ev-id="ev_aa7ca4578a" className="flex flex-col gap-8">
             {products.map((product, index) =>
             <div data-ev-id="ev_8579e40436"
             key={product.id}
             id={product.id}
-            className="bg-white rounded-3xl shadow-sm border border-border overflow-hidden scroll-mt-32">
+            className="bg-surface rounded-3xl shadow-sm border border-border overflow-hidden scroll-mt-32">
 
                 <div data-ev-id="ev_63a27ff4ce" className="p-8 lg:p-10">
                   <div data-ev-id="ev_d964b252e0" className="flex flex-col lg:flex-row gap-8">
                     {/* Icon and Title */}
                     <div data-ev-id="ev_09560763cf" className="lg:w-1/3">
                       <div data-ev-id="ev_a54b41f344" className="flex items-start gap-4 mb-4">
-                        <div data-ev-id="ev_2bc3e2c547" className="w-16 h-16 bg-gradient-to-br from-navy to-navy-light rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <div data-ev-id="ev_2bc3e2c547" className="w-16 h-16 bg-gold/10 border border-gold/30 rounded-2xl flex items-center justify-center flex-shrink-0">
                           <product.icon className="w-8 h-8 text-gold" />
                         </div>
                         <div data-ev-id="ev_b0a3fe4832">
                           <span data-ev-id="ev_ba7da122b5" className="text-gold text-sm font-semibold">0{index + 1}</span>
-                          <h2 data-ev-id="ev_d3355d4580" className="text-2xl font-bold text-navy">{product.title}</h2>
+                          <h2 data-ev-id="ev_d3355d4580" className="text-2xl font-bold text-ink">{product.title}</h2>
                         </div>
                       </div>
                       
-                      <p data-ev-id="ev_82e56247f5" className="text-slate text-lg mb-6">{renderWithPioneerLink(product.shortDescription)}</p>
+                      <p data-ev-id="ev_82e56247f5" className="text-ink-muted text-lg mb-6">{renderWithPioneerLink(product.shortDescription)}</p>
                       
                       {/* Highlights */}
                       <div data-ev-id="ev_abf9ad8f9c" className="flex flex-wrap gap-2 mb-6">
@@ -442,14 +442,14 @@ export default function Products() {
                     {/* Benefits and For Whom */}
                     <div data-ev-id="ev_a59889556e" className="lg:w-2/3 grid md:grid-cols-2 gap-6">
                       {/* Benefits */}
-                      <div data-ev-id="ev_9d9222e3bb" className="bg-light rounded-2xl p-6">
-                        <h3 data-ev-id="ev_2655818f55" className="font-bold text-navy mb-4 flex items-center gap-2">
+                      <div data-ev-id="ev_9d9222e3bb" className="bg-surface-2 rounded-2xl p-6">
+                        <h3 data-ev-id="ev_2655818f55" className="font-bold text-ink mb-4 flex items-center gap-2">
                           <CheckCircle2 className="w-5 h-5 text-gold" />
                           יתרונות עיקריים
                         </h3>
                         <ul data-ev-id="ev_3a5b4b9ae7" className="flex flex-col gap-2">
                           {product.benefits.map((benefit, i) =>
-                        <li data-ev-id="ev_73dfeef5c9" key={i} className="flex items-start gap-2 text-slate text-sm">
+                        <li data-ev-id="ev_73dfeef5c9" key={i} className="flex items-start gap-2 text-ink-muted text-sm">
                               <span data-ev-id="ev_038268cdbd" className="text-gold mt-1">•</span>
                               {benefit}
                             </li>
@@ -459,13 +459,13 @@ export default function Products() {
                       
                       {/* For Whom */}
                       <div data-ev-id="ev_c98abb3042" className="bg-navy/5 rounded-2xl p-6">
-                        <h3 data-ev-id="ev_90698904ef" className="font-bold text-navy mb-4 flex items-center gap-2">
+                        <h3 data-ev-id="ev_90698904ef" className="font-bold text-ink mb-4 flex items-center gap-2">
                           <Users className="w-5 h-5 text-gold" />
                           מתאים עבור
                         </h3>
                         <ul data-ev-id="ev_7b5dc1ee56" className="flex flex-col gap-2">
                           {product.forWhom.map((item, i) =>
-                        <li data-ev-id="ev_fc4a62fe6c" key={i} className="flex items-start gap-2 text-slate text-sm">
+                        <li data-ev-id="ev_fc4a62fe6c" key={i} className="flex items-start gap-2 text-ink-muted text-sm">
                               <span data-ev-id="ev_cb04db3b84" className="text-gold mt-1">•</span>
                               {item}
                             </li>
@@ -479,8 +479,8 @@ export default function Products() {
                   {expandedProduct === product.id &&
                 <div data-ev-id="ev_8ac8b13bb8" className="mt-8 pt-8 border-t border-border">
                       <div data-ev-id="ev_e65699d36d" className="prose prose-lg max-w-none">
-                        <h3 data-ev-id="ev_1d6dc3d0e5" className="text-xl font-bold text-navy mb-4">מידע נוסף</h3>
-                        <div data-ev-id="ev_b6edc8d409" className="text-slate whitespace-pre-line text-pretty">
+                        <h3 data-ev-id="ev_1d6dc3d0e5" className="text-xl font-bold text-ink mb-4">מידע נוסף</h3>
+                        <div data-ev-id="ev_b6edc8d409" className="text-ink-muted whitespace-pre-line text-pretty">
                           {renderWithPioneerLink(product.fullDescription)}
                         </div>
                       </div>
@@ -488,14 +488,14 @@ export default function Products() {
                       <div data-ev-id="ev_0d8c1d7133" className="mt-8 flex flex-col sm:flex-row gap-4">
                         <Link
                       to="/#contact"
-                      className="inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy font-semibold px-6 py-3 rounded-lg transition-colors">
+                      className="inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-3 rounded-lg transition-colors">
 
                           <span data-ev-id="ev_ff1f46370e">קבע פגישת ייעוץ</span>
                           <ArrowLeft className="w-5 h-5" />
                         </Link>
                         <a data-ev-id="ev_2eb070dd5a"
                     href="tel:03-1234567"
-                    className="inline-flex items-center justify-center gap-2 border-2 border-navy text-navy font-semibold px-6 py-3 rounded-lg hover:bg-navy hover:text-white transition-colors">
+                    className="inline-flex items-center justify-center gap-2 border-2 border-gold/40 text-ink font-semibold px-6 py-3 rounded-lg hover:bg-navy hover:text-white transition-colors">
 
                           <span data-ev-id="ev_892cde2bf9">שוחח עם יועץ</span>
                         </a>
@@ -510,18 +510,18 @@ export default function Products() {
       </section>
 
       {/* CTA Section */}
-      <section data-ev-id="ev_be029b8715" className="py-20 bg-gradient-to-br from-gold to-gold-light">
+      <section data-ev-id="ev_be029b8715" className="cta-glow relative overflow-hidden py-24 bg-navy-dark border-y border-gold/20">
         <div data-ev-id="ev_9c16265d44" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 data-ev-id="ev_484e4afccd" className="text-3xl sm:text-4xl font-bold text-navy mb-6 text-balance">
+          <h2 data-ev-id="ev_484e4afccd" className="text-3xl sm:text-4xl font-bold text-ink mb-6 text-balance">
             לא בטוח איזה מוצר מתאים לך?
           </h2>
-          <p data-ev-id="ev_ddb25d521f" className="text-navy/80 text-lg mb-8 max-w-2xl mx-auto text-pretty">
+          <p data-ev-id="ev_ddb25d521f" className="text-ink-muted text-lg mb-8 max-w-2xl mx-auto text-pretty">
             צוות היועצים שלנו ישמח לבצע ניתוח מקיף של המצב הפיננסי שלך ולהמליץ על 
             השילוב האופטימלי של מוצרים ושירותים שיתאימו בדיוק לצרכים שלך.
           </p>
           <Link
             to="/#contact"
-            className="inline-flex items-center gap-2 bg-navy hover:bg-navy-light text-white font-semibold px-8 py-4 rounded-lg transition-colors">
+            className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-semibold px-8 py-4 rounded-lg transition-colors">
 
             <span data-ev-id="ev_ae5be61990">קבע פגישת ייעוץ חינם</span>
             <ArrowLeft className="w-5 h-5" />
@@ -538,7 +538,7 @@ export default function Products() {
             href="https://surense.com/app/p/9z3sqal"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-navy font-bold px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            className="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
 
               <FileText className="w-5 h-5" />
               להוצאת מידע פנסיוני עדכני

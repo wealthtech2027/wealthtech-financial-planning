@@ -91,17 +91,17 @@ export function PensionOfferPopup({ isOpen, onClose }: PensionOfferPopupProps) {
 
       
       {/* Modal */}
-      <div data-ev-id="ev_403c96c275" className="relative bg-white rounded-3xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in duration-300">
+      <div data-ev-id="ev_403c96c275" className="relative bg-surface rounded-3xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in duration-300">
         {/* Close button */}
         <button data-ev-id="ev_058126a6e6"
         onClick={handleClose}
-        className="absolute top-4 left-4 p-2 rounded-full hover:bg-muted transition-colors z-10">
+        className="absolute top-4 left-4 p-2 rounded-full hover:bg-surface-2 transition-colors z-10">
 
-          <X className="w-5 h-5 text-slate" />
+          <X className="w-5 h-5 text-ink-muted" />
         </button>
         
         {/* Header with gradient */}
-        <div data-ev-id="ev_5491296bac" className="bg-gradient-to-br from-navy via-navy-light to-navy p-8 pt-12 rounded-t-3xl text-center">
+        <div data-ev-id="ev_5491296bac" className="panel-accent p-8 pt-12 rounded-t-3xl text-center">
           <div data-ev-id="ev_1cf7a7562a" className="inline-flex items-center justify-center w-16 h-16 bg-gold/20 rounded-2xl mb-4">
             <Gift className="w-8 h-8 text-gold" />
           </div>
@@ -124,8 +124,8 @@ export function PensionOfferPopup({ isOpen, onClose }: PensionOfferPopupProps) {
                     <FileText className="w-4 h-4 text-gold" />
                   </div>
                   <div data-ev-id="ev_ea2cea0d2b">
-                    <h4 data-ev-id="ev_4549dcd096" className="font-semibold text-navy">דוח מפורט על הנכסים שלך</h4>
-                    <p data-ev-id="ev_57a53ec5b8" className="text-sm text-slate">מיפוי מלא של כל החסכונות הפנסיוניים</p>
+                    <h4 data-ev-id="ev_4549dcd096" className="font-semibold text-ink">דוח מפורט על הנכסים שלך</h4>
+                    <p data-ev-id="ev_57a53ec5b8" className="text-sm text-ink-muted">מיפוי מלא של כל החסכונות הפנסיוניים</p>
                   </div>
                 </div>
                 
@@ -134,8 +134,8 @@ export function PensionOfferPopup({ isOpen, onClose }: PensionOfferPopupProps) {
                     <Video className="w-4 h-4 text-gold" />
                   </div>
                   <div data-ev-id="ev_3ae0b725af">
-                    <h4 data-ev-id="ev_ae3b8e2530" className="font-semibold text-navy">פגישת ייעוץ בזום</h4>
-                    <p data-ev-id="ev_5afd1f5a69" className="text-sm text-slate">נדון בדוח ונבנה תוכנית מותאמת אישית</p>
+                    <h4 data-ev-id="ev_ae3b8e2530" className="font-semibold text-ink">פגישת ייעוץ בזום</h4>
+                    <p data-ev-id="ev_5afd1f5a69" className="text-sm text-ink-muted">נדון בדוח ונבנה תוכנית מותאמת אישית</p>
                   </div>
                 </div>
                 
@@ -144,8 +144,8 @@ export function PensionOfferPopup({ isOpen, onClose }: PensionOfferPopupProps) {
                     <Users className="w-4 h-4 text-gold" />
                   </div>
                   <div data-ev-id="ev_a42959c29e">
-                    <h4 data-ev-id="ev_ae84031926" className="font-semibold text-navy">או פגישה פרונטלית</h4>
-                    <p data-ev-id="ev_85f264052b" className="text-sm text-slate">במשרדינו או אצלך - מה שנוח לך</p>
+                    <h4 data-ev-id="ev_ae84031926" className="font-semibold text-ink">או פגישה פרונטלית</h4>
+                    <p data-ev-id="ev_85f264052b" className="text-sm text-ink-muted">במשרדינו או אצלך - מה שנוח לך</p>
                   </div>
                 </div>
               </div>
@@ -153,30 +153,30 @@ export function PensionOfferPopup({ isOpen, onClose }: PensionOfferPopupProps) {
               {/* Form */}
               <form data-ev-id="ev_bbce5de328" onSubmit={handleSubmit} className="space-y-4">
                 <div data-ev-id="ev_13f3d36726">
-                  <label data-ev-id="ev_5fdc4a3e6f" className="block text-sm font-medium text-navy mb-1">שם מלא</label>
+                  <label data-ev-id="ev_5fdc4a3e6f" className="block text-sm font-medium text-ink mb-1">שם מלא</label>
                   <div data-ev-id="ev_b962ebdb83" className="relative">
-                    <User className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate" />
+                    <User className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-ink-muted" />
                     <input data-ev-id="ev_e4ecae9d38"
                   type="text"
                   required
                   value={formData.name}
                   onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
-                  className="w-full pr-10 pl-4 py-3 rounded-xl border border-border bg-white text-navy focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
+                  className="w-full pr-10 pl-4 py-3 rounded-xl border border-border bg-surface text-ink focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
                   placeholder="הכנס את שמך" />
 
                   </div>
                 </div>
                 
                 <div data-ev-id="ev_fe27dfff10">
-                  <label data-ev-id="ev_51ef41afd5" className="block text-sm font-medium text-navy mb-1">טלפון</label>
+                  <label data-ev-id="ev_51ef41afd5" className="block text-sm font-medium text-ink mb-1">טלפון</label>
                   <div data-ev-id="ev_05dff50d63" className="relative">
-                    <Phone className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate" />
+                    <Phone className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-ink-muted" />
                     <input data-ev-id="ev_c612d11995"
                   type="tel"
                   required
                   value={formData.phone}
                   onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
-                  className="w-full pr-10 pl-4 py-3 rounded-xl border border-border bg-white text-navy focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
+                  className="w-full pr-10 pl-4 py-3 rounded-xl border border-border bg-surface text-ink focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
                   placeholder="050-000-0000"
                   dir="ltr" />
 
@@ -184,15 +184,15 @@ export function PensionOfferPopup({ isOpen, onClose }: PensionOfferPopupProps) {
                 </div>
                 
                 <div data-ev-id="ev_6dd02e9a2e">
-                  <label data-ev-id="ev_0d5cdb5545" className="block text-sm font-medium text-navy mb-1">אימייל</label>
+                  <label data-ev-id="ev_0d5cdb5545" className="block text-sm font-medium text-ink mb-1">אימייל</label>
                   <div data-ev-id="ev_c13e62a46b" className="relative">
-                    <Mail className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate" />
+                    <Mail className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-ink-muted" />
                     <input data-ev-id="ev_fbfebe74e3"
                   type="email"
                   required
                   value={formData.email}
                   onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
-                  className="w-full pr-10 pl-4 py-3 rounded-xl border border-border bg-white text-navy focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
+                  className="w-full pr-10 pl-4 py-3 rounded-xl border border-border bg-surface text-ink focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
                   placeholder="your@email.com"
                   dir="ltr" />
 
@@ -202,11 +202,11 @@ export function PensionOfferPopup({ isOpen, onClose }: PensionOfferPopupProps) {
                 <button data-ev-id="ev_9003472f08"
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-gold hover:bg-gold-light text-navy font-bold py-4 rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-70">
+              className="w-full bg-gold hover:bg-gold-light text-navy-dark font-bold py-4 rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-70">
 
                   {isSubmitting ?
                 <>
-                      <div data-ev-id="ev_2ba49a7864" className="w-5 h-5 border-2 border-navy/30 border-t-navy rounded-full animate-spin" />
+                      <div data-ev-id="ev_2ba49a7864" className="w-5 h-5 border-2 border-gold/30 border-t-navy rounded-full animate-spin" />
                       שולח...
                     </> :
 
@@ -219,23 +219,23 @@ export function PensionOfferPopup({ isOpen, onClose }: PensionOfferPopupProps) {
               </form>
               
               {submitError &&
-            <p data-ev-id="ev_5001d03830" className="text-red-600 text-sm text-center mt-3 bg-red-50 p-2 rounded-lg">
+            <p data-ev-id="ev_5001d03830" className="text-red-400 text-sm text-center mt-3 bg-red-500/10 p-2 rounded-lg">
                   {submitError}
                 </p>
             }
               
-              <p data-ev-id="ev_f43900880e" className="text-xs text-slate text-center mt-4">
+              <p data-ev-id="ev_f43900880e" className="text-xs text-ink-muted text-center mt-4">
                 וולת'טק סוכנות לביטוח | לומדים את התיק הפנסיוני שלך
               </p>
             </> : (
 
           /* Success State */
           <div data-ev-id="ev_421fbde4e7" className="text-center py-8">
-              <div data-ev-id="ev_8d251a8e4b" className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-4">
-                <CheckCircle className="w-10 h-10 text-green-600" />
+              <div data-ev-id="ev_8d251a8e4b" className="inline-flex items-center justify-center w-20 h-20 bg-green-500/15 rounded-full mb-4">
+                <CheckCircle className="w-10 h-10 text-green-400" />
               </div>
-              <h3 data-ev-id="ev_32c5ce7517" className="text-2xl font-bold text-navy mb-2">תודה רבה!</h3>
-              <p data-ev-id="ev_47d0204322" className="text-slate mb-4">
+              <h3 data-ev-id="ev_32c5ce7517" className="text-2xl font-bold text-ink mb-2">תודה רבה!</h3>
+              <p data-ev-id="ev_47d0204322" className="text-ink-muted mb-4">
                 קיבלנו את הפרטים שלך.<br data-ev-id="ev_3b6690d5c1" />
                 נציג מטעמנו יצור איתך קשר בהקדם לתיאום פגישה.
               </p>

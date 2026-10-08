@@ -92,7 +92,7 @@ export function WorkshopPopup({ isOpen, onClose }: WorkshopPopupProps) {
 
       
       {/* Modal */}
-      <div data-ev-id="ev_7fae86db08" className="relative bg-gradient-to-br from-navy to-navy-light rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in duration-300">
+      <div data-ev-id="ev_7fae86db08" className="relative panel-accent rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in duration-300">
         {/* Close button */}
         <button data-ev-id="ev_0eb491530b"
         onClick={handleClose}
@@ -124,7 +124,7 @@ export function WorkshopPopup({ isOpen, onClose }: WorkshopPopupProps) {
                 </p>
                 <button data-ev-id="ev_d1fe3b06f6"
               onClick={handleClose}
-              className="bg-gold hover:bg-gold-light text-navy font-bold px-8 py-3 rounded-xl transition-colors">
+              className="bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-3 rounded-xl transition-colors">
 
                   סגור
                 </button>
@@ -176,7 +176,7 @@ export function WorkshopPopup({ isOpen, onClose }: WorkshopPopupProps) {
                   <button data-ev-id="ev_6174a0e5f6"
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gold hover:bg-gold-light text-navy font-bold py-4 rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-50 mt-2">
+                className="w-full bg-gold hover:bg-gold-light text-navy-dark font-bold py-4 rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-50 mt-2">
 
                     {isSubmitting ?
                   <>

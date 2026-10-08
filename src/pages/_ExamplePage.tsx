@@ -69,13 +69,13 @@ export default function ExamplePage() {
 			{(items ?? []).map((item) => (
 				<div key={item.id} className="p-4 border border-border rounded-lg">
 					<p className="font-medium">{item.name}</p>
-					<button onClick={() => handleCopy(item.name)} className="text-sm text-primary">
+					<button onClick={() => handleCopy(item.name)} className="text-sm text-ink">
 						Copy name
 					</button>
 				</div>
 			))}
 
-			<button onClick={() => navigate('/')} className="text-sm text-muted-foreground">
+			<button onClick={() => navigate('/')} className="text-sm text-ink-muted">
 				Back Home
 			</button>
 		</div>

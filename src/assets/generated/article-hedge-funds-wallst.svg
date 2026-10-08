@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" font-family="Heebo, Assistant, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1d3d"/>
+      <stop offset="1" stop-color="#070e20"/>
+    </linearGradient>
+    <radialGradient id="glowL" cx="0.27" cy="0.5" r="0.4">
+      <stop offset="0" stop-color="#d4a853" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#d4a853" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowR" cx="0.67" cy="0.45" r="0.4">
+      <stop offset="0" stop-color="#4a6fa5" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#4a6fa5" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a2c55" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#0f1d3d" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="column" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d4a853" stop-opacity="0.08"/>
+      <stop offset="0.5" stop-color="#e8c47c" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#d4a853" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8c47c" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#e8c47c" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="800" fill="url(#bg)"/>
+  <rect width="1600" height="800" fill="url(#grid)"/>
+  <rect width="1600" height="800" fill="url(#glowL)"/>
+  <rect width="1600" height="800" fill="url(#glowR)"/>
+
+  <!-- Wall Street facade -->
+  <g stroke="#d4a853" stroke-width="2" stroke-linejoin="round">
+    <polygon points="220,290 430,212 640,290" fill="#d4a853" fill-opacity="0.08"/>
+    <polygon points="268,282 430,228 592,282" fill="none" stroke-opacity="0.45"/>
+    <rect x="230" y="290" width="400" height="38" fill="#1a2c55"/>
+  </g>
+  <text x="430" y="317" text-anchor="middle" font-size="22" font-weight="700" letter-spacing="8" fill="#e8c47c">WALL ST.</text>
+  <g fill="url(#column)" stroke="#d4a853" stroke-opacity="0.7" stroke-width="1.5">
+    <rect x="248" y="336" width="44" height="10"/><rect x="254" y="346" width="32" height="150"/>
+    <rect x="313" y="336" width="44" height="10"/><rect x="319" y="346" width="32" height="150"/>
+    <rect x="378" y="336" width="44" height="10"/><rect x="384" y="346" width="32" height="150"/>
+    <rect x="438" y="336" width="44" height="10"/><rect x="444" y="346" width="32" height="150"/>
+    <rect x="503" y="336" width="44" height="10"/><rect x="509" y="346" width="32" height="150"/>
+    <rect x="568" y="336" width="44" height="10"/><rect x="574" y="346" width="32" height="150"/>
+  </g>
+  <g fill="#1a2c55" stroke="#d4a853" stroke-opacity="0.7" stroke-width="1.5">
+    <rect x="230" y="496" width="400" height="14"/>
+    <rect x="215" y="510" width="430" height="14"/>
+    <rect x="200" y="524" width="460" height="14"/>
+  </g>
+
+  <!-- Market chart panel -->
+  <g filter="url(#soft)">
+    <rect x="760" y="200" width="640" height="345" rx="26" fill="url(#panel)" stroke="#d4a853" stroke-opacity="0.45" stroke-width="1.5"/>
+  </g>
+  <text x="792" y="246" font-size="24" font-weight="700" fill="#ffffff" fill-opacity="0.92">S&amp;P 500</text>
+  <text x="900" y="246" font-size="18" font-weight="600" fill="#e8c47c">▲ 1.24%</text>
+
+  <!-- Long / Short chips -->
+  <g font-size="15" font-weight="700" text-anchor="middle">
+    <rect x="1196" y="224" width="86" height="30" rx="15" fill="#d4a853" fill-opacity="0.18" stroke="#d4a853" stroke-opacity="0.6"/>
+    <text x="1239" y="244" fill="#e8c47c">LONG ▲</text>
+    <rect x="1292" y="224" width="86" height="30" rx="15" fill="#d9646b" fill-opacity="0.15" stroke="#d9646b" stroke-opacity="0.6"/>
+    <text x="1335" y="244" fill="#e88a90">SHORT ▼</text>
+  </g>
+
+  <!-- Chart grid -->
+  <g stroke="#ffffff" stroke-opacity="0.06">
+    <line x1="790" y1="300" x2="1370" y2="300"/>
+    <line x1="790" y1="360" x2="1370" y2="360"/>
+    <line x1="790" y1="420" x2="1370" y2="420"/>
+    <line x1="790" y1="480" x2="1370" y2="480"/>
+  </g>
+
+  <!-- Moving average area + line -->
+  <path d="M872 455 L908 443 L944 433 L980 421 L1016 411 L1052 402 L1088 392 L1124 382 L1160 371 L1196 359 L1232 348 L1268 336 L1304 322 L1340 308 L1340 520 L872 520 Z" fill="url(#area)"/>
+  <path d="M872 455 L908 443 L944 433 L980 421 L1016 411 L1052 402 L1088 392 L1124 382 L1160 371 L1196 359 L1232 348 L1268 336 L1304 322 L1340 308" fill="none" stroke="#7f9cc9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.8"/>
+
+  <!-- Candlesticks (gold = up, red = down) -->
+  <g stroke-width="2">
+    <g stroke="#e8c47c" fill="#d4a853">
+      <line x1="800" y1="445" x2="800" y2="490"/><rect x="790" y="455" width="20" height="25"/>
+      <line x1="872" y1="430" x2="872" y2="476"/><rect x="862" y="440" width="20" height="30"/>
+      <line x1="908" y1="410" x2="908" y2="450"/><rect x="898" y="420" width="20" height="20"/>
+      <line x1="980" y1="396" x2="980" y2="442"/><rect x="970" y="405" width="20" height="33"/>
+      <line x1="1016" y1="380" x2="1016" y2="414"/><rect x="1006" y="390" width="20" height="15"/>
+      <line x1="1088" y1="366" x2="1088" y2="418"/><rect x="1078" y="375" width="20" height="37"/>
+      <line x1="1124" y1="350" x2="1124" y2="384"/><rect x="1114" y="360" width="20" height="15"/>
+      <line x1="1196" y1="330" x2="1196" y2="384"/><rect x="1186" y="340" width="20" height="38"/>
+      <line x1="1232" y1="312" x2="1232" y2="348"/><rect x="1222" y="325" width="20" height="15"/>
+      <line x1="1304" y1="290" x2="1304" y2="348"/><rect x="1294" y="300" width="20" height="42"/>
+      <line x1="1340" y1="270" x2="1340" y2="308"/><rect x="1330" y="282" width="20" height="18"/>
+    </g>
+    <g stroke="#d9646b" fill="#d9646b" fill-opacity="0.85">
+      <line x1="836" y1="448" x2="836" y2="478"/><rect x="826" y="455" width="20" height="15"/>
+      <line x1="944" y1="414" x2="944" y2="446"/><rect x="934" y="420" width="20" height="18"/>
+      <line x1="1052" y1="384" x2="1052" y2="420"/><rect x="1042" y="390" width="20" height="22"/>
+      <line x1="1160" y1="352" x2="1160" y2="386"/><rect x="1150" y="360" width="20" height="18"/>
+      <line x1="1268" y1="318" x2="1268" y2="350"/><rect x="1258" y="325" width="20" height="17"/>
+    </g>
+  </g>
+  <circle cx="1340" cy="282" r="14" fill="#e8c47c" fill-opacity="0.2"/>
+
+  <!-- Ticker tape -->
+  <rect x="0" y="566" width="1600" height="40" fill="#0b1630"/>
+  <line x1="0" y1="566" x2="1600" y2="566" stroke="#d4a853" stroke-opacity="0.35"/>
+  <line x1="0" y1="606" x2="1600" y2="606" stroke="#d4a853" stroke-opacity="0.35"/>
+  <text x="40" y="592" font-size="17" font-weight="600" letter-spacing="1" fill="#ffffff" fill-opacity="0.75" xml:space="preserve">S&amp;P 500 <tspan fill="#e8c47c">▲ 1.24%</tspan>     •     NASDAQ <tspan fill="#e8c47c">▲ 0.87%</tspan>     •     DOW JONES <tspan fill="#e8c47c">▲ 0.52%</tspan>     •     VIX <tspan fill="#e88a90">▼ 3.10%</tspan>     •     RUSSELL 2000 <tspan fill="#e8c47c">▲ 0.66%</tspan>     •     US 10Y <tspan fill="#e88a90">▼ 0.04</tspan>     •     S&amp;P 500 <tspan fill="#e8c47c">▲ 1.24%</tspan></text>
+
+  <!-- Sparkles -->
+  <g fill="#e8c47c">
+    <circle cx="160" cy="210" r="2.5" fill-opacity="0.6"/>
+    <circle cx="700" cy="220" r="2" fill-opacity="0.5"/>
+    <circle cx="1460" cy="230" r="2.5" fill-opacity="0.5"/>
+    <circle cx="1480" cy="500" r="2" fill-opacity="0.4"/>
+    <circle cx="690" cy="520" r="2" fill-opacity="0.4"/>
+  </g>
+</svg>
