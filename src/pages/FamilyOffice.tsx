@@ -22,7 +22,7 @@ import {
 'lucide-react';
 import { Logo } from '@/components/Logo';
 import { Reveal } from '@/components/Reveal';
-import { supabase } from '@/integrations/supabase/client';
+import { sendLead } from '@/lib/sendLead';
 
 const PIONEER_URL = 'https://www.piowealth.com';
 
@@ -111,23 +111,16 @@ export default function FamilyOffice() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!supabase) {
-      setSubmitError('לא ניתן לשלוח כרגע. נסו שוב מאוחר יותר או התקשרו אלינו.');
-      return;
-    }
 
     setSubmitting(true);
     setSubmitError(null);
     try {
-      const { error } = await supabase.from('leads').insert({
+      await sendLead({
         name: form.name,
         phone: form.phone,
         email: form.email,
-        source: 'family_office',
-        notes: 'פנייה מעמוד Wealth Management & Family Office'
+        source: 'Wealth Management & Family Office'
       });
-
-      if (error) throw error;
       setSubmitted(true);
       setForm({ name: '', phone: '', email: '', consent: false });
     } catch (err) {

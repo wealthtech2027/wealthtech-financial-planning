@@ -27,7 +27,7 @@ import {
 'lucide-react';
 import { Logo } from '@/components/Logo';
 import { Reveal } from '@/components/Reveal';
-import { supabase } from '@/integrations/supabase/client';
+import { sendLead } from '@/lib/sendLead';
 
 const pillars = [
 { icon: UserCheck, title: 'מנהל תיק אחד', text: 'איש קשר אחד שמרכז את המידע, המשימות והעדכונים מולכם.' },
@@ -91,23 +91,16 @@ export default function WealthTechOne() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!supabase) {
-      setSubmitError('לא ניתן לשלוח כרגע. נסו שוב מאוחר יותר או התקשרו אלינו.');
-      return;
-    }
 
     setSubmitting(true);
     setSubmitError(null);
     try {
-      const { error } = await supabase.from('leads').insert({
+      await sendLead({
         name: form.name,
         phone: form.phone,
         email: form.email,
-        source: 'wealthtech_one',
-        notes: `WealthTech One - נושא הפנייה: ${form.topic}`
+        source: `WealthTech One · נושא הפנייה: ${form.topic}`
       });
-
-      if (error) throw error;
       setSubmitted(true);
       setForm({ name: '', phone: '', email: '', topic: '', consent: false });
     } catch (err) {

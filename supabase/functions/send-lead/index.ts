@@ -11,7 +11,14 @@ interface LeadData {
   phone: string;
   email: string;
   source?: string;
+  notes?: string;
 }
+
+const LEADS_TO = 'udi.hevroni@wealthtech.co.il';
+
+// Form input goes into HTML - escape it so visitors cannot inject markup into the email
+const esc = (v: string) =>
+  String(v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
 
 Deno.serve(async (req: Request) => {
   // Handle CORS preflight
@@ -33,7 +40,7 @@ Deno.serve(async (req: Request) => {
     const resend = new Resend(resendApiKey);
     const leadData: LeadData = await req.json();
 
-    const { name, phone, email, source = 'פופאפ מסלקה פנסיונית' } = leadData;
+    const { name, phone, email, source = 'פופאפ מסלקה פנסיונית', notes } = leadData;
 
     // Validate required fields
     if (!name || !phone || !email) {
@@ -46,14 +53,14 @@ Deno.serve(async (req: Request) => {
     // Send email notification
     const { data, error } = await resend.emails.send({
       from: 'WealthTech Leads <onboarding@resend.dev>',
-      to: ['udihevroni@gmail.com'],
+      to: [LEADS_TO],
       replyTo: email,
-      subject: `🎯 ליד חדש: ${name}`,
+      subject: `🎯 ליד חדש: ${name} · ${source}`.slice(0, 180),
       html: `
         <div dir="rtl" style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="background: linear-gradient(135deg, #1e3a5f, #2d4a6f); padding: 30px; border-radius: 16px 16px 0 0; text-align: center;">
             <h1 style="color: #d4af37; margin: 0; font-size: 24px;">ליד חדש התקבל! 🎉</h1>
-            <p style="color: white; margin: 10px 0 0 0;">מקור: ${source}</p>
+            <p style="color: white; margin: 10px 0 0 0;">מקור: ${esc(source)}</p>
           </div>
           
           <div style="background: #f8f9fa; padding: 30px; border-radius: 0 0 16px 16px; border: 1px solid #e9ecef; border-top: none;">
@@ -62,24 +69,25 @@ Deno.serve(async (req: Request) => {
             <table style="width: 100%; border-collapse: collapse;">
               <tr>
                 <td style="padding: 12px; border-bottom: 1px solid #dee2e6; font-weight: bold; color: #495057;">שם:</td>
-                <td style="padding: 12px; border-bottom: 1px solid #dee2e6; color: #212529;">${name}</td>
+                <td style="padding: 12px; border-bottom: 1px solid #dee2e6; color: #212529;">${esc(name)}</td>
               </tr>
               <tr>
                 <td style="padding: 12px; border-bottom: 1px solid #dee2e6; font-weight: bold; color: #495057;">טלפון:</td>
                 <td style="padding: 12px; border-bottom: 1px solid #dee2e6;">
-                  <a href="tel:${phone}" style="color: #d4af37; text-decoration: none; font-weight: bold;">${phone}</a>
+                  <a href="tel:${esc(phone)}" style="color: #d4af37; text-decoration: none; font-weight: bold;">${esc(phone)}</a>
                 </td>
               </tr>
               <tr>
                 <td style="padding: 12px; font-weight: bold; color: #495057;">אימייל:</td>
                 <td style="padding: 12px;">
-                  <a href="mailto:${email}" style="color: #d4af37; text-decoration: none;">${email}</a>
+                  <a href="mailto:${esc(email)}" style="color: #d4af37; text-decoration: none;">${esc(email)}</a>
                 </td>
               </tr>
             </table>
+            ${notes ? `<div style="margin-top: 20px; padding: 16px; background: #fff; border: 1px solid #dee2e6; border-radius: 12px; white-space: pre-line; line-height: 1.7; color: #212529;">${esc(notes)}</div>` : ''}
             
             <div style="margin-top: 30px; padding: 20px; background: #d4af37; border-radius: 12px; text-align: center;">
-              <a href="tel:${phone}" style="color: #1e3a5f; text-decoration: none; font-weight: bold; font-size: 18px;">
+              <a href="tel:${esc(phone)}" style="color: #1e3a5f; text-decoration: none; font-weight: bold; font-size: 18px;">
                 📞 התקשר עכשיו
               </a>
             </div>

@@ -38,7 +38,7 @@ Deno.serve(async (req: Request) => {
     // Send email to Udi
     const { data, error } = await resend.emails.send({
       from: 'WealthTech Contact <onboarding@resend.dev>',
-      to: ['udihevroni@gmail.com'],
+      to: ['udi.hevroni@wealthtech.co.il'],
       subject: `פנייה חדשה מהאתר - ${name}`,
       html: `
         <div dir="rtl" style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

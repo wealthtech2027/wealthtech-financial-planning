@@ -14,7 +14,7 @@ import {
   RotateCcw } from
 'lucide-react';
 import { Logo } from '@/components/Logo';
-import { supabase } from '@/integrations/supabase/client';
+import { sendLead } from '@/lib/sendLead';
 
 type Question = {
   id: string;
@@ -178,29 +178,20 @@ export default function RightsCheck() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!supabase) {
-      setSubmitError('לא ניתן לשלוח כרגע. נסו שוב מאוחר יותר או התקשרו אלינו.');
-      return;
-    }
 
-    const summary = [
-    'בדיקת זכויות - שאלון התאמה',
-    `תחומים לבדיקה: ${results.filter((r) => r.relevant).map((r) => r.title).join(', ') || 'לא סומנו'}`,
-    ...questions.map((q) => `${q.text} → ${(answers[q.id] ?? []).join(', ')}`)].
-    join('\n');
+    const relevant = results.filter((r) => r.relevant).map((r) => r.title).join(', ') || 'לא סומנו';
+    const notes = questions.map((q) => `${q.text} ← ${(answers[q.id] ?? []).join(', ')}`).join('\n');
 
     setSubmitting(true);
     setSubmitError(null);
     try {
-      const { error } = await supabase.from('leads').insert({
+      await sendLead({
         name: form.name,
         phone: form.phone,
         email: form.email,
-        source: 'rights_check',
-        notes: summary
+        source: `שאלון בדיקת זכויות · תחומים לבדיקה: ${relevant} · ${(answers.motivation ?? []).join('')}`,
+        notes
       });
-
-      if (error) throw error;
       setSubmitted(true);
     } catch (err) {
       console.error('Error submitting rights check form:', err);

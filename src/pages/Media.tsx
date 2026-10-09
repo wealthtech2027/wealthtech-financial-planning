@@ -26,7 +26,7 @@ import {
 'lucide-react';
 import { LogoMarquee } from '@/components/LogoMarquee';
 import { Logo } from '@/components/Logo';
-import { supabase } from '@/integrations/supabase/client';
+import { sendLead } from '@/lib/sendLead';
 import articleInvestmentAdvisorImage from '@/assets/uploads/article-investment-advisor.jpg';
 import articleQualifiedInvestorImage from '@/assets/generated/article-qualified-investor.jpg.png';
 import articleMortgageInsuranceImage from '@/assets/generated/article-mortgage-insurance.png';
@@ -650,19 +650,15 @@ export default function Media() {
 
   const handleWorkshopSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!supabase) return;
 
     setWorkshopSubmitting(true);
     try {
-      const { error } = await supabase.from('leads').insert({
+      await sendLead({
         name: workshopForm.name,
         phone: workshopForm.phone,
         email: workshopForm.email,
-        source: 'workshop_family_finance',
-        notes: 'הרשמה לסדנת תכנון פיננסי למשפחה'
+        source: 'הרשמה לסדנת תכנון פיננסי למשפחה (כתבה במדיה)'
       });
-
-      if (error) throw error;
       setWorkshopSubmitted(true);
       setWorkshopForm({ name: '', phone: '', email: '' });
     } catch (err) {
