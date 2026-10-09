@@ -55,7 +55,6 @@ export function LogoMarquee({ variant = 'light', title = 'מטפלים בלקו�
       key={`${setKey}-${company.name}`}
       src={company.logo}
       alt={setKey === 'first' ? company.name : ''}
-      loading="lazy"
       className={`${company.tall ? 'h-9 sm:h-10' : 'h-6 sm:h-7'} w-auto max-w-[150px] object-contain brightness-0 invert opacity-55 hover:opacity-100 transition-opacity duration-300`} />
 
     )}
@@ -71,7 +70,7 @@ export function LogoMarquee({ variant = 'light', title = 'מטפלים בלקו�
         </div>
       </div>
 
-      <div data-ev-id="ev_9ca5c2c1b9" className="relative">
+      <div data-ev-id="ev_9ca5c2c1b9" dir="ltr" className="relative">
         {/* Gradient overlays */}
         <div data-ev-id="ev_431f6c0b51" className={`absolute left-0 top-0 bottom-0 w-16 sm:w-32 z-10 pointer-events-none ${
         variant === 'dark' ?
@@ -85,7 +84,7 @@ export function LogoMarquee({ variant = 'light', title = 'מטפלים בלקו�
         } />
 
         {/* Scrolling container: two identical sets for a seamless loop */}
-        <div data-ev-id="ev_e7028e821d" className="flex items-center animate-marquee">
+        <div data-ev-id="ev_e7028e821d" dir="ltr" className="flex w-max items-center animate-marquee">
           {renderSet('first')}
           {renderSet('second')}
         </div>
