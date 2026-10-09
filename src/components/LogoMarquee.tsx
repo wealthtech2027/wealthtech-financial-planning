@@ -1,18 +1,31 @@
 import { Building2 } from 'lucide-react';
+import nvidiaLogo from '@/assets/logos/nvidia.svg';
+import microsoftLogo from '@/assets/logos/microsoft.svg';
+import amazonLogo from '@/assets/logos/amazon.svg';
+import broadcomLogo from '@/assets/logos/broadcom.svg';
+import googleLogo from '@/assets/logos/google.svg';
+import amdocsLogo from '@/assets/logos/amdocs.svg';
+import passportcardLogo from '@/assets/logos/passportcard.svg';
+import cyberarkLogo from '@/assets/logos/cyberark.svg';
+import nessLogo from '@/assets/logos/ness.svg';
+import elbitLogo from '@/assets/logos/elbit.png';
+import rafaelLogo from '@/assets/logos/rafael.svg';
+import iaiLogo from '@/assets/logos/iai.svg';
 
+// `tall` = emblem-style logos that need more height to read at the same visual weight as wordmarks
 const companies = [
-{ name: 'NVIDIA', color: '#76B900' },
-{ name: 'Microsoft', color: '#00A4EF' },
-{ name: 'Amazon', color: '#FF9900' },
-{ name: 'Broadcom', color: '#CC092F' },
-{ name: 'Google', color: '#4285F4' },
-{ name: 'Amdocs', color: '#0072C6' },
-{ name: 'PassportCard', color: '#1E3A5F' },
-{ name: 'CyberArk', color: '#0066B3' },
-{ name: 'Ness', color: '#E31937' },
-{ name: 'Elbit', color: '#003366' },
-{ name: 'Rafael', color: '#00529B' },
-{ name: 'IAI', color: '#0033A0' }];
+{ name: 'NVIDIA', logo: nvidiaLogo },
+{ name: 'Microsoft', logo: microsoftLogo },
+{ name: 'Amazon', logo: amazonLogo },
+{ name: 'Broadcom', logo: broadcomLogo },
+{ name: 'Google', logo: googleLogo },
+{ name: 'Amdocs', logo: amdocsLogo },
+{ name: 'PassportCard', logo: passportcardLogo, tall: true },
+{ name: 'CyberArk', logo: cyberarkLogo },
+{ name: 'Ness', logo: nessLogo, tall: true },
+{ name: 'Elbit Systems', logo: elbitLogo, tall: true },
+{ name: 'Rafael', logo: rafaelLogo, tall: true },
+{ name: 'IAI', logo: iaiLogo, tall: true }];
 
 
 interface LogoMarqueeProps {
@@ -27,12 +40,23 @@ export function LogoMarquee({ variant = 'light', title = 'מטפלים בלקו�
   const textClass = variant === 'dark' ?
   'text-white/60' :
   'text-ink-muted';
-  const logoTextClass = variant === 'dark' ?
-  'text-white/80 hover:text-white' :
-  'text-ink/70 hover:text-ink';
   const borderClass = variant === 'dark' ?
   'border-white/10' :
   'border-border';
+
+  const renderSet = (setKey: string) =>
+  <div className="flex shrink-0 items-center gap-12 lg:gap-16 px-6 lg:px-8" aria-hidden={setKey === 'second'}>
+      {companies.map((company) =>
+    <img
+      key={`${setKey}-${company.name}`}
+      src={company.logo}
+      alt={setKey === 'first' ? company.name : ''}
+      loading="lazy"
+      className={`${company.tall ? 'h-9 sm:h-10' : 'h-6 sm:h-7'} w-auto max-w-[150px] object-contain brightness-0 invert opacity-55 hover:opacity-100 transition-opacity duration-300`} />
+
+    )}
+    </div>;
+
 
   return (
     <section data-ev-id="ev_fae9ee7aa7" className={`py-8 ${bgClass} border-y ${borderClass} overflow-hidden`}>
@@ -42,57 +66,24 @@ export function LogoMarquee({ variant = 'light', title = 'מטפלים בלקו�
           <p data-ev-id="ev_75e3d8a912" className={`text-sm font-medium ${textClass}`}>{title}</p>
         </div>
       </div>
-      
+
       <div data-ev-id="ev_9ca5c2c1b9" className="relative">
         {/* Gradient overlays */}
-        <div data-ev-id="ev_431f6c0b51" className={`absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none ${
+        <div data-ev-id="ev_431f6c0b51" className={`absolute left-0 top-0 bottom-0 w-16 sm:w-32 z-10 pointer-events-none ${
         variant === 'dark' ?
         'bg-gradient-to-r from-navy-light/50 to-transparent' :
         'bg-gradient-to-r from-surface-2/50 to-transparent'}`
         } />
-        <div data-ev-id="ev_f3b536de29" className={`absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none ${
+        <div data-ev-id="ev_f3b536de29" className={`absolute right-0 top-0 bottom-0 w-16 sm:w-32 z-10 pointer-events-none ${
         variant === 'dark' ?
         'bg-gradient-to-l from-navy-light/50 to-transparent' :
         'bg-gradient-to-l from-surface-2/50 to-transparent'}`
         } />
-        
-        {/* Scrolling container */}
-        <div data-ev-id="ev_e7028e821d" className="flex animate-marquee">
-          {/* First set */}
-          <div data-ev-id="ev_33e367d4ab" className="flex shrink-0 gap-8 lg:gap-12 px-6">
-            {companies.map((company, index) =>
-            <div data-ev-id="ev_ae069d4989"
-            key={`first-${index}`}
-            className={`flex items-center gap-2 px-6 py-3 rounded-lg transition-all duration-300 cursor-default group`}>
 
-                <div data-ev-id="ev_1ba9ad2d7c"
-              className="w-3 h-3 rounded-full transition-transform group-hover:scale-125"
-              style={{ backgroundColor: company.color }} />
-
-                <span data-ev-id="ev_8b9d3b170b" className={`text-lg font-semibold whitespace-nowrap transition-colors ${logoTextClass}`}>
-                  {company.name}
-                </span>
-              </div>
-            )}
-          </div>
-          
-          {/* Duplicate set for seamless loop */}
-          <div data-ev-id="ev_6e3f975aea" className="flex shrink-0 gap-8 lg:gap-12 px-6">
-            {companies.map((company, index) =>
-            <div data-ev-id="ev_a713b199da"
-            key={`second-${index}`}
-            className={`flex items-center gap-2 px-6 py-3 rounded-lg transition-all duration-300 cursor-default group`}>
-
-                <div data-ev-id="ev_c51256623d"
-              className="w-3 h-3 rounded-full transition-transform group-hover:scale-125"
-              style={{ backgroundColor: company.color }} />
-
-                <span data-ev-id="ev_3cb4c0fd8c" className={`text-lg font-semibold whitespace-nowrap transition-colors ${logoTextClass}`}>
-                  {company.name}
-                </span>
-              </div>
-            )}
-          </div>
+        {/* Scrolling container: two identical sets for a seamless loop */}
+        <div data-ev-id="ev_e7028e821d" className="flex items-center animate-marquee">
+          {renderSet('first')}
+          {renderSet('second')}
         </div>
       </div>
     </section>);
