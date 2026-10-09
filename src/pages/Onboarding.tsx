@@ -698,7 +698,7 @@ export default function Onboarding() {
   if (isSubmitted) {
     return (
       <div data-ev-id="ev_b6e274a51c" className="min-h-screen bg-surface-2 font-sans flex items-center justify-center p-4">
-        <div data-ev-id="ev_ee04056ed6" className="bg-surface rounded-3xl shadow-lg p-8 md:p-12 max-w-lg w-full text-center">
+        <div data-ev-id="ev_ee04056ed6" className="bg-surface rounded-3xl shadow-lg p-6 sm:p-8 md:p-12 max-w-lg w-full text-center">
           <div data-ev-id="ev_bc8dad6188" className="w-20 h-20 bg-green-500/15 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle2 className="w-10 h-10 text-green-400" />
           </div>

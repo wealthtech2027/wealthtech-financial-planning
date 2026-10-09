@@ -11,7 +11,7 @@ export function WhatsAppButton() {
     href={whatsappUrl}
     target="_blank"
     rel="noopener noreferrer"
-    className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 group"
+    className="hidden md:flex fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full shadow-lg items-center justify-center transition-all duration-300 hover:scale-110 group"
     aria-label="צור קשר בוואטסאפ">
 
       <MessageCircle className="w-7 h-7 fill-white" />

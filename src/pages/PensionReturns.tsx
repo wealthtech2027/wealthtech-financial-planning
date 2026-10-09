@@ -854,7 +854,7 @@ export default function PensionReturns() {
       {/* Floating Offer Button */}
       <button data-ev-id="ev_b659b01171"
       onClick={() => setShowOfferPopup(true)}
-      className="fixed bottom-6 left-20 z-50 bg-gold hover:bg-gold-light text-navy-dark font-bold px-6 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center gap-3 group">
+      className="hidden md:flex fixed bottom-6 left-20 z-50 bg-gold hover:bg-gold-light text-navy-dark font-bold px-6 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all items-center gap-3 group">
 
         <Gift className="w-6 h-6 group-hover:scale-110 transition-transform" />
         <span data-ev-id="ev_79c71eac44" className="hidden sm:inline">מגיע לך הטבה!</span>

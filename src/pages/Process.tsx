@@ -253,7 +253,7 @@ export default function Process() {
       {/* Why Planning Section */}
       <section data-ev-id="ev_5ce308a546" className="py-20 bg-surface">
         <div data-ev-id="ev_7f1720fb49" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div data-ev-id="ev_cd2d722678" className="grid lg:grid-cols-2 gap-16 items-center">
+          <div data-ev-id="ev_cd2d722678" className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div data-ev-id="ev_f7fcfcf118">
               <div data-ev-id="ev_a37cbd9e2d" className="inline-flex items-center gap-2 text-gold font-semibold mb-4">
                 <Lightbulb className="w-5 h-5" />
@@ -287,7 +287,7 @@ export default function Process() {
             </div>
             
             <div data-ev-id="ev_4e6913c003" className="relative">
-              <div data-ev-id="ev_d830509a47" className="bg-gradient-to-br from-surface-2 to-surface rounded-3xl p-8 border border-border">
+              <div data-ev-id="ev_d830509a47" className="bg-gradient-to-br from-surface-2 to-surface rounded-3xl p-6 sm:p-8 border border-border">
                 <div data-ev-id="ev_8b27c2e6bf" className="text-center mb-8">
                   <div data-ev-id="ev_dce6241762" className="text-6xl font-bold text-gold mb-2">30%</div>
                   <div data-ev-id="ev_1792165037" className="text-ink-muted">מהאנשים מחזיקים בתוכנית פיננסית</div>
@@ -305,9 +305,9 @@ export default function Process() {
       </section>
 
       {/* 6 Steps Section */}
-      <section data-ev-id="ev_6f3d2cde5c" className="py-20 lg:py-32 bg-surface-2">
+      <section data-ev-id="ev_6f3d2cde5c" className="py-14 sm:py-20 lg:py-32 bg-surface-2">
         <div data-ev-id="ev_71258c5b01" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div data-ev-id="ev_4b3a9922c2" className="text-center max-w-3xl mx-auto mb-16">
+          <div data-ev-id="ev_4b3a9922c2" className="text-center max-w-3xl mx-auto mb-10 lg:mb-16">
             <div data-ev-id="ev_380069046c" className="inline-flex items-center gap-2 text-gold font-semibold mb-4">
               <ClipboardList className="w-5 h-5" />
               <span data-ev-id="ev_4c985c19ea">התהליך שלנו</span>
@@ -327,7 +327,7 @@ export default function Process() {
             {steps.map((step, index) =>
             <div data-ev-id="ev_39486e4fd5"
             key={index}
-            className="bg-surface rounded-3xl p-8 lg:p-10 shadow-sm border border-border hover:shadow-lg transition-shadow">
+            className="bg-surface rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm border border-border hover:shadow-lg transition-shadow">
 
                 <div data-ev-id="ev_306ca4457d" className="flex flex-col lg:flex-row gap-8">
                   <div data-ev-id="ev_e4fa96054f" className="flex-shrink-0">
@@ -400,7 +400,7 @@ export default function Process() {
       {/* Additional Tips Section */}
       <section data-ev-id="ev_62590f8164" className="py-20 bg-surface">
         <div data-ev-id="ev_849be04d57" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div data-ev-id="ev_e1708a0aa7" className="text-center max-w-3xl mx-auto mb-16">
+          <div data-ev-id="ev_e1708a0aa7" className="text-center max-w-3xl mx-auto mb-10 lg:mb-16">
             <h2 data-ev-id="ev_e95c42c80c" className="text-3xl sm:text-4xl font-bold text-ink mb-6 text-balance">
               טיפים נוספים לשיפור התכנון הפיננסי
             </h2>
@@ -411,7 +411,7 @@ export default function Process() {
           
           <div data-ev-id="ev_afd5712503" className="grid md:grid-cols-3 gap-8">
             {additionalTips.map((tip, index) =>
-            <div data-ev-id="ev_d76dad68f7" key={index} className="bg-surface-2 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+            <div data-ev-id="ev_d76dad68f7" key={index} className="bg-surface-2 rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
                 <div data-ev-id="ev_9f7d11dba9" className="w-14 h-14 bg-gold/10 border border-gold/30 rounded-xl flex items-center justify-center mb-6">
                   <tip.icon className="w-7 h-7 text-gold" />
                 </div>
@@ -424,7 +424,7 @@ export default function Process() {
       </section>
 
       {/* CTA Section */}
-      <section data-ev-id="ev_2039d366d3" className="cta-glow relative overflow-hidden py-24 bg-navy-dark border-y border-gold/20">
+      <section data-ev-id="ev_2039d366d3" className="cta-glow relative overflow-hidden py-16 sm:py-24 bg-navy-dark border-y border-gold/20">
         <div data-ev-id="ev_bd9af8b5be" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 data-ev-id="ev_1cb517bed2" className="text-3xl sm:text-4xl font-bold text-ink mb-6 text-balance">
             מוכנים להתחיל בתהליך התכנון הפיננסי?
@@ -463,7 +463,7 @@ export default function Process() {
           <div data-ev-id="ev_b94eccf9c2" className="flex flex-col md:flex-row justify-between items-center gap-6">
             <Logo variant="light" />
             
-            <div data-ev-id="ev_88c5c5f814" className="flex items-center gap-6">
+            <div data-ev-id="ev_88c5c5f814" className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
               <Link to="/" className="text-white/70 hover:text-white transition-colors">ראשי</Link>
               <Link to="/#services" className="text-white/70 hover:text-white transition-colors">שירותים</Link>
               <Link to="/process" className="text-white/70 hover:text-white transition-colors">תהליך העבודה</Link>

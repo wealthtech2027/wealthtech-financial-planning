@@ -1026,7 +1026,7 @@ export default function WealthSnapshot() {
       
       {/* CTA */}
       {!leadSubmitted ?
-    <div data-ev-id="ev_161484bf70" className="panel-accent rounded-2xl shadow-xl p-8 text-center">
+    <div data-ev-id="ev_161484bf70" className="panel-accent rounded-2xl shadow-xl p-6 sm:p-8 text-center">
           <h3 data-ev-id="ev_f023493e32" className="text-2xl font-bold text-white mb-3">רוצה ניתוח מעמיק עם מומחה?</h3>
           <p data-ev-id="ev_4d63692ae4" className="text-white/70 mb-6 max-w-xl mx-auto">
             צוות המתכננים הפיננסיים שלנו ינתח את תמונת ההון שלך ויבנה איתך תוכנית מותאמת אישית.
@@ -1050,7 +1050,7 @@ export default function WealthSnapshot() {
           </button>
         </div> :
 
-    <div data-ev-id="ev_dfd3c0a464" className="bg-green-500/10 border border-green-500/30 rounded-2xl p-8 text-center">
+    <div data-ev-id="ev_dfd3c0a464" className="bg-green-500/10 border border-green-500/30 rounded-2xl p-6 sm:p-8 text-center">
           <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
           <h3 data-ev-id="ev_19e1650c69" className="text-2xl font-bold text-green-400 mb-2">תודה! קיבלנו את הפרטים</h3>
           <p data-ev-id="ev_28dc430fbd" className="text-green-400">נציג עמך בקרוב לתיאום שיחת ייעוץ.</p>

@@ -59,7 +59,7 @@ export function LogoMarquee({ variant = 'light', title = 'מטפלים בלקו�
         {/* Scrolling container */}
         <div data-ev-id="ev_e7028e821d" className="flex animate-marquee">
           {/* First set */}
-          <div data-ev-id="ev_33e367d4ab" className="flex shrink-0 gap-12 px-6">
+          <div data-ev-id="ev_33e367d4ab" className="flex shrink-0 gap-8 lg:gap-12 px-6">
             {companies.map((company, index) =>
             <div data-ev-id="ev_ae069d4989"
             key={`first-${index}`}
@@ -77,7 +77,7 @@ export function LogoMarquee({ variant = 'light', title = 'מטפלים בלקו�
           </div>
           
           {/* Duplicate set for seamless loop */}
-          <div data-ev-id="ev_6e3f975aea" className="flex shrink-0 gap-12 px-6">
+          <div data-ev-id="ev_6e3f975aea" className="flex shrink-0 gap-8 lg:gap-12 px-6">
             {companies.map((company, index) =>
             <div data-ev-id="ev_a713b199da"
             key={`second-${index}`}

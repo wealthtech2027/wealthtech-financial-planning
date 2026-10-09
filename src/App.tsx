@@ -22,9 +22,11 @@ import WealthSnapshot from '@/pages/WealthSnapshot';
 import WealthTechOne from '@/pages/WealthTechOne';
 import RightsCheck from '@/pages/RightsCheck';
 import FamilyOffice from '@/pages/FamilyOffice';
+import { MobileActionBar } from '@/components/MobileActionBar';
 
 export default function App() {
 	return (
+		<>
 		<Routes>
 			<Route path="/" element={<Index />} />
 			<Route path="/process" element={<Process />} />
@@ -43,5 +45,7 @@ export default function App() {
 			<Route path="/rights-check" element={<RightsCheck />} />
 			<Route path="/family-office" element={<FamilyOffice />} />
 		</Routes>
+		<MobileActionBar />
+		</>
 	);
 }

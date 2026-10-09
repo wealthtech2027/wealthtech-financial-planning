@@ -231,10 +231,10 @@ export default function WealthTechOne() {
       </section>
 
       {/* Rights domains */}
-      <section className="relative py-20 lg:py-28 bg-surface-2 overflow-hidden">
+      <section className="relative py-14 sm:py-20 lg:py-28 bg-surface-2 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal className="max-w-3xl mb-12">
+          <Reveal className="max-w-3xl mb-8 lg:mb-12">
             <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
               <span className="w-8 h-px bg-gold" />
               <span>מה בודקים</span>
@@ -244,15 +244,15 @@ export default function WealthTechOne() {
             </h2>
           </Reveal>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
             {domains.map(({ icon: Icon, title, text }, i) =>
             <Reveal key={title} delay={i * 100}>
-                <div className="card-tech h-full rounded-2xl p-6">
-                  <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center mb-5">
-                    <Icon className="w-6 h-6 text-gold" />
+                <div className="card-tech h-full rounded-2xl p-4 sm:p-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center mb-3 sm:mb-5">
+                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
                   </div>
-                  <h3 className="text-xl font-bold text-ink mb-2">{title}</h3>
-                  <p className="text-ink-muted text-pretty">{text}</p>
+                  <h3 className="text-base sm:text-xl font-bold text-ink mb-1 sm:mb-2">{title}</h3>
+                  <p className="text-sm sm:text-base text-ink-muted text-pretty">{text}</p>
                 </div>
               </Reveal>
             )}
@@ -261,9 +261,9 @@ export default function WealthTechOne() {
       </section>
 
       {/* When is it relevant */}
-      <section className="relative py-20 lg:py-28 bg-surface overflow-hidden">
+      <section className="relative py-14 sm:py-20 lg:py-28 bg-surface overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal className="max-w-3xl mb-12">
+          <Reveal className="max-w-3xl mb-8 lg:mb-12">
             <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
               <span className="w-8 h-px bg-gold" />
               <span>מתי זה רלוונטי</span>
@@ -279,7 +279,7 @@ export default function WealthTechOne() {
           <div className="grid md:grid-cols-3 gap-6">
             {situations.map(({ icon: Icon, title, text }, i) =>
             <Reveal key={title} delay={i * 120}>
-                <div className="card-tech h-full rounded-3xl p-8">
+                <div className="card-tech h-full rounded-3xl p-6 sm:p-8">
                   <div className="flex items-start justify-between mb-6">
                     <div className="w-14 h-14 rounded-2xl bg-gold/10 border border-gold/30 flex items-center justify-center">
                       <Icon className="w-7 h-7 text-gold" />
@@ -300,10 +300,10 @@ export default function WealthTechOne() {
       </section>
 
       {/* Team */}
-      <section className="relative py-20 lg:py-28 bg-surface-2 overflow-hidden">
+      <section className="relative py-14 sm:py-20 lg:py-28 bg-surface-2 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal className="max-w-3xl mb-12">
+          <Reveal className="max-w-3xl mb-8 lg:mb-12">
             <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
               <span className="w-8 h-px bg-gold" />
               <span>הצוות המקצועי</span>
@@ -335,9 +335,9 @@ export default function WealthTechOne() {
       </section>
 
       {/* Process */}
-      <section id="one-process" className="relative py-20 lg:py-28 bg-surface overflow-hidden scroll-mt-20">
+      <section id="one-process" className="relative py-14 sm:py-20 lg:py-28 bg-surface overflow-hidden scroll-mt-20">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal className="max-w-3xl mb-12">
+          <Reveal className="max-w-3xl mb-8 lg:mb-12">
             <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
               <span className="w-8 h-px bg-gold" />
               <span>איך התהליך עובד</span>
@@ -347,13 +347,13 @@ export default function WealthTechOne() {
             </h2>
           </Reveal>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
             {steps.map((step, i) =>
             <Reveal key={step.title} delay={i * 100}>
-                <div className="card-tech h-full rounded-2xl p-6">
-                  <div className="font-mono text-gold text-sm font-semibold mb-4">שלב 0{i + 1}</div>
-                  <h3 className="text-xl font-bold text-ink mb-2">{step.title}</h3>
-                  <p className="text-ink-muted text-pretty">{step.text}</p>
+                <div className="card-tech h-full rounded-2xl p-4 sm:p-6">
+                  <div className="font-mono text-gold text-xs sm:text-sm font-semibold mb-2 sm:mb-4">שלב 0{i + 1}</div>
+                  <h3 className="text-base sm:text-xl font-bold text-ink mb-1 sm:mb-2">{step.title}</h3>
+                  <p className="text-sm sm:text-base text-ink-muted text-pretty">{step.text}</p>
                 </div>
               </Reveal>
             )}
@@ -371,10 +371,10 @@ export default function WealthTechOne() {
       </section>
 
       {/* Deliverables */}
-      <section className="relative py-20 lg:py-28 bg-surface-2 overflow-hidden">
+      <section className="relative py-14 sm:py-20 lg:py-28 bg-surface-2 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <Reveal>
               <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
                 <span className="w-8 h-px bg-gold" />
@@ -401,7 +401,7 @@ export default function WealthTechOne() {
       </section>
 
       {/* Contact */}
-      <section id="one-contact" className="cta-glow relative py-20 lg:py-28 bg-navy-dark border-y border-gold/20 scroll-mt-20">
+      <section id="one-contact" className="cta-glow relative py-14 sm:py-20 lg:py-28 bg-navy-dark border-y border-gold/20 scroll-mt-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold text-ink mb-4 text-balance">מתחילים בשיחה אחת</h2>
@@ -411,7 +411,7 @@ export default function WealthTechOne() {
           </div>
 
           {submitted ?
-          <div className="card-tech rounded-2xl p-8 text-center">
+          <div className="card-tech rounded-2xl p-6 sm:p-8 text-center">
               <CheckCircle2 className="w-14 h-14 text-gold mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-ink mb-2">הפנייה נקלטה</h3>
               <p className="text-ink-muted">נחזור אליכם לתיאום שיחת היכרות. אין צורך לשלוח מסמכים בשלב זה.</p>
@@ -509,7 +509,7 @@ export default function WealthTechOne() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <Logo variant="light" />
 
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
               <Link to="/" className="text-white/70 hover:text-white transition-colors">ראשי</Link>
               <Link to="/#services" className="text-white/70 hover:text-white transition-colors">שירותים</Link>
               <Link to="/process" className="text-white/70 hover:text-white transition-colors">תהליך העבודה</Link>

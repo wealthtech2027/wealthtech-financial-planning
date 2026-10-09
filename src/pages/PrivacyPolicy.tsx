@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
       {/* Content */}
       <section data-ev-id="ev_545cab39f9" className="py-12 bg-surface-2">
         <div data-ev-id="ev_36958791b9" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div data-ev-id="ev_e629b7de50" className="bg-surface rounded-2xl p-8 sm:p-12 shadow-sm border border-border">
+          <div data-ev-id="ev_e629b7de50" className="bg-surface rounded-2xl p-6 sm:p-12 shadow-sm border border-border">
             
             {/* Company Info */}
             <div data-ev-id="ev_976fdf3095" className="mb-8 p-6 bg-surface-2 rounded-xl">

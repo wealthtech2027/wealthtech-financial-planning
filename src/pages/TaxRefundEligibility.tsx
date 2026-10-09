@@ -344,7 +344,7 @@ export default function TaxRefundEligibility() {
           <div data-ev-id="ev_7285a0686b" className="space-y-6">
               {/* Main Result Card */}
               <div data-ev-id="ev_b7088333e6" className="bg-surface rounded-3xl shadow-xl overflow-hidden">
-                <div data-ev-id="ev_7c3ad0b465" className={`${config.color} p-8 text-center`}>
+                <div data-ev-id="ev_7c3ad0b465" className={`${config.color} p-6 sm:p-8 text-center`}>
                   <EligibilityIcon className={`w-16 h-16 ${config.textColor} mx-auto mb-4`} />
                   <h2 data-ev-id="ev_992fa90fb3" className={`text-2xl sm:text-3xl font-bold ${config.textColor} mb-2`}>
                     {config.title}

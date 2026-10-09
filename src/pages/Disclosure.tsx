@@ -41,7 +41,7 @@ export default function Disclosure() {
       {/* Content */}
       <section data-ev-id="ev_f3808fdfde" className="py-12 bg-surface-2">
         <div data-ev-id="ev_27ceff7737" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div data-ev-id="ev_fd6784c20b" className="bg-surface rounded-2xl p-8 sm:p-12 shadow-sm border border-border">
+          <div data-ev-id="ev_fd6784c20b" className="bg-surface rounded-2xl p-6 sm:p-12 shadow-sm border border-border">
             
             <div data-ev-id="ev_7bf0f34fc7" className="prose prose-lg max-w-none text-ink-muted leading-relaxed">
               

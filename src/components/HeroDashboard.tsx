@@ -16,7 +16,7 @@ export function HeroDashboard() {
     <div className="relative">
       <div className="absolute -inset-6 bg-gold/10 blur-3xl rounded-full" />
 
-      <div className="relative glass-panel rounded-3xl p-6 flex flex-col gap-5">
+      <div className="relative glass-panel rounded-3xl p-4 sm:p-6 flex flex-col gap-4 sm:gap-5">
         {/* Top bar */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2 text-sm text-ink">
@@ -92,7 +92,7 @@ export function HeroDashboard() {
             {rights.map((r, i) =>
             <li
               key={r.label}
-              className="scan-item flex items-center justify-between text-sm rounded-lg bg-white/[0.03] px-3 py-2"
+              className={`scan-item ${i >= 2 ? 'hidden sm:flex' : 'flex'} items-center justify-between text-sm rounded-lg bg-white/[0.03] px-3 py-2`}
               style={{ animationDelay: `${900 + i * 450}ms` }}>
                 <span className="flex items-center gap-2 text-ink">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />

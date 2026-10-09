@@ -101,7 +101,7 @@ export function PensionOfferPopup({ isOpen, onClose }: PensionOfferPopupProps) {
         </button>
         
         {/* Header with gradient */}
-        <div data-ev-id="ev_5491296bac" className="panel-accent p-8 pt-12 rounded-t-3xl text-center">
+        <div data-ev-id="ev_5491296bac" className="panel-accent p-6 sm:p-8 pt-12 rounded-t-3xl text-center">
           <div data-ev-id="ev_1cf7a7562a" className="inline-flex items-center justify-center w-16 h-16 bg-gold/20 rounded-2xl mb-4">
             <Gift className="w-8 h-8 text-gold" />
           </div>

@@ -762,7 +762,7 @@ export default function LifeInsuranceCalculator() {
           <div data-ev-id="ev_68b36b0561" className="space-y-6">
               {/* Main Result Card */}
               <div data-ev-id="ev_7a1f1a413c" className="bg-surface rounded-3xl shadow-xl overflow-hidden">
-                <div data-ev-id="ev_2f16ec0068" className="panel-accent p-8 text-center">
+                <div data-ev-id="ev_2f16ec0068" className="panel-accent p-6 sm:p-8 text-center">
                   <Shield className="w-16 h-16 text-gold mx-auto mb-4" />
                   <p data-ev-id="ev_1ade970561" className="text-white/80 mb-2">סכום ביטוח חיים מומלץ</p>
                   <p data-ev-id="ev_6963697e6a" className="text-4xl sm:text-5xl font-bold text-white">

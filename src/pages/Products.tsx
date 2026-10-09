@@ -402,7 +402,7 @@ export default function Products() {
             id={product.id}
             className="bg-surface rounded-3xl shadow-sm border border-border overflow-hidden scroll-mt-32">
 
-                <div data-ev-id="ev_63a27ff4ce" className="p-8 lg:p-10">
+                <div data-ev-id="ev_63a27ff4ce" className="p-6 sm:p-8 lg:p-10">
                   <div data-ev-id="ev_d964b252e0" className="flex flex-col lg:flex-row gap-8">
                     {/* Icon and Title */}
                     <div data-ev-id="ev_09560763cf" className="lg:w-1/3">
@@ -510,7 +510,7 @@ export default function Products() {
       </section>
 
       {/* CTA Section */}
-      <section data-ev-id="ev_be029b8715" className="cta-glow relative overflow-hidden py-24 bg-navy-dark border-y border-gold/20">
+      <section data-ev-id="ev_be029b8715" className="cta-glow relative overflow-hidden py-16 sm:py-24 bg-navy-dark border-y border-gold/20">
         <div data-ev-id="ev_9c16265d44" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 data-ev-id="ev_484e4afccd" className="text-3xl sm:text-4xl font-bold text-ink mb-6 text-balance">
             לא בטוח איזה מוצר מתאים לך?
@@ -548,7 +548,7 @@ export default function Products() {
           <div data-ev-id="ev_83c5da1c1d" className="flex flex-col md:flex-row justify-between items-center gap-6">
             <Logo variant="light" />
             
-            <div data-ev-id="ev_e92aaba34f" className="flex items-center gap-6">
+            <div data-ev-id="ev_e92aaba34f" className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
               <Link to="/" className="text-white/70 hover:text-white transition-colors">ראשי</Link>
               <Link to="/products" className="text-white/70 hover:text-white transition-colors">מוצרים</Link>
               <Link to="/process" className="text-white/70 hover:text-white transition-colors">תהליך העבודה</Link>

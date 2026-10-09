@@ -819,7 +819,7 @@ export default function Media() {
           
           {/* Videos Section */}
           {filteredVideos.length > 0 &&
-          <div data-ev-id="ev_10ec1ad23d" className="mb-16">
+          <div data-ev-id="ev_10ec1ad23d" className="mb-10 lg:mb-16">
               <div data-ev-id="ev_e97f1d0eb4" className="flex items-center gap-3 mb-8">
                 <div data-ev-id="ev_e71f4948d9" className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center">
                   <Youtube className="w-5 h-5 text-gold" />
@@ -872,7 +872,7 @@ export default function Media() {
 
           {/* Articles Section */}
           {filteredArticles.length > 0 &&
-          <div data-ev-id="ev_e5e40d5481" className="mb-16">
+          <div data-ev-id="ev_e5e40d5481" className="mb-10 lg:mb-16">
               <div data-ev-id="ev_c0e654db9f" className="flex items-center gap-3 mb-8">
                 <div data-ev-id="ev_332e02986c" className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center">
                   <Newspaper className="w-5 h-5 text-gold" />
@@ -930,7 +930,7 @@ export default function Media() {
                               </div>
                               
                               {article.hasLeadForm &&
-                        <div data-ev-id="ev_fccd0ed22e" className="mt-10 panel-accent rounded-2xl p-8 text-white">
+                        <div data-ev-id="ev_fccd0ed22e" className="mt-10 panel-accent rounded-2xl p-6 sm:p-8 text-white">
                                   <div data-ev-id="ev_addb6d25c3" className="grid md:grid-cols-2 gap-8 items-center">
                                     {article.flyerImage &&
                             <div data-ev-id="ev_33a5d6853c" className="rounded-xl overflow-hidden shadow-2xl">
@@ -990,7 +990,7 @@ export default function Media() {
 
           {/* Press Coverage Section */}
           {filteredPress.length > 0 &&
-          <div data-ev-id="ev_5109ffd2ff" className="mb-16">
+          <div data-ev-id="ev_5109ffd2ff" className="mb-10 lg:mb-16">
               <div data-ev-id="ev_740481dfa7" className="flex items-center gap-3 mb-8">
                 <div data-ev-id="ev_5ea986c9fc" className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center">
                   <Newspaper className="w-5 h-5 text-gold" />
@@ -1036,7 +1036,7 @@ export default function Media() {
 
           {/* Podcasts Section */}
           {showPodcasts &&
-          <div data-ev-id="ev_43e96a5b22" className="mb-16">
+          <div data-ev-id="ev_43e96a5b22" className="mb-10 lg:mb-16">
               <div data-ev-id="ev_8fc9923029" className="flex items-center gap-3 mb-8">
                 <div data-ev-id="ev_6383d6cbf5" className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center">
                   <Mic2 className="w-5 h-5 text-gold" />
@@ -1107,7 +1107,7 @@ export default function Media() {
           }
 
           {/* Newsletter */}
-          <div data-ev-id="ev_f7100318fb" className="bg-surface rounded-3xl p-8 md:p-12 border border-border">
+          <div data-ev-id="ev_f7100318fb" className="bg-surface rounded-3xl p-6 sm:p-8 md:p-12 border border-border">
             <div data-ev-id="ev_53cab07cde" className="max-w-2xl mx-auto text-center">
               <h2 data-ev-id="ev_123a783873" className="text-2xl md:text-3xl font-bold text-ink mb-4">
                 הישארו מעודכנים

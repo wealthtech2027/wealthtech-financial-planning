@@ -203,8 +203,8 @@ export default function FamilyOffice() {
             </div>
 
             <h1 className="font-extrabold text-white leading-[1.05] mb-6" dir="ltr">
-              <span className="block text-right text-5xl sm:text-6xl lg:text-7xl">Wealth Management</span>
-              <span className="block text-right text-5xl sm:text-6xl lg:text-7xl text-gradient-gold pb-2">&amp; Family Office</span>
+              <span className="block text-right text-4xl sm:text-6xl lg:text-7xl">Wealth Management</span>
+              <span className="block text-right text-4xl sm:text-6xl lg:text-7xl text-gradient-gold pb-2">&amp; Family Office</span>
             </h1>
 
             <p className="text-2xl sm:text-3xl font-bold text-ink mb-5 text-balance">
@@ -233,11 +233,11 @@ export default function FamilyOffice() {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-10 sm:mt-16">
             {stats.map((s) =>
-            <div key={s.label} className="card-tech rounded-2xl p-6">
-                <div className="font-mono text-4xl font-bold text-gradient-gold mb-2">{s.value}</div>
-                <div className="text-sm text-ink-muted">{s.label}</div>
+            <div key={s.label} className="card-tech rounded-2xl p-4 sm:p-6">
+                <div className="font-mono text-3xl sm:text-4xl font-bold text-gradient-gold mb-2">{s.value}</div>
+                <div className="text-xs sm:text-sm text-ink-muted">{s.label}</div>
               </div>
             )}
           </div>
@@ -245,10 +245,10 @@ export default function FamilyOffice() {
       </section>
 
       {/* Services */}
-      <section className="relative py-20 lg:py-28 bg-surface-2 overflow-hidden">
+      <section className="relative py-14 sm:py-20 lg:py-28 bg-surface-2 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal className="max-w-3xl mb-12">
+          <Reveal className="max-w-3xl mb-8 lg:mb-12">
             <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
               <span className="w-8 h-px bg-gold" />
               <span>השירותים של Pioneer</span>
@@ -302,9 +302,9 @@ export default function FamilyOffice() {
       </section>
 
       {/* Family Office scope + audience */}
-      <section className="relative py-20 lg:py-28 bg-surface overflow-hidden">
+      <section className="relative py-14 sm:py-20 lg:py-28 bg-surface overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
             <Reveal className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
                 <span className="w-8 h-px bg-gold" />
@@ -327,7 +327,7 @@ export default function FamilyOffice() {
             </Reveal>
 
             <Reveal className="lg:col-span-5" delay={120}>
-              <div className="card-tech rounded-3xl p-8 lg:sticky lg:top-28">
+              <div className="card-tech rounded-3xl p-6 sm:p-8 lg:sticky lg:top-28">
                 <h3 className="text-2xl font-bold text-ink mb-6">למי השירות מתאים</h3>
                 <ul className="flex flex-col gap-3 mb-8">
                   {audience.map((item) =>
@@ -347,10 +347,10 @@ export default function FamilyOffice() {
       </section>
 
       {/* Structured approach */}
-      <section className="relative py-20 lg:py-28 bg-surface-2 overflow-hidden">
+      <section className="relative py-14 sm:py-20 lg:py-28 bg-surface-2 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal className="max-w-3xl mb-12">
+          <Reveal className="max-w-3xl mb-8 lg:mb-12">
             <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
               <span className="w-8 h-px bg-gold" />
               <span>הגישה המובנית</span>
@@ -402,7 +402,7 @@ export default function FamilyOffice() {
       </section>
 
       {/* Contact */}
-      <section id="fo-contact" className="cta-glow relative py-20 lg:py-28 bg-navy-dark border-y border-gold/20 scroll-mt-20">
+      <section id="fo-contact" className="cta-glow relative py-14 sm:py-20 lg:py-28 bg-navy-dark border-y border-gold/20 scroll-mt-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold text-ink mb-4 text-balance">פגישת היכרות דיסקרטית</h2>
@@ -412,7 +412,7 @@ export default function FamilyOffice() {
           </div>
 
           {submitted ?
-          <div className="card-tech rounded-2xl p-8 text-center">
+          <div className="card-tech rounded-2xl p-6 sm:p-8 text-center">
               <CheckCircle2 className="w-14 h-14 text-gold mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-ink mb-2">הפנייה נקלטה</h3>
               <p className="text-ink-muted">נחזור אליכם בהקדם לתיאום פגישה.</p>
@@ -496,7 +496,7 @@ export default function FamilyOffice() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <Logo variant="light" />
 
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
               <Link to="/" className="text-white/70 hover:text-white transition-colors">ראשי</Link>
               <Link to="/#services" className="text-white/70 hover:text-white transition-colors">שירותים</Link>
               <Link to="/process" className="text-white/70 hover:text-white transition-colors">תהליך העבודה</Link>

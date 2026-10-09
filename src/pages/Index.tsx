@@ -249,69 +249,93 @@ export default function Index() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen &&
-        <div data-ev-id="ev_35e7bb1c78" className="xl:hidden bg-surface border-t border-border">
-            <div data-ev-id="ev_cc2e6bca2f" className="px-4 py-4 flex flex-col gap-4">
-              <a data-ev-id="ev_6a4f425685" href="#about" className="text-ink-muted hover:text-ink font-medium py-2">אודות</a>
-              <Link data-ev-id="ev_3bc6950ce1" to="/products" className="text-ink-muted hover:text-ink font-medium py-2">מוצרים</Link>
-              <a data-ev-id="ev_48c7549341" href="#services" className="text-ink-muted hover:text-ink font-medium py-2">שירותים</a>
-              <Link to="/wealthtech-one" className="text-gold hover:text-gold-light font-semibold py-2">WealthTech One</Link>
-              <Link to="/family-office" className="text-ink-muted hover:text-ink font-medium py-2">Family Office</Link>
-              <Link data-ev-id="ev_4d74daf187" to="/process" className="text-ink-muted hover:text-ink font-medium py-2">תהליך העבודה</Link>
-              <Link data-ev-id="ev_c1a033792c" to="/media" className="text-ink-muted hover:text-ink font-medium py-2">מדיה</Link>
-              <a href="#finance-market" onClick={() => setMobileMenuOpen(false)} className="text-ink-muted hover:text-ink font-medium py-2">השוק הפיננסי</a>
-              
-              {/* Mobile Tools Accordion */}
-              <div data-ev-id="ev_24bda1743e">
-                <button data-ev-id="ev_bb538d9920"
-              onClick={() => setMobileToolsOpen(!mobileToolsOpen)}
-              className="flex items-center justify-between w-full text-gold font-medium py-2">
-
-                  <span data-ev-id="ev_35883b7c25">כלים פיננסיים</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileToolsOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {mobileToolsOpen &&
-              <div data-ev-id="ev_1d9a0119ca" className="pr-4 flex flex-col gap-2 mt-2">
-                    <Link data-ev-id="ev_5f485fe854" to="/life-insurance-calculator" className="text-ink-muted hover:text-ink font-medium py-2 flex items-center gap-2">
-                      <Calculator className="w-4 h-4" />
-                      מחשבון ביטוח חיים
-                    </Link>
-                    <Link data-ev-id="ev_dfe3099f43" to="/savings-calculator" className="text-ink-muted hover:text-ink font-medium py-2 flex items-center gap-2">
-                      <TrendingUp className="w-4 h-4" />
-                      מחשבון חיסכון
-                    </Link>
-                    <Link data-ev-id="ev_62a020bcb7" to="/wealth-snapshot" className="text-ink-muted hover:text-ink font-medium py-2 flex items-center gap-2">
-                      <Wallet className="w-4 h-4" />
-                      מפת הנכסים שלי
-                    </Link>
-                    <Link data-ev-id="ev_2fcb524070" to="/pension-returns" className="text-ink-muted hover:text-ink font-medium py-2 flex items-center gap-2">
-                      <BarChart3 className="w-4 h-4" />
-                      מנוע השוואת תשואות
-                    </Link>
-                    <Link data-ev-id="ev_4f9d6a860d" to="/tax-refund-eligibility" className="text-ink-muted hover:text-ink font-medium py-2 flex items-center gap-2">
-                      <FileText className="w-4 h-4" />
-                      בדיקת זכאות החזר מס
-                    </Link>
-                  </div>
-              }
+        <div
+          className="xl:hidden bg-surface border-t border-border max-h-[calc(100dvh-5rem)] overflow-y-auto"
+          onClick={(e) => {if ((e.target as HTMLElement).closest('a')) setMobileMenuOpen(false);}}>
+            <div className="px-4 pt-4 pb-6 flex flex-col gap-5">
+              {/* Flagship services */}
+              <div className="grid grid-cols-2 gap-3">
+                <Link to="/wealthtech-one" className="rounded-2xl border border-gold/40 bg-gold/10 p-4 flex flex-col gap-2">
+                  <ScanSearch className="w-5 h-5 text-gold" />
+                  <span className="font-bold text-ink leading-tight">WealthTech One</span>
+                  <span className="text-xs text-ink-muted">מיצוי זכויות</span>
+                </Link>
+                <Link to="/family-office" className="rounded-2xl border border-white/10 bg-white/5 p-4 flex flex-col gap-2">
+                  <Gem className="w-5 h-5 text-gold" />
+                  <span className="font-bold text-ink leading-tight">Family Office</span>
+                  <span className="text-xs text-ink-muted">ניהול עושר</span>
+                </Link>
               </div>
-              
-              <Link data-ev-id="ev_c950b3d423" to="/links" className="text-ink-muted hover:text-ink font-medium py-2">קישורים</Link>
 
-              <a data-ev-id="ev_8d9cb16eaf"
-            href="https://surense.com/app/p/9z3sqal"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-3 rounded-lg">
+              {/* Main links */}
+              <div className="flex flex-col divide-y divide-white/5 border-y border-white/5">
+                {[
+                { href: '#about', label: 'אודות' },
+                { href: '#services', label: 'שירותים' },
+                { to: '/products', label: 'מוצרים' },
+                { to: '/process', label: 'תהליך העבודה' },
+                { to: '/media', label: 'מדיה' },
+                { href: '#finance-market', label: 'השוק הפיננסי' },
+                { to: '/links', label: 'קישורים שימושיים' }].
+                map((item) =>
+                item.to ?
+                <Link key={item.label} to={item.to} className="flex items-center justify-between py-3.5 text-ink font-medium">
+                      {item.label}
+                      <ArrowLeft className="w-4 h-4 text-ink-muted" />
+                    </Link> :
 
-                <FileText className="w-4 h-4" />
-                להוצאת מידע עדכני
-              </a>
-              <Link data-ev-id="ev_3e10f6dfea"
-            to="/onboarding"
-            className="bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-3 rounded-lg text-center">
+                <a key={item.label} href={item.href} className="flex items-center justify-between py-3.5 text-ink font-medium">
+                      {item.label}
+                      <ArrowLeft className="w-4 h-4 text-ink-muted" />
+                    </a>
+                )}
 
-                התחל תהליך
-              </Link>
+                {/* Tools accordion */}
+                <div>
+                  <button
+                    onClick={() => setMobileToolsOpen(!mobileToolsOpen)}
+                    className="flex items-center justify-between w-full py-3.5 text-gold font-semibold">
+                    <span>כלים פיננסיים</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform ${mobileToolsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {mobileToolsOpen &&
+                  <div className="grid grid-cols-1 gap-1 pb-3">
+                      {[
+                    { to: '/rights-check', icon: ScanSearch, label: 'שאלון בדיקת זכויות' },
+                    { to: '/life-insurance-calculator', icon: Calculator, label: 'מחשבון ביטוח חיים' },
+                    { to: '/savings-calculator', icon: TrendingUp, label: 'מחשבון חיסכון' },
+                    { to: '/wealth-snapshot', icon: Wallet, label: 'מפת הנכסים שלי' },
+                    { to: '/pension-returns', icon: BarChart3, label: 'מנוע השוואת תשואות' },
+                    { to: '/tax-refund-eligibility', icon: FileText, label: 'בדיקת זכאות החזר מס' }].
+                    map(({ to, icon: Icon, label }) =>
+                    <Link key={to} to={to} className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-muted active:bg-white/5">
+                          <span className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center">
+                            <Icon className="w-4 h-4 text-gold" />
+                          </span>
+                          {label}
+                        </Link>
+                    )}
+                    </div>
+                  }
+                </div>
+              </div>
+
+              {/* Actions */}
+              <div className="flex flex-col gap-3">
+                <Link
+                  to="/onboarding"
+                  className="bg-gold active:bg-gold-light text-navy-dark font-bold px-6 py-3.5 rounded-xl text-center">
+                  התחל תהליך
+                </Link>
+                <a
+                  href="https://surense.com/app/p/9z3sqal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 border border-white/15 text-ink font-semibold px-6 py-3 rounded-xl">
+                  <FileText className="w-4 h-4 text-gold" />
+                  להוצאת מידע פנסיוני עדכני
+                </a>
+              </div>
             </div>
           </div>
         }
@@ -325,8 +349,8 @@ export default function Index() {
           <div data-ev-id="ev_1137a15102" className="absolute bottom-0 -right-40 w-[520px] h-[520px] bg-blue-500/10 rounded-full blur-3xl"></div>
         </div>
 
-        <div data-ev-id="ev_d502e488ff" className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-          <div data-ev-id="ev_8eb882f37a" className="grid lg:grid-cols-[1.05fr_1fr] gap-12 lg:gap-16 items-center">
+        <div data-ev-id="ev_d502e488ff" className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+          <div data-ev-id="ev_8eb882f37a" className="grid lg:grid-cols-[1.05fr_1fr] gap-8 lg:gap-16 items-center">
             <div data-ev-id="ev_852c9dcdad">
               <div data-ev-id="ev_0ee476a3a6" className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5 mb-8">
                 <Sparkles className="w-4 h-4 text-gold" />
@@ -343,11 +367,11 @@ export default function Index() {
                 ממפים את כל התמונה הפיננסית שלכם, וממצים כל שקל שמגיע לכם.
               </p>
 
-              <p data-ev-id="ev_ecdf672d7c" className="text-lg text-ink-muted mb-10 max-w-xl text-pretty">
+              <p data-ev-id="ev_ecdf672d7c" className="text-base sm:text-lg text-ink-muted mb-8 sm:mb-10 max-w-xl text-pretty">
                 תכנון פיננסי מבוסס דאטה ומיצוי זכויות למנהלים, מייסדים ומשפחות: פנסיה, השקעות, ביטוח, החזרי מס וכספים שנשכחו, תחת קורת גג אחת ובליווי אישי.
               </p>
 
-              <div data-ev-id="ev_176827c442" className="flex flex-col sm:flex-row gap-4 mb-12">
+              <div data-ev-id="ev_176827c442" className="flex flex-col sm:flex-row gap-4 mb-8 lg:mb-12">
                 <Link data-ev-id="ev_e620f76795"
                 to="/rights-check"
                 className="group inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-4 rounded-xl transition-all shadow-[0_10px_40px_-10px_#d4a853]">
@@ -364,22 +388,22 @@ export default function Index() {
                 </a>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 max-w-lg border-t border-white/10 pt-8">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4 max-w-lg border-t border-white/10 pt-6 sm:pt-8">
                 <div>
-                  <div className="font-mono text-3xl font-bold text-ink"><CountUp to={20} suffix="+" /></div>
+                  <div className="font-mono text-2xl sm:text-3xl font-bold text-ink"><CountUp to={20} suffix="+" /></div>
                   <div className="text-xs text-ink-muted mt-1">שנות ניסיון בשוק ההון והביטוח</div>
                 </div>
                 <div>
-                  <div className="font-mono text-3xl font-bold text-ink"><CountUp to={360} suffix="°" /></div>
+                  <div className="font-mono text-2xl sm:text-3xl font-bold text-ink"><CountUp to={360} suffix="°" /></div>
                   <div className="text-xs text-ink-muted mt-1">ראייה הוליסטית: השקעות, ביטוח ופנסיה</div>
                 </div>
                 <div>
-                  <div className="font-mono text-3xl font-bold text-ink"><CountUp to={4} /></div>
+                  <div className="font-mono text-2xl sm:text-3xl font-bold text-ink"><CountUp to={4} /></div>
                   <div className="text-xs text-ink-muted mt-1">כלים דיגיטליים לבדיקה עצמית</div>
                 </div>
               </div>
 
-              <p className="mt-8 text-xs text-ink-muted/80 max-w-xl leading-relaxed">
+              <p className="mt-6 sm:mt-8 text-[11px] sm:text-xs text-ink-muted/70 max-w-xl leading-relaxed">
                 החברה פועלת ברישיון מטעם רשות שוק ההון, ביטוח וחיסכון. שירותי ה־Family Office מבוצעים בלעדית באמצעות <a data-ev-id="ev_cd7d5f0d5a" href="https://www.piowealth.com" target="_blank" rel="noopener noreferrer" className="text-gold/90 hover:text-gold underline">Pioneer Wealth Management</a>, המחזיקה ברישיון ניהול השקעות ומפוקחת על ידי הרשות לניירות ערך.
               </p>
             </div>
@@ -397,10 +421,10 @@ export default function Index() {
       <LogoMarquee />
 
       {/* Services Section */}
-      <section data-ev-id="ev_0bd4ef5ac3" id="services" className="relative py-20 lg:py-32 bg-surface-2 overflow-hidden">
+      <section data-ev-id="ev_0bd4ef5ac3" id="services" className="relative py-14 sm:py-20 lg:py-32 bg-surface-2 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
         <div data-ev-id="ev_e87cdae18f" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal className="max-w-3xl mb-14">
+          <Reveal className="max-w-3xl mb-10 lg:mb-14">
             <div data-ev-id="ev_ec48ab1112" className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
               <span className="w-8 h-px bg-gold" />
               <span data-ev-id="ev_1fdc3fd23d">השירותים שלנו</span>
@@ -416,7 +440,7 @@ export default function Index() {
           <div data-ev-id="ev_9c346c8717" className="grid lg:grid-cols-2 gap-6">
             {pillars.map((pillar, index) =>
             <Reveal key={pillar.title} delay={index * 120}>
-                <div data-ev-id="ev_fa0ea75c5c" className="card-tech group h-full rounded-3xl p-8 lg:p-10 overflow-hidden">
+                <div data-ev-id="ev_fa0ea75c5c" className="card-tech group h-full rounded-3xl p-6 sm:p-8 lg:p-10 overflow-hidden">
                   <div className="absolute -top-24 -left-24 w-64 h-64 bg-gold/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="relative flex items-start justify-between mb-8">
                     <div data-ev-id="ev_065d543d5d" className="w-14 h-14 rounded-2xl bg-gold/10 border border-gold/30 flex items-center justify-center">
@@ -473,10 +497,10 @@ export default function Index() {
       <ToolsShowcase />
 
       {/* About WealthTech Section */}
-      <section data-ev-id="ev_about_company" id="about" className="relative py-20 lg:py-32 bg-surface-2 overflow-hidden">
+      <section data-ev-id="ev_about_company" id="about" className="relative py-14 sm:py-20 lg:py-32 bg-surface-2 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-50 pointer-events-none" />
         <div data-ev-id="ev_38a95d0bf3" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div data-ev-id="ev_3bbfd490a6" className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+          <div data-ev-id="ev_3bbfd490a6" className="grid lg:grid-cols-12 gap-8 lg:gap-16">
             <Reveal className="lg:col-span-5 lg:sticky lg:top-28 self-start">
               <div data-ev-id="ev_0e678318b0" className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
                 <span className="w-8 h-px bg-gold" />
@@ -509,7 +533,7 @@ export default function Index() {
                 </p>
               </Reveal>
 
-              <div className="card-tech rounded-3xl p-8 lg:p-10">
+              <div className="card-tech rounded-3xl p-6 sm:p-8 lg:p-10">
                 <h3 data-ev-id="ev_6b81c64051" className="text-2xl font-bold text-ink mb-8">
                   אנחנו לא מתחילים מהמוצר. <span className="text-gold">אנחנו מתחילים מכם.</span>
                 </h3>
@@ -533,13 +557,13 @@ export default function Index() {
           </div>
 
           {/* Key Questions */}
-          <div data-ev-id="ev_5c23b7c1fb" className="mt-20 lg:mt-28">
+          <div data-ev-id="ev_5c23b7c1fb" className="mt-12 lg:mt-28">
             <Reveal>
               <h3 data-ev-id="ev_d2d4626fbf" className="text-2xl sm:text-3xl font-bold text-ink mb-8 text-balance">
                 תכנון פיננסי טוב מתחיל <span className="text-gold">בשאלות הנכונות.</span>
               </h3>
             </Reveal>
-            <div data-ev-id="ev_bfd7fef9f1" className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div data-ev-id="ev_bfd7fef9f1" className="grid sm:grid-cols-2 lg:grid-cols-5 gap-2.5 sm:gap-4">
               {[
               'כמה כסף באמת תצטרכו בעתיד?',
               'האם מבנה ההשקעות שלכם מתאים לכלל הנכסים שלכם?',
@@ -548,7 +572,7 @@ export default function Index() {
               'האם כל המערכת הפיננסית שלכם באמת פועלת כמערכת אחת?'].
               map((question, i) =>
               <Reveal key={question} delay={i * 90}>
-                  <div className="card-tech h-full rounded-2xl p-6 flex flex-col gap-4">
+                  <div className="card-tech h-full rounded-2xl px-4 py-3.5 sm:p-6 flex sm:flex-col items-baseline sm:items-start gap-3 sm:gap-4">
                     <span className="font-mono text-xs text-gold">Q.{String(i + 1).padStart(2, '0')}</span>
                     <span className="text-ink font-medium text-pretty">{question}</span>
                   </div>
@@ -557,7 +581,7 @@ export default function Index() {
             </div>
           </div>
 
-          <Reveal className="mt-20 text-center">
+          <Reveal className="mt-12 lg:mt-20 text-center">
             <p data-ev-id="ev_05ed10c9fb" className="text-ink-muted text-lg mb-2">
               כי בסופו של דבר, תכנון פיננסי אינו עוסק רק בכסף. הוא עוסק באפשרות לקבל החלטות טובות יותר לגבי החיים שלכם.
             </p>
@@ -569,9 +593,9 @@ export default function Index() {
       </section>
 
       {/* Founder Section */}
-      <section data-ev-id="ev_38ed89a569" id="founder" className="py-20 lg:py-32 bg-surface-2">
+      <section data-ev-id="ev_38ed89a569" id="founder" className="py-14 sm:py-20 lg:py-32 bg-surface-2">
         <div data-ev-id="ev_029a091d85" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div data-ev-id="ev_9fcccaf64d" className="grid lg:grid-cols-2 gap-16 items-center">
+          <div data-ev-id="ev_9fcccaf64d" className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div data-ev-id="ev_a14f87b6a5">
               <div data-ev-id="ev_665cf35951" className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
                 <span className="w-8 h-px bg-gold" />
@@ -618,7 +642,7 @@ export default function Index() {
 
               </div>
               
-              <div data-ev-id="ev_3061b87568" className="absolute -bottom-6 -right-6 bg-gold rounded-2xl p-6 shadow-xl">
+              <div data-ev-id="ev_3061b87568" className="absolute -bottom-5 right-4 sm:-bottom-6 sm:-right-6 bg-gold rounded-2xl p-4 sm:p-6 shadow-xl">
                 <div data-ev-id="ev_fd50f255d4" className="text-navy-dark">
                   <div data-ev-id="ev_afc86482fe" className="text-3xl font-bold">2010</div>
                   <a data-ev-id="ev_6019df4555" href="https://www.piowealth.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:underline">Pioneer Wealth Management</a>
@@ -630,9 +654,9 @@ export default function Index() {
       </section>
 
       {/* Media Section */}
-      <section data-ev-id="ev_7d1cfacb51" id="media" className="relative py-20 lg:py-32 bg-navy-dark overflow-hidden">
+      <section data-ev-id="ev_7d1cfacb51" id="media" className="relative py-14 sm:py-20 lg:py-32 bg-navy-dark overflow-hidden">
         <div data-ev-id="ev_2b69193d8c" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div data-ev-id="ev_1e0ced6e71" className="text-center max-w-3xl mx-auto mb-16">
+          <div data-ev-id="ev_1e0ced6e71" className="text-center max-w-3xl mx-auto mb-10 lg:mb-16">
             <div data-ev-id="ev_486480b968" className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
                 <span className="w-8 h-px bg-gold" />
                 <span data-ev-id="ev_9b12a00dd8">נוכחות תקשורתית</span>
@@ -650,7 +674,7 @@ export default function Index() {
           </div>
           
           <div data-ev-id="ev_6c74c5206e" className="grid md:grid-cols-2 gap-8">
-            <div data-ev-id="ev_5326e5b1fc" className="card-tech rounded-2xl p-8">
+            <div data-ev-id="ev_5326e5b1fc" className="card-tech rounded-2xl p-6 sm:p-8">
               <div data-ev-id="ev_328e90d86c" className="flex items-center gap-4 mb-6">
                 <div data-ev-id="ev_ff5afd90de" className="w-16 h-16 bg-gold rounded-xl flex items-center justify-center">
                   <Tv className="w-8 h-8 text-navy-dark" />
@@ -666,7 +690,7 @@ export default function Index() {
               </p>
             </div>
             
-            <div data-ev-id="ev_a6b84c0ac3" className="card-tech rounded-2xl p-8">
+            <div data-ev-id="ev_a6b84c0ac3" className="card-tech rounded-2xl p-6 sm:p-8">
               <div data-ev-id="ev_e529c9782b" className="flex items-center gap-4 mb-6">
                 <div data-ev-id="ev_fd382547be" className="w-16 h-16 bg-gold rounded-xl flex items-center justify-center">
                   <BarChart3 className="w-8 h-8 text-navy-dark" />
@@ -686,9 +710,9 @@ export default function Index() {
       </section>
 
       {/* Finance Market (financetv.co.il) Section */}
-      <section id="finance-market" className="relative py-20 lg:py-28 hero-tech overflow-hidden">
+      <section id="finance-market" className="relative py-14 sm:py-20 lg:py-28 hero-tech overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
                 <span className="w-8 h-px bg-gold" />
@@ -733,7 +757,7 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section data-ev-id="ev_6fbaa24d6b" className="cta-glow relative overflow-hidden py-24 bg-navy-dark border-y border-gold/20">
+      <section data-ev-id="ev_6fbaa24d6b" className="cta-glow relative overflow-hidden py-16 sm:py-24 bg-navy-dark border-y border-gold/20">
         <div data-ev-id="ev_84a530bc36" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 data-ev-id="ev_ddb6a0e135" className="text-3xl sm:text-4xl font-bold text-ink mb-6 text-balance">
             מוכנים להתחיל את המסע הפיננסי שלכם?
@@ -776,9 +800,9 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section data-ev-id="ev_d94c79f839" id="contact" className="py-20 lg:py-32 bg-surface">
+      <section data-ev-id="ev_d94c79f839" id="contact" className="py-14 sm:py-20 lg:py-32 bg-surface">
         <div data-ev-id="ev_f6a23696a4" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div data-ev-id="ev_ac19ad3049" className="grid lg:grid-cols-2 gap-16">
+          <div data-ev-id="ev_ac19ad3049" className="grid lg:grid-cols-2 gap-10 lg:gap-16">
             <div data-ev-id="ev_53e7608940">
               <div data-ev-id="ev_07367bae8d" className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
                 <span className="w-8 h-px bg-gold" />
@@ -856,7 +880,7 @@ export default function Index() {
             
             <div data-ev-id="ev_cf31a5bb29">
               {submitSuccess ?
-              <div data-ev-id="ev_a44435e30d" className="bg-surface-2 rounded-2xl p-8 text-center">
+              <div data-ev-id="ev_a44435e30d" className="bg-surface-2 rounded-2xl p-6 sm:p-8 text-center">
                   <div data-ev-id="ev_12d3fb84c7" className="w-16 h-16 bg-green-500/15 rounded-full flex items-center justify-center">
                     <CheckCircle2 className="w-8 h-8 text-green-400" />
                   </div>
@@ -870,7 +894,7 @@ export default function Index() {
                   </button>
                 </div> :
 
-              <form data-ev-id="ev_a114c76033" onSubmit={handleContactSubmit} className="bg-surface-2 rounded-2xl p-8">
+              <form data-ev-id="ev_a114c76033" onSubmit={handleContactSubmit} className="bg-surface-2 rounded-2xl p-6 sm:p-8">
                   <div data-ev-id="ev_eb9ba6b744" className="flex flex-col gap-6">
                     <div data-ev-id="ev_7c5a20dde3">
                       <label data-ev-id="ev_cc9aa6f75a" className="block text-sm font-medium text-ink mb-2">שם מלא *</label>
@@ -970,7 +994,7 @@ export default function Index() {
             className="h-20 w-auto object-contain" />
 
             
-            <div data-ev-id="ev_df8420040e" className="flex items-center gap-6">
+            <div data-ev-id="ev_df8420040e" className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
               <a data-ev-id="ev_1f5985c2fd" href="#about" className="text-white/70 hover:text-white transition-colors">אודות</a>
               <a data-ev-id="ev_6c297bd2b9" href="#services" className="text-white/70 hover:text-white transition-colors">שירותים</a>
               <Link to="/wealthtech-one" className="text-white/70 hover:text-white transition-colors">WealthTech One</Link>
@@ -1002,7 +1026,7 @@ export default function Index() {
       {/* Floating Offer Button */}
       <button data-ev-id="ev_2d1f468c14"
       onClick={() => setShowOfferPopup(true)}
-      className="fixed bottom-6 left-20 z-50 bg-gold hover:bg-gold-light text-navy-dark font-bold px-6 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center gap-3 group">
+      className="hidden md:flex fixed bottom-6 left-20 z-50 bg-gold hover:bg-gold-light text-navy-dark font-bold px-6 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all items-center gap-3 group">
 
         <Gift className="w-6 h-6 group-hover:scale-110 transition-transform" />
         <span data-ev-id="ev_2975386387" className="hidden sm:inline">מגיע לך הטבה!</span>

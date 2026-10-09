@@ -52,10 +52,10 @@ const minorTools = [
 
 export function ToolsShowcase() {
   return (
-    <section id="tools" className="relative py-20 lg:py-28 bg-surface overflow-hidden">
+    <section id="tools" className="relative py-14 sm:py-20 lg:py-28 bg-surface overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-gold/5 blur-3xl rounded-full pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+        <Reveal className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8 lg:mb-12">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
               <span className="w-8 h-px bg-gold" />
@@ -73,7 +73,7 @@ export function ToolsShowcase() {
         <div className="grid lg:grid-cols-2 gap-6 mb-6">
           {/* Life insurance */}
           <Reveal>
-            <div className="card-tech group h-full rounded-3xl p-8 lg:p-10 flex flex-col sm:flex-row gap-8 items-center">
+            <div className="card-tech group h-full rounded-3xl p-6 sm:p-8 lg:p-10 flex flex-col sm:flex-row gap-8 items-center">
               <div className="relative shrink-0 flex items-center justify-center">
                 <CoverageGauge />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -100,7 +100,7 @@ export function ToolsShowcase() {
 
           {/* Savings */}
           <Reveal delay={120}>
-            <div className="card-tech group h-full rounded-3xl p-8 lg:p-10 flex flex-col sm:flex-row gap-8 items-center">
+            <div className="card-tech group h-full rounded-3xl p-6 sm:p-8 lg:p-10 flex flex-col sm:flex-row gap-8 items-center">
               <div className="shrink-0 rounded-2xl bg-white/[0.03] border border-white/10 p-5">
                 <RiskBars />
                 <div className="text-[10px] text-ink-muted text-center mt-2">רמת סיכון</div>

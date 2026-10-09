@@ -112,7 +112,7 @@ export function WorkshopPopup({ isOpen, onClose }: WorkshopPopupProps) {
           </div>
           
           {/* Form Section */}
-          <div data-ev-id="ev_fa61b1f09a" className="p-8 flex flex-col justify-center">
+          <div data-ev-id="ev_fa61b1f09a" className="p-6 sm:p-8 flex flex-col justify-center">
             {isSubmitted ?
             <div data-ev-id="ev_ac3d838257" className="text-center py-8">
                 <div data-ev-id="ev_695ead145c" className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">

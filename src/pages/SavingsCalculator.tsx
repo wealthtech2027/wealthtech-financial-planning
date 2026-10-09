@@ -373,7 +373,7 @@ export default function SavingsCalculator() {
               
               {/* Main Result */}
               <div data-ev-id="ev_9d09f94ded" className="bg-surface rounded-3xl shadow-xl overflow-hidden">
-                <div data-ev-id="ev_8574bd95a0" className="panel-accent p-8 text-center">
+                <div data-ev-id="ev_8574bd95a0" className="panel-accent p-6 sm:p-8 text-center">
                   <PiggyBank className="w-16 h-16 text-gold mx-auto mb-4" />
                   <p data-ev-id="ev_021b87c702" className="text-white/80 mb-2">שווי חיסכון עתידי משוער</p>
                   <p data-ev-id="ev_9a75916c90" className="text-4xl sm:text-5xl font-bold text-white">

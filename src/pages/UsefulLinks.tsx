@@ -304,7 +304,7 @@ export default function UsefulLinks() {
       {/* Links Grid */}
       <section data-ev-id="ev_695c54a011" className="py-16 bg-surface-2">
         <div data-ev-id="ev_bbd5716c80" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div data-ev-id="ev_e936874338" className="flex flex-col gap-12">
+          <div data-ev-id="ev_e936874338" className="flex flex-col gap-8 lg:gap-12">
             {filteredCategories.map((category) =>
             <div data-ev-id="ev_41c1bfcc6f" key={category.id}>
                 {/* Category Header */}
@@ -401,7 +401,7 @@ export default function UsefulLinks() {
           <div data-ev-id="ev_7fbe4999b4" className="flex flex-col md:flex-row justify-between items-center gap-6">
             <Logo variant="light" />
             
-            <div data-ev-id="ev_083ee35335" className="flex items-center gap-6">
+            <div data-ev-id="ev_083ee35335" className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
               <Link to="/" className="text-white/70 hover:text-white transition-colors">ראשי</Link>
               <Link to="/products" className="text-white/70 hover:text-white transition-colors">מוצרים</Link>
               <Link to="/process" className="text-white/70 hover:text-white transition-colors">תהליך עבודה</Link>

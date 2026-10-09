@@ -102,15 +102,15 @@ export function AccessibilityWidget() {
       {/* Floating Button */}
       <button data-ev-id="ev_116e9438ce"
       onClick={() => setIsOpen(!isOpen)}
-      className="fixed bottom-6 left-6 z-50 w-14 h-14 bg-navy hover:bg-navy-light text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+      className="fixed bottom-24 left-4 w-11 h-11 md:bottom-6 md:left-6 md:w-14 md:h-14 z-40 bg-navy border border-white/10 hover:bg-navy-light text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
       aria-label="תפריט נגישות">
 
-        <Accessibility className="w-7 h-7" />
+        <Accessibility className="w-5 h-5 md:w-7 md:h-7" />
       </button>
 
       {/* Accessibility Panel */}
       {isOpen &&
-      <div data-ev-id="ev_47a44e4b3f" className="fixed bottom-24 left-6 z-50 w-80 bg-surface rounded-2xl shadow-2xl border border-border overflow-hidden" dir="rtl">
+      <div data-ev-id="ev_47a44e4b3f" className="fixed bottom-40 left-4 md:bottom-24 md:left-6 z-50 w-80 max-w-[calc(100vw-2rem)] max-h-[60vh] overflow-y-auto bg-surface rounded-2xl shadow-2xl border border-border overflow-hidden" dir="rtl">
           {/* Header */}
           <div data-ev-id="ev_c75d0a44d6" className="bg-navy text-white px-5 py-4 flex items-center justify-between">
             <div data-ev-id="ev_9acbc5716f" className="flex items-center gap-3">
