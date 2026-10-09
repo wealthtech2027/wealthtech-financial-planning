@@ -11,6 +11,8 @@ import nessLogo from '@/assets/logos/ness.svg';
 import elbitLogo from '@/assets/logos/elbit.png';
 import rafaelLogo from '@/assets/logos/rafael.svg';
 import iaiLogo from '@/assets/logos/iai.svg';
+import ibmLogo from '@/assets/logos/ibm.svg';
+import paloAltoLogo from '@/assets/logos/paloalto.svg';
 
 // `tall` = emblem-style logos that need more height to read at the same visual weight as wordmarks
 const companies = [
@@ -19,9 +21,11 @@ const companies = [
 { name: 'Amazon', logo: amazonLogo },
 { name: 'Broadcom', logo: broadcomLogo },
 { name: 'Google', logo: googleLogo },
+{ name: 'IBM', logo: ibmLogo },
 { name: 'Amdocs', logo: amdocsLogo },
 { name: 'PassportCard', logo: passportcardLogo, tall: true },
 { name: 'CyberArk', logo: cyberarkLogo },
+{ name: 'Palo Alto Networks', logo: paloAltoLogo },
 { name: 'Ness', logo: nessLogo, tall: true },
 { name: 'Elbit Systems', logo: elbitLogo, tall: true },
 { name: 'Rafael', logo: rafaelLogo, tall: true },
@@ -33,7 +37,7 @@ interface LogoMarqueeProps {
   title?: string;
 }
 
-export function LogoMarquee({ variant = 'light', title = 'מטפלים בלקוחות מהחברות המובילות' }: LogoMarqueeProps) {
+export function LogoMarquee({ variant = 'light', title = 'מטפלים בלקוחות בכירים מהחברות המובילות' }: LogoMarqueeProps) {
   const bgClass = variant === 'dark' ?
   'bg-navy-light/50' :
   'bg-surface-2/50';
