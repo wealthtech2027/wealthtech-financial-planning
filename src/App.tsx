@@ -22,6 +22,7 @@ import WealthSnapshot from '@/pages/WealthSnapshot';
 import WealthTechOne from '@/pages/WealthTechOne';
 import RightsCheck from '@/pages/RightsCheck';
 import FamilyOffice from '@/pages/FamilyOffice';
+import PensionResearch from '@/pages/PensionResearch';
 import { MobileActionBar } from '@/components/MobileActionBar';
 
 export default function App() {
@@ -44,6 +45,7 @@ export default function App() {
 			<Route path="/wealthtech-one" element={<WealthTechOne />} />
 			<Route path="/rights-check" element={<RightsCheck />} />
 			<Route path="/family-office" element={<FamilyOffice />} />
+			<Route path="/pension-research" element={<PensionResearch />} />
 		</Routes>
 		<MobileActionBar />
 		</>
