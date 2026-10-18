@@ -17,6 +17,9 @@ import { Logo } from '@/components/Logo';
 import { LogoMarquee } from '@/components/LogoMarquee';
 import { sendLead } from '@/lib/sendLead';
 import { useInView } from '@/hooks/use-in-view';
+import { initMetaPixel, trackMetaEvent } from '@/lib/metaPixel';
+
+const META_PIXEL_ID = '1439645368271393'; // "וולת'טק - מחקר פנסיוני"
 
 const VIDEO_ID = 'XIXy_MuYlcQ';
 const CHANNEL = 'ערוץ 10 - ערוץ הכלכלה של ישראל';
@@ -36,7 +39,7 @@ const trust = [
 // Figures from the WealthTech pension research desk (Pensia-Net data through Aug 2026, under-50 track)
 const findings = [
 { value: '₪2.39M', label: 'מיליון ש״ח שהושקעו לפני 10 שנים, בממוצע הגופים' },
-{ value: '13%-17%', label: 'טווח התשואות בשנה האחרונה בין הגופים הגדולים' },
+{ value: '13%-17%', label: 'טווח התשואות בשנה האחרונה בין הגופים הגדולים (לפי פנסיה-נט, רשות שוק ההון)' },
 { value: '~58%', label: 'חשיפה ממוצעת למניות בכספי הפנסיה' },
 { value: '₪200,000+', label: 'הפער ב-10 שנים בין הקרן המובילה לחלשה, על השקעה של מיליון ש״ח' }];
 
@@ -90,6 +93,10 @@ function campaignTag() {
 
 export default function PensionResearch() {
   const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    initMetaPixel(META_PIXEL_ID);
+  }, []);
   const [form, setForm] = useState({ name: '', phone: '', email: '', consent: false });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -107,6 +114,7 @@ export default function PensionResearch() {
         source: `קמפיין מחקר הפנסיה (ערוץ 10) · בדיקת תיק פנסיוני${campaignTag()}`
       });
       setSubmitted(true);
+      trackMetaEvent('Lead');
     } catch (err) {
       console.error('Error submitting pension research lead:', err);
       setSubmitError('אירעה שגיאה בשליחה. נסו שוב או התקשרו אלינו: 050-8210573');
@@ -394,7 +402,8 @@ export default function PensionResearch() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
           <a href="https://wealthtech.co.il" className="text-ink font-semibold" dir="ltr">wealthtech.co.il</a>
           <p className="text-ink-muted/70 text-xs text-center sm:text-left leading-relaxed max-w-2xl">
-            תשואות עבר אינן מבטיחות תשואות עתידיות. המידע בעמוד זה הוא כללי ואינו מהווה ייעוץ או שיווק פנסיוני המותאם לצרכיו של כל אדם. וולת׳טק סוכנות לביטוח (2015) בע״מ.
+            תשואות עבר אינן מבטיחות תשואות עתידיות. המידע בעמוד זה הוא כללי ואינו מהווה ייעוץ או שיווק פנסיוני המותאם לצרכיו של כל אדם.{' '}
+            <span className="text-gold font-semibold">וולת׳טק סוכנות לביטוח (2015) בע״מ</span>, ח.פ 515186971.
           </p>
         </div>
       </footer>
