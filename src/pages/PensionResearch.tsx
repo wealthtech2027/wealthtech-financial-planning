@@ -82,6 +82,37 @@ function ChartVideo({ src, alt }: {src: string;alt: string;}) {
 
 }
 
+const faqs = [
+{
+  q: 'מי זה וולת׳טק?',
+  a: 'וולת׳טק היא סוכנות לביטוח שמלווה משפחות ובכירים בתכנון פיננסי, פנסיוני וביטוחי. אנחנו ממפים את כל התמונה הפיננסית, ובונים תוכנית אחת שמחברת בין פנסיה, השקעות, ביטוחים ומיצוי זכויות. שירותי ניהול ההון וה-Family Office ניתנים באמצעות פיוניר תכנון פיננסי, המחזיקה ברישיון ניהול תיקי השקעות ומפוקחת על ידי הרשות לניירות ערך.'
+},
+{
+  q: 'מי זה אודי חברוני?',
+  a: 'אודי חברוני הוא מייסד וולת׳טק ומנכ״ל הסוכנות. הוא מכהן כמנהל הון בכיר בקבוצת פיוניר מאז 2010, והיה לשעבר יועץ חיצוני לקופת הגמל וקרן ההשתלמות של האקדמאים. יש לו ניסיון של למעלה מ-20 שנה בשוק ההון והביטוח, והוא מתמחה בתכנון פיננסי למשפחות ולבכירים. הוא פאנליסט קבוע בתוכנית הכלכלית של ערוץ 10, ומייסד הפלטפורמה "השוק הפיננסי". מורשה מטעם הרשות לניירות ערך ומשרד האוצר.'
+},
+{
+  q: 'האם זה ייעוץ השקעות?',
+  a: 'לא. השירות הוא תכנון פנסיוני: ניתוח מקיף של המסלקה הפנסיונית שלכם. בשיחה המקצועית נבחן יחד את המצב, ונבין אם נוכל לשרת אתכם באופן מלא ברמה הפנסיונית.'
+},
+{
+  q: 'מה כולל הניתוח, וכמה זה עולה?',
+  a: 'יתרות, מסלולי השקעה, דמי ניהול, כיסויים ביטוחיים קיימים, מוטבים, טיב ביצוע של המנהלים והפקדות שוטפות לשכר. השירות ללא עלות, לכם ולבן או בת הזוג.'
+},
+{
+  q: 'איך מתבצעת השיחה?',
+  a: 'השיחה הראשונה היא טלפונית, ואחריה מתואמת פגישה בווידאו או פרונטלית. אנחנו מאמינים שחשוב שתכירו אותנו, ושנכיר אתכם.'
+},
+{
+  q: 'האם צריך להביא מסמכים?',
+  a: 'לא. לאחר הפנייה נוציא עבורכם, ללא עלות, את התיק הפנסיוני מתוך המסלקה הפנסיונית, ונערוך אותו לחוברת מקצועית שתשמש בסיס לפגישה. זה נעשה בהרשאתכם בלבד.'
+},
+{
+  q: 'מה קורה לפרטים שלי?',
+  a: 'הפרטים משמשים ליצירת קשר בלבד. הפרטים המלאים מופיעים במדיניות הפרטיות שלנו.'
+}];
+
+
 /** Campaign attribution: keep utm_* params from the ad link so every lead says where it came from */
 function campaignTag() {
   const params = new URLSearchParams(window.location.search);
@@ -217,95 +248,15 @@ export default function PensionResearch() {
         </div>
       </section>
 
-      {/* Key findings - from the slides aired on Channel 10 */}
-      <section className="relative py-12 sm:py-16 border-t border-white/5">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-3">
-            <span className="w-8 h-px bg-gold" />
-            <span>ממצאי המחקר</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-2 text-balance">מה קרה לפנסיה ב-10 השנים האחרונות?</h2>
-          <p className="text-ink-muted mb-8 text-pretty">
-            8 הגופים הגדולים, מסלול לבני 50 ומטה, נתוני פנסיה-נט של רשות שוק ההון עד אוגוסט 2026. חישוב: דסק מחקר פנסיוני WealthTech.
-          </p>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
-            {findings.map((f) =>
-            <div key={f.label} className="card-tech rounded-2xl p-4 sm:p-5">
-                <div className="font-mono text-2xl sm:text-3xl font-bold text-gold mb-1 text-right" dir="ltr">{f.value}</div>
-                <div className="text-xs sm:text-sm text-ink-muted text-pretty">{f.label}</div>
-              </div>
-            )}
-          </div>
-
-          <div className="grid gap-4 lg:grid-cols-2">
-            {slides.map((s, i) =>
-            <figure key={s.src} className={i === 0 ? 'lg:col-span-2' : ''}>
-                <ChartVideo src={s.src} alt={s.alt} />
-                <figcaption className="text-xs text-ink-muted/70 mt-2">{s.caption}</figcaption>
-              </figure>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Light band - "watch the research, check your portfolio" */}
-      <section className="bg-[#f6f5f2] text-navy-dark py-12 sm:py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-start gap-5 mb-10">
-            <button
-              type="button"
-              onClick={() => {setPlaying(true);window.scrollTo({ top: 0, behavior: 'smooth' });}}
-              aria-label="לצפייה בראיון"
-              className="hidden sm:flex w-16 h-16 shrink-0 rounded-full border-[3px] border-navy-dark items-center justify-center hover:bg-navy-dark hover:text-white transition-colors">
-              <Play className="w-7 h-7 fill-current ms-1" />
-            </button>
-            <div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-2">
-                צפו במחקר. בדקו את התיק שלכם.
-              </h2>
-              <p className="text-lg sm:text-xl text-navy-dark/60">ביצועים • דמי ניהול • כיסויים ביטוחיים</p>
-            </div>
-          </div>
-
-          <div className="grid sm:grid-cols-3 gap-4 mb-10">
-            {checks.map(({ icon: Icon, title, text }) =>
-            <div key={title} className="rounded-2xl bg-white border border-navy-dark/10 p-4 sm:p-6 shadow-sm flex sm:block items-start gap-4">
-                <div className="w-11 h-11 shrink-0 rounded-xl bg-navy-dark text-gold flex items-center justify-center sm:mb-4">
-                  <Icon className="w-5 h-5" />
-                </div>
-                <h3 className="text-xl font-bold mb-1">{title}</h3>
-                <p className="text-navy-dark/70 text-pretty">{text}</p>
-              </div>
-            )}
-          </div>
-
-          <button
-            type="button"
-            onClick={scrollToForm}
-            className="w-full inline-flex items-center justify-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-bold text-lg sm:text-xl py-4 rounded-xl transition-colors">
-            לתיאום בדיקת תיק פנסיוני
-            <ArrowLeft className="w-5 h-5" />
-          </button>
-        </div>
-      </section>
-
-      {/* Who we are - short trust block right before the form */}
+      {/* What you get - the three checks, moved above the form */}
       <section className="pt-14 sm:pt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-3">
-            <span className="w-8 h-px bg-gold" />
-            <span>מי אנחנו</span>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2 text-balance">צפו במחקר. בדקו את התיק שלכם.</h2>
+            <p className="text-ink-muted text-lg">ביצועים • דמי ניהול • כיסויים ביטוחיים</p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3 text-balance">
-            וולת׳טק: <span className="text-gold">תכנון פיננסי, פנסיה וביטוח</span> לבכירים ולמשפחות.
-          </h2>
-          <p className="text-ink-muted text-lg mb-8 max-w-3xl text-pretty">
-            אנחנו ממפים את כל התמונה הפיננסית: פנסיה, השקעות, ביטוחים ומיצוי זכויות, ובונים תוכנית אחת שעובדת יחד, בליווי אישי לאורך השנים.
-          </p>
-
           <div className="grid sm:grid-cols-3 gap-3 sm:gap-4">
-            {trust.map(({ icon: Icon, title, text }) =>
+            {checks.map(({ icon: Icon, title, text }) =>
             <div key={title} className="card-tech rounded-2xl p-4 sm:p-6 flex sm:block items-start gap-4">
                 <div className="w-11 h-11 shrink-0 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center sm:mb-4">
                   <Icon className="w-5 h-5 text-gold" />
@@ -318,10 +269,6 @@ export default function PensionResearch() {
             )}
           </div>
         </div>
-
-        <div className="mt-10">
-          <LogoMarquee />
-        </div>
       </section>
 
       {/* Lead form */}
@@ -330,7 +277,10 @@ export default function PensionResearch() {
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 text-balance">בדיקת תיק פנסיוני אישית</h2>
             <p className="text-ink-muted text-lg text-pretty">
-              השאירו פרטים, ונחזור אליכם לתיאום שיחה קצרה. נבדוק יחד את הביצועים, דמי הניהול והכיסויים בתיק שלכם, ללא עלות וללא התחייבות.
+              השאירו פרטים, ונחזור אליכם תוך 24 שעות לתיאום שיחה קצרה. נבדוק יחד את הביצועים, דמי הניהול והכיסויים בתיק שלכם. הבדיקה הראשונית ללא עלות.
+            </p>
+            <p className="text-ink-muted/80 text-sm mt-3 text-pretty">
+              השיחה תתבצע עם גורם מורשה בעל רישיון ביטוח פנסיוני, ולא עם נציג טלפוני.
             </p>
           </div>
 
@@ -338,7 +288,7 @@ export default function PensionResearch() {
           <div className="card-tech rounded-2xl p-8 text-center">
               <CheckCircle2 className="w-14 h-14 text-gold mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-ink mb-2">תודה, הפרטים התקבלו</h3>
-              <p className="text-ink-muted">נחזור אליכם בהקדם לתיאום בדיקת התיק.</p>
+              <p className="text-ink-muted">נחזור אליכם תוך 24 שעות לתיאום שיחת הבדיקה.</p>
             </div> :
 
           <form onSubmit={handleSubmit} className="card-tech rounded-2xl p-6 sm:p-8 flex flex-col gap-4">
@@ -394,6 +344,92 @@ export default function PensionResearch() {
               </button>
             </form>
           }
+        </div>
+      </section>
+
+      {/* Key findings - from the slides aired on Channel 10 */}
+      <section className="relative py-12 sm:py-16 border-t border-white/5">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-3">
+            <span className="w-8 h-px bg-gold" />
+            <span>ממצאי המחקר</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-2 text-balance">מה קרה לפנסיה ב-10 השנים האחרונות?</h2>
+          <p className="text-ink-muted mb-8 text-pretty">
+            8 הגופים הגדולים, מסלול לבני 50 ומטה, נתוני פנסיה-נט של רשות שוק ההון עד אוגוסט 2026. חישוב: דסק מחקר פנסיוני WealthTech.
+          </p>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8">
+            {findings.map((f) =>
+            <div key={f.label} className="card-tech rounded-2xl p-4 sm:p-5">
+                <div className="font-mono text-2xl sm:text-3xl font-bold text-gold mb-1 text-right" dir="ltr">{f.value}</div>
+                <div className="text-xs sm:text-sm text-ink-muted text-pretty">{f.label}</div>
+              </div>
+            )}
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-2">
+            {slides.map((s, i) =>
+            <figure key={s.src} className={i === 0 ? 'lg:col-span-2' : ''}>
+                <ChartVideo src={s.src} alt={s.alt} />
+                <figcaption className="text-xs text-ink-muted/70 mt-2">{s.caption}</figcaption>
+              </figure>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Who we are - short trust block, after the form */}
+      <section className="pt-14 sm:pt-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-3">
+            <span className="w-8 h-px bg-gold" />
+            <span>מי אנחנו</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3 text-balance">
+            וולת׳טק: <span className="text-gold">תכנון פיננסי, פנסיה וביטוח</span> לבכירים ולמשפחות.
+          </h2>
+          <p className="text-ink-muted text-lg mb-8 max-w-3xl text-pretty">
+            אנחנו ממפים את כל התמונה הפיננסית: פנסיה, השקעות, ביטוחים ומיצוי זכויות, ובונים תוכנית אחת שעובדת יחד, בליווי אישי לאורך השנים.
+          </p>
+
+          <div className="grid sm:grid-cols-3 gap-3 sm:gap-4">
+            {trust.map(({ icon: Icon, title, text }) =>
+            <div key={title} className="card-tech rounded-2xl p-4 sm:p-6 flex sm:block items-start gap-4">
+                <div className="w-11 h-11 shrink-0 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center sm:mb-4">
+                  <Icon className="w-5 h-5 text-gold" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-ink mb-1">{title}</h3>
+                  <p className="text-ink-muted text-sm text-pretty">{text}</p>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="mt-10">
+          <LogoMarquee />
+        </div>
+      </section>
+
+      {/* FAQ - answers the questions a first-time visitor has before leaving details */}
+      <section className="pt-14 sm:pt-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-3">
+            <span className="w-8 h-px bg-gold" />
+            <span>שאלות נפוצות</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-8 text-balance">מה כדאי לדעת לפני השיחה</h2>
+
+          <div className="flex flex-col gap-4">
+            {faqs.map((item) =>
+            <div key={item.q} className="card-tech rounded-2xl p-5 sm:p-6">
+                <h3 className="text-lg font-bold text-ink mb-2">{item.q}</h3>
+                <p className="text-ink-muted text-pretty">{item.a}</p>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 
