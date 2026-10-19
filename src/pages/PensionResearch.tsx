@@ -113,6 +113,13 @@ const faqs = [
 }];
 
 
+/** Gold emphasis for the free-service promise wherever it appears in copy */
+function highlightFree(text: string) {
+  return text.split(/(ללא עלות)/).map((part, i) =>
+    part === 'ללא עלות' ? <span key={i} className="text-gold font-semibold">{part}</span> : part
+  );
+}
+
 /** Campaign attribution: keep utm_* params from the ad link so every lead says where it came from */
 function campaignTag() {
   const params = new URLSearchParams(window.location.search);
@@ -277,7 +284,7 @@ export default function PensionResearch() {
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 text-balance">בדיקת תיק פנסיוני אישית</h2>
             <p className="text-ink-muted text-lg text-pretty">
-              השאירו פרטים, ונחזור אליכם תוך 24 שעות לתיאום שיחה קצרה. נבדוק יחד את הביצועים, דמי הניהול והכיסויים בתיק שלכם. הבדיקה הראשונית ללא עלות.
+              השאירו פרטים, ונחזור אליכם תוך 24 שעות לתיאום שיחה קצרה. נבדוק יחד את הביצועים, דמי הניהול והכיסויים בתיק שלכם. הבדיקה הראשונית <span className="text-gold font-semibold">ללא עלות</span>.
             </p>
             <p className="text-ink-muted/80 text-sm mt-3 text-pretty">
               השיחה תתבצע עם גורם מורשה בעל רישיון ביטוח פנסיוני, ולא עם נציג טלפוני.
@@ -426,7 +433,7 @@ export default function PensionResearch() {
             {faqs.map((item) =>
             <div key={item.q} className="card-tech rounded-2xl p-5 sm:p-6">
                 <h3 className="text-lg font-bold text-ink mb-2">{item.q}</h3>
-                <p className="text-ink-muted text-pretty">{item.a}</p>
+                <p className="text-ink-muted text-pretty">{highlightFree(item.a)}</p>
               </div>
             )}
           </div>
