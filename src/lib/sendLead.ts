@@ -15,6 +15,12 @@ export interface Lead {
  * Sends a lead to the `send-lead` edge function, which emails it to the office.
  * Throws if the lead was not accepted, so forms can show an error instead of a false success.
  */
+/**
+ * Incoming-webhook URL of the monday board (via Make). Empty = disabled.
+ * Once set, every lead is also pushed to the board as a new item.
+ */
+const LEAD_WEBHOOK_URL = '';
+
 export async function sendLead(lead: Lead): Promise<void> {
   if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
     throw new Error('Lead service is not configured');
@@ -33,4 +39,21 @@ export async function sendLead(lead: Lead): Promise<void> {
   if (!response.ok || !result.success) {
     throw new Error(result.error || `Lead request failed (${response.status})`);
   }
+
+  pushToBoard(lead);
+}
+
+/** Fire-and-forget: a board failure must never show the visitor an error after the lead was saved. */
+function pushToBoard(lead: Lead): void {
+  if (!LEAD_WEBHOOK_URL) return;
+  fetch(LEAD_WEBHOOK_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      ...lead,
+      page: typeof window !== 'undefined' ? window.location.pathname : '',
+      submittedAt: new Date().toISOString()
+    }),
+    keepalive: true
+  }).catch((err) => console.error('Lead board push failed:', err));
 }

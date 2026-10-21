@@ -16,7 +16,6 @@ import {
 import { Logo } from '@/components/Logo';
 import { LogoMarquee } from '@/components/LogoMarquee';
 import { sendLead } from '@/lib/sendLead';
-import { useInView } from '@/hooks/use-in-view';
 import { initMetaPixel, trackMetaEvent } from '@/lib/metaPixel';
 
 const META_PIXEL_ID = '1439645368271393'; // "וולת'טק - מחקר פנסיוני"
@@ -49,67 +48,6 @@ const slides = [
   src: '/campaign/pension-million-10y',
   alt: 'גרף: מה קרה למיליון שקל בקרנות הפנסיה ב-10 שנים, עד 2,390,903 ש"ח',
   caption: 'חישוב היפותטי: סכום חד-פעמי באוגוסט 2016, ללא הפקדות ומשיכות, נומינלי, לפני מס ואינפלציה.'
-}];
-
-
-/**
- * Animated research chart: plays once when scrolled into view and stops on the final frame.
- * The still image (`.webp`) is the poster, so the chart reads fully even before / without playback.
- */
-function ChartVideo({ src, alt }: {src: string;alt: string;}) {
-  const { ref, inView } = useInView<HTMLVideoElement>(0.4);
-
-  useEffect(() => {
-    const video = ref.current;
-    if (!inView || !video) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    video.play().catch(() => {/* autoplay blocked - poster stays visible */});
-  }, [inView, ref]);
-
-  return (
-    <video
-      ref={ref}
-      muted
-      playsInline
-      preload="metadata"
-      poster={`${src}.webp`}
-      aria-label={alt}
-      width={1600}
-      height={900}
-      className="w-full h-auto rounded-2xl border border-white/10 shadow-xl bg-navy-dark">
-      <source src={`${src}.mp4`} type="video/mp4" />
-    </video>);
-
-}
-
-const faqs = [
-{
-  q: 'מי זה וולת׳טק?',
-  a: 'וולת׳טק היא סוכנות לביטוח שמלווה משפחות ובכירים בתכנון פיננסי, פנסיוני וביטוחי. אנחנו ממפים את כל התמונה הפיננסית, ובונים תוכנית אחת שמחברת בין פנסיה, השקעות, ביטוחים ומיצוי זכויות. שירותי ניהול ההון וה-Family Office ניתנים באמצעות פיוניר תכנון פיננסי, המחזיקה ברישיון ניהול תיקי השקעות ומפוקחת על ידי הרשות לניירות ערך.'
-},
-{
-  q: 'מי זה אודי חברוני?',
-  a: 'אודי חברוני הוא מייסד וולת׳טק ומנכ״ל הסוכנות. הוא מכהן כמנהל הון בכיר בקבוצת פיוניר מאז 2010, והיה לשעבר יועץ חיצוני לקופת הגמל וקרן ההשתלמות של האקדמאים. יש לו ניסיון של למעלה מ-20 שנה בשוק ההון והביטוח, והוא מתמחה בתכנון פיננסי למשפחות ולבכירים. הוא פאנליסט קבוע בתוכנית הכלכלית של ערוץ 10, ומייסד הפלטפורמה "השוק הפיננסי". מורשה מטעם הרשות לניירות ערך ומשרד האוצר.'
-},
-{
-  q: 'האם זה ייעוץ השקעות?',
-  a: 'לא. השירות הוא תכנון פנסיוני: ניתוח מקיף של המסלקה הפנסיונית שלכם. בשיחה המקצועית נבחן יחד את המצב, ונבין אם נוכל לשרת אתכם באופן מלא ברמה הפנסיונית.'
-},
-{
-  q: 'מה כולל הניתוח, וכמה זה עולה?',
-  a: 'יתרות, מסלולי השקעה, דמי ניהול, כיסויים ביטוחיים קיימים, מוטבים, טיב ביצוע של המנהלים והפקדות שוטפות לשכר. השירות ללא עלות, לכם ולבן או בת הזוג.'
-},
-{
-  q: 'איך מתבצעת השיחה?',
-  a: 'השיחה הראשונה היא טלפונית, ואחריה מתואמת פגישה בווידאו או פרונטלית. אנחנו מאמינים שחשוב שתכירו אותנו, ושנכיר אתכם.'
-},
-{
-  q: 'האם צריך להביא מסמכים?',
-  a: 'לא. לאחר הפנייה נוציא עבורכם, ללא עלות, את התיק הפנסיוני מתוך המסלקה הפנסיונית, ונערוך אותו לחוברת מקצועית שתשמש בסיס לפגישה. זה נעשה בהרשאתכם בלבד.'
-},
-{
-  q: 'מה קורה לפרטים שלי?',
-  a: 'הפרטים משמשים ליצירת קשר בלבד. הפרטים המלאים מופיעים במדיניות הפרטיות שלנו.'
 }];
 
 
@@ -378,7 +316,7 @@ export default function PensionResearch() {
           <div className="grid gap-4 lg:grid-cols-2">
             {slides.map((s, i) =>
             <figure key={s.src} className={i === 0 ? 'lg:col-span-2' : ''}>
-                <ChartVideo src={s.src} alt={s.alt} />
+                <img src={`${s.src}.webp`} alt={s.alt} width={1600} height={900} loading="lazy" className="w-full h-auto rounded-2xl border border-white/10 shadow-xl" />
                 <figcaption className="text-xs text-ink-muted/70 mt-2">{s.caption}</figcaption>
               </figure>
             )}

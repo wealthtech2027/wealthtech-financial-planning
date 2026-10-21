@@ -35,6 +35,7 @@ import { CountUp } from '@/components/CountUp';
 import { Reveal } from '@/components/Reveal';
 import { ToolsShowcase } from '@/components/ToolsShowcase';
 import { ApproachTimeline } from '@/components/ApproachTimeline';
+import { YouTubeFacade } from '@/components/YouTubeFacade';
 import { Logo } from '@/components/Logo';
 import { PensionOfferPopup } from '@/components/PensionOfferPopup';
 import { WorkshopPopup } from '@/components/WorkshopPopup';
@@ -419,6 +420,30 @@ export default function Index() {
 
       {/* Logo Marquee - Client Companies */}
       <LogoMarquee />
+
+      {/* Featured video - Channel 10 interview */}
+      <section id="featured-video" className="relative py-14 sm:py-20 bg-navy-dark overflow-hidden">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-4">
+                <span className="w-8 h-px bg-gold" />
+                <span>כפי שהוצג בערוץ 10</span>
+                <span className="w-8 h-px bg-gold" />
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3 text-balance">
+                מה קרה לפנסיה ב-10 השנים האחרונות?
+              </h2>
+              <p className="text-white/70 text-lg text-pretty max-w-2xl mx-auto">
+                המחקר של וולת׳טק על ביצועי קרנות הפנסיה בישראל, בראיון בערוץ 10, ערוץ הכלכלה של ישראל.
+              </p>
+            </div>
+            <YouTubeFacade
+              videoId="XIXy_MuYlcQ"
+              title="זינק ל-2.4 מיליון שקל: אלו קרנות הפנסיה שהובילו בתשואות" />
+          </Reveal>
+        </div>
+      </section>
 
       {/* Services Section */}
       <section data-ev-id="ev_0bd4ef5ac3" id="services" className="relative py-14 sm:py-20 lg:py-32 bg-surface-2 overflow-hidden">
