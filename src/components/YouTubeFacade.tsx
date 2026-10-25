@@ -6,6 +6,8 @@ interface YouTubeFacadeProps {
   title: string;
   /** Short line shown over the thumbnail */
   caption?: string;
+  /** Start offset in seconds */
+  start?: number;
   className?: string;
 }
 
@@ -13,7 +15,7 @@ interface YouTubeFacadeProps {
  * YouTube embed that loads the player only after a click (thumbnail + play button first).
  * Keeps the page fast and avoids third-party tracking until the visitor chooses to watch.
  */
-export function YouTubeFacade({ videoId, title, caption, className = '' }: YouTubeFacadeProps) {
+export function YouTubeFacade({ videoId, title, caption, start, className = '' }: YouTubeFacadeProps) {
   const [playing, setPlaying] = useState(false);
 
   return (
@@ -21,7 +23,7 @@ export function YouTubeFacade({ videoId, title, caption, className = '' }: YouTu
       {playing ?
       <iframe
         className="absolute inset-0 w-full h-full"
-        src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`}
+        src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0${start ? `&start=${start}` : ''}`}
         title={title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen /> :

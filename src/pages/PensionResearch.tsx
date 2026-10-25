@@ -15,6 +15,7 @@ import {
 'lucide-react';
 import { Logo } from '@/components/Logo';
 import { LogoMarquee } from '@/components/LogoMarquee';
+import { YouTubeFacade } from '@/components/YouTubeFacade';
 import { sendLead } from '@/lib/sendLead';
 import { initMetaPixel, trackMetaEvent } from '@/lib/metaPixel';
 
@@ -352,6 +353,22 @@ export default function PensionResearch() {
               </figure>
             )}
           </div>
+        </div>
+      </section>
+
+      {/* Second Channel 10 appearance - keren hishtalmut */}
+      <section className="pt-14 sm:pt-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-3">
+            <span className="w-8 h-px bg-gold" />
+            <span>עוד מהאולפן</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-2 text-balance">קרן השתלמות: כך תגדילו את החיסכון שלכם</h2>
+          <p className="text-ink-muted mb-6 text-pretty">אודי חברוני בערוץ 10, ערוץ הכלכלה של ישראל.</p>
+          <YouTubeFacade
+            videoId="IeILvuol0jw"
+            start={265}
+            title="קרן השתלמות: כך תגדילו את החיסכון שלכם" />
         </div>
       </section>
 
