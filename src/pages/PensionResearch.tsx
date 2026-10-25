@@ -146,7 +146,7 @@ export default function PensionResearch() {
           <div className="absolute -top-40 left-1/4 w-[640px] h-[640px] bg-gold/10 rounded-full blur-3xl" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-t border-gold/40 pt-8 sm:pt-10">
             <div className="flex items-center justify-start sm:justify-between gap-4 mb-8 text-sm">
               <span className="hidden sm:inline text-ink font-semibold">הדסק הפנסיוני</span>
@@ -156,9 +156,9 @@ export default function PensionResearch() {
               </span>
             </div>
 
-            <div className="grid lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-14 items-center">
+            <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-12 items-center">
               <div>
-                <h1 className="font-extrabold text-white leading-[0.95] tracking-tight mb-8 text-6xl sm:text-7xl lg:text-8xl">
+                <h1 className="font-extrabold text-white leading-[0.95] tracking-tight mb-8 text-6xl sm:text-7xl lg:text-7xl xl:text-8xl">
                   מהמחקר שלנו
                   <br />
                   לפנסיה
@@ -272,10 +272,11 @@ export default function PensionResearch() {
                 type="tel"
                 autoComplete="tel"
                 inputMode="tel"
+                dir="ltr"
                 placeholder="טלפון"
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                className="w-full rounded-lg bg-white/5 border border-white/15 px-4 py-3.5 text-white placeholder:text-white/40 focus:border-gold focus:outline-none" />
+                className="text-right w-full rounded-lg bg-white/5 border border-white/15 px-4 py-3.5 text-white placeholder:text-white/40 focus:border-gold focus:outline-none" />
                 <input
                 required
                 type="email"
