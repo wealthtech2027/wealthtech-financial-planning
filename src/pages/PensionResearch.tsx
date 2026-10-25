@@ -18,6 +18,7 @@ import { LogoMarquee } from '@/components/LogoMarquee';
 import { YouTubeFacade } from '@/components/YouTubeFacade';
 import { sendLead } from '@/lib/sendLead';
 import { initMetaPixel, trackMetaEvent } from '@/lib/metaPixel';
+import { pushDataLayerEvent } from '@/lib/dataLayer';
 
 const META_PIXEL_ID = '1439645368271393'; // "וולת'טק - מחקר פנסיוני"
 
@@ -123,6 +124,7 @@ export default function PensionResearch() {
       });
       setSubmitted(true);
       trackMetaEvent('Lead');
+      pushDataLayerEvent('generate_lead', { form: 'pension_research' });
     } catch (err) {
       console.error('Error submitting pension research lead:', err);
       setSubmitError('אירעה שגיאה בשליחה. נסו שוב או התקשרו אלינו: 050-8210573');
