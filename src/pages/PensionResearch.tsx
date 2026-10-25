@@ -13,7 +13,7 @@ import {
   Layers,
   BadgeCheck } from
 'lucide-react';
-import { Logo } from '@/components/Logo';
+import { PensionNav } from '@/components/PensionNav';
 import { LogoMarquee } from '@/components/LogoMarquee';
 import { YouTubeFacade } from '@/components/YouTubeFacade';
 import { sendLead } from '@/lib/sendLead';
@@ -137,23 +137,10 @@ export default function PensionResearch() {
 
   return (
     <div className="min-h-screen bg-navy-dark font-sans">
-      {/* Minimal header - landing page keeps focus on one action */}
-      <header className="absolute top-0 inset-x-0 z-30">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <Link to="/" aria-label="לדף הבית">
-            <Logo />
-          </Link>
-          <button
-            type="button"
-            onClick={scrollToForm}
-            className="hidden sm:inline-flex bg-gold hover:bg-gold-light text-navy-dark font-semibold px-5 py-2.5 rounded-lg transition-colors">
-            לתיאום בדיקת תיק פנסיוני
-          </button>
-        </div>
-      </header>
+      <PensionNav onCtaClick={scrollToForm} />
 
       {/* Hero - mirrors the campaign banner */}
-      <section className="relative pt-28 sm:pt-32 pb-12 sm:pb-16 overflow-hidden">
+      <section id="pr-research" className="relative pt-28 sm:pt-32 pb-12 sm:pb-16 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0 bg-grid opacity-60" />
           <div className="absolute -top-40 left-1/4 w-[640px] h-[640px] bg-gold/10 rounded-full blur-3xl" />
@@ -228,7 +215,7 @@ export default function PensionResearch() {
       </section>
 
       {/* What you get - the three checks, moved above the form */}
-      <section className="pt-14 sm:pt-20">
+      <section id="pr-checks" className="pt-14 sm:pt-20 scroll-mt-16 sm:scroll-mt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2 text-balance">צפו במחקר. בדקו את התיק שלכם.</h2>
@@ -251,7 +238,7 @@ export default function PensionResearch() {
       </section>
 
       {/* Lead form */}
-      <section id="pr-form" className="relative py-14 sm:py-20 scroll-mt-4">
+      <section id="pr-form" className="relative py-14 sm:py-20 scroll-mt-16 sm:scroll-mt-20">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 text-balance">בדיקת תיק פנסיוני אישית</h2>
@@ -327,7 +314,7 @@ export default function PensionResearch() {
       </section>
 
       {/* Key findings - from the slides aired on Channel 10 */}
-      <section className="relative py-12 sm:py-16 border-t border-white/5">
+      <section id="pr-findings" className="relative py-12 sm:py-16 border-t border-white/5 scroll-mt-16 sm:scroll-mt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-3">
             <span className="w-8 h-px bg-gold" />
@@ -359,7 +346,7 @@ export default function PensionResearch() {
       </section>
 
       {/* Second Channel 10 appearance - keren hishtalmut */}
-      <section className="pt-14 sm:pt-20">
+      <section id="pr-studio" className="pt-14 sm:pt-20 scroll-mt-16 sm:scroll-mt-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-3">
             <span className="w-8 h-px bg-gold" />
@@ -375,7 +362,7 @@ export default function PensionResearch() {
       </section>
 
       {/* Who we are - short trust block, after the form */}
-      <section className="pt-14 sm:pt-20">
+      <section id="pr-about" className="pt-14 sm:pt-20 scroll-mt-16 sm:scroll-mt-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-3">
             <span className="w-8 h-px bg-gold" />
@@ -409,7 +396,7 @@ export default function PensionResearch() {
       </section>
 
       {/* FAQ - answers the questions a first-time visitor has before leaving details */}
-      <section className="pt-14 sm:pt-20">
+      <section id="pr-faq" className="pt-14 sm:pt-20 scroll-mt-16 sm:scroll-mt-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-gold text-sm font-semibold tracking-wide mb-3">
             <span className="w-8 h-px bg-gold" />
