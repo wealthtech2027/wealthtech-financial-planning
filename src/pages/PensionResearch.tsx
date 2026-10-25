@@ -17,8 +17,7 @@ import { PensionNav } from '@/components/PensionNav';
 import { LogoMarquee } from '@/components/LogoMarquee';
 import { YouTubeFacade } from '@/components/YouTubeFacade';
 import { sendLead } from '@/lib/sendLead';
-import { initMetaPixel, trackMetaEvent } from '@/lib/metaPixel';
-import { pushDataLayerEvent } from '@/lib/dataLayer';
+import { initMetaPixel } from '@/lib/metaPixel';
 
 const META_PIXEL_ID = '1439645368271393'; // "וולת'טק - מחקר פנסיוני"
 
@@ -108,7 +107,6 @@ export default function PensionResearch() {
   }, []);
   const [form, setForm] = useState({ name: '', phone: '', email: '', consent: false });
   const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -122,9 +120,10 @@ export default function PensionResearch() {
         email: form.email,
         source: `קמפיין מחקר הפנסיה (ערוץ 10) · בדיקת תיק פנסיוני${campaignTag()}`
       });
-      setSubmitted(true);
-      trackMetaEvent('Lead');
-      pushDataLayerEvent('generate_lead', { form: 'pension_research' });
+      // Full page load (not an SPA route change) so ad pixels and GTM register the thank-you page view.
+      // The lead events themselves fire on that page, once per submission.
+      sessionStorage.setItem('pr_lead_submitted', '1');
+      window.location.assign(`/pension-research-thanks${window.location.search}`);
     } catch (err) {
       console.error('Error submitting pension research lead:', err);
       setSubmitError('אירעה שגיאה בשליחה. נסו שוב או התקשרו אלינו: 050-8210573');
@@ -250,13 +249,6 @@ export default function PensionResearch() {
             </p>
           </div>
 
-          {submitted ?
-          <div className="card-tech rounded-2xl p-8 text-center">
-              <CheckCircle2 className="w-14 h-14 text-gold mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-ink mb-2">תודה, הפרטים התקבלו</h3>
-              <p className="text-ink-muted">נחזור אליכם תוך 24 שעות לתיאום שיחת הבדיקה.</p>
-            </div> :
-
           <form onSubmit={handleSubmit} className="card-tech rounded-2xl p-6 sm:p-8 flex flex-col gap-4">
               <input
               required
@@ -310,7 +302,6 @@ export default function PensionResearch() {
                 לתיאום בדיקת תיק פנסיוני
               </button>
             </form>
-          }
         </div>
       </section>
 
@@ -429,7 +420,6 @@ export default function PensionResearch() {
 
       {/* Mobile sticky CTA (replaces the site-wide action bar on this page) */}
       <div className="sm:hidden h-20" aria-hidden="true" />
-      {!submitted &&
       <div className="sm:hidden fixed bottom-0 inset-x-0 z-40 border-t border-gold/20 bg-navy-dark/95 backdrop-blur-md px-4 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
           <button
           type="button"
@@ -438,7 +428,6 @@ export default function PensionResearch() {
             לתיאום בדיקת תיק פנסיוני
           </button>
         </div>
-      }
     </div>);
 
 }

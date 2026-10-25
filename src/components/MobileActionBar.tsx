@@ -5,7 +5,7 @@ import { ScanSearch, MessageCircle } from 'lucide-react';
 const WHATSAPP_URL = `https://wa.me/972508210573?text=${encodeURIComponent('שלום, אשמח לקבל פרטים נוספים על השירותים שלכם')}`;
 
 // Pages that already are the conversion step - no need for the bar there
-const HIDDEN_ON = ['/rights-check', '/onboarding', '/pension-research'];
+const HIDDEN_ON = ['/rights-check', '/onboarding', '/pension-research', '/pension-research-thanks'];
 
 // Show the bar only once the visitor scrolled past the hero (which has its own CTAs)
 const SHOW_AFTER_PX = 560;
