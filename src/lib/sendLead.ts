@@ -19,7 +19,7 @@ export interface Lead {
  * Incoming-webhook URL of the monday board (via Make). Empty = disabled.
  * Once set, every lead is also pushed to the board as a new item.
  */
-const LEAD_WEBHOOK_URL = 'https://hook.eu1.make.com/54g2qdn2cg6qolqjfjojldahm81q3qvm';
+const LEAD_WEBHOOK_URL = 'https://hook.eu1.make.com/hztfpp47vax1ureyi0g14b6ugrxsgyys';
 
 export async function sendLead(lead: Lead): Promise<void> {
   if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
