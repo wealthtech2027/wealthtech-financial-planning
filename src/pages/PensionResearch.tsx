@@ -411,6 +411,24 @@ export default function PensionResearch() {
       <footer className="border-t border-white/10 py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
           <a href="https://wealthtech.co.il" className="text-ink font-semibold" dir="ltr">wealthtech.co.il</a>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 pt-6 border-t border-white/5 text-xs text-ink-muted/80 leading-relaxed text-pretty">
+          <p className="font-semibold text-ink mb-2">מידע משפטי</p>
+          <p>וולת׳טק סוכנות לביטוח (2015) בע״מ, ח.פ. 515186971. כתובת: הסדנאות 8, הרצליה.</p>
+          <p>
+            דוא״ל: <a href="mailto:service@wealthtech.co.il" className="text-gold hover:underline">service@wealthtech.co.il</a>
+            {' · '}טלפון: <a href="tel:0508210573" className="text-gold hover:underline" dir="ltr">050-8210573</a>
+          </p>
+          <p>נציג מורשה: אודי חברוני, מורשה מטעם הרשות לניירות ערך ומשרד האוצר.</p>
+          <p className="mt-2">
+            <a href="https://wealthtech.co.il/privacy" className="text-gold hover:underline">מדיניות פרטיות</a>
+            {' · '}
+            <a href="https://wealthtech.co.il/disclosure" className="text-gold hover:underline">גילוי נאות</a>
+            {' · '}
+            <a href="https://wealthtech.co.il/terms" className="text-gold hover:underline">תקנון האתר</a>
+            {' · '}
+            <a href="https://wealthtech.co.il" className="text-gold hover:underline">אתר וולת׳טק</a>
+          </p>
+        </div>
           <p className="text-ink-muted/70 text-xs text-center sm:text-left leading-relaxed max-w-2xl">
             תשואות עבר אינן מבטיחות תשואות עתידיות. המידע בעמוד זה הוא כללי ואינו מהווה ייעוץ או שיווק פנסיוני המותאם לצרכיו של כל אדם.{' '}
             <span className="text-gold font-semibold">וולת׳טק סוכנות לביטוח (2015) בע״מ</span>, ח.פ 515186971.

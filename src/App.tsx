@@ -24,6 +24,7 @@ import RightsCheck from '@/pages/RightsCheck';
 import FamilyOffice from '@/pages/FamilyOffice';
 import PensionResearch from '@/pages/PensionResearch';
 import PensionResearchThanks from '@/pages/PensionResearchThanks';
+import Terms from '@/pages/Terms';
 import { MobileActionBar } from '@/components/MobileActionBar';
 
 export default function App() {
@@ -47,6 +48,7 @@ export default function App() {
 			<Route path="/rights-check" element={<RightsCheck />} />
 			<Route path="/family-office" element={<FamilyOffice />} />
 			<Route path="/pension-research" element={<PensionResearch />} />
+			<Route path="/terms" element={<Terms />} />
 			<Route path="/pension-research-thanks" element={<PensionResearchThanks />} />
 		</Routes>
 		<MobileActionBar />
